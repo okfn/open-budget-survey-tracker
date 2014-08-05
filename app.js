@@ -9,7 +9,6 @@ var i18n = require('i18n-abide');
 
 var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'messages.pot');
 var routes = require('./routes/index');
-// var users = require('./routes/users');
 
 var app = express();
 
