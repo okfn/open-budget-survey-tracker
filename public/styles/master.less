@@ -1,0 +1,57 @@
+@import "../../bower_components/bootstrap/less/mixins.less";
+
+@header-height: 99px;
+
+header {
+	position: relative;
+	height: @header-height;
+  .logo,
+  .ibp-logo {
+  	position: absolute;
+  	display: block;
+  	height: @header-height - 10;
+  	background: transparent none 50% 100% no-repeat;
+    span {
+    	display: none;
+    }
+  }
+  .logo {
+    left: 0;
+    width: 270px;
+    background-image: url(/images/logo.png);
+  }
+  .ibp-logo {
+    right: 0;
+    width: 378px;
+    background-image: url(/images/ibp-logo.png);
+  }
+}
+
+nav.main {
+	background: transparent url(/images/nav-background.gif) 0 0 repeat-x;
+	ul {
+		.clearfix;
+		padding-top: 0;
+		padding-bottom: 0;
+		li {
+			display: block;
+			float: left;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			line-height: 20px;
+			a {
+				display: block;
+				color: white;
+				font-size: 11px;
+				padding: 4px 10px 5px 10px;
+				margin: 4px 5px 2px 5px;
+				font-weight: bold;
+				&:hover {
+					color: #f7cc92;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

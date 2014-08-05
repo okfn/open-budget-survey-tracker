@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <title>{% block page_title %}{% endblock %}</title>
+
+  {% block head %}
+    <script src="/vendor/jquery-2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/vendor/bootstrap-3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/master.css">
+  {% endblock %}
+
+</head>
+<body>
+
+  {% block header %}
+    <header class="container">
+      <a href="/" class="logo">
+        <span>{{ gettext("Open Budget Survey: Data Explorer") }}</span>
+      </div>
+      <a href="http://internationalbudget.org/" class="ibp-logo">
+        <span>{{ gettext("International Budget Parternship: Open Budgets. Transform Lives.") }}</span>
+      </a>
+    </header>
+    <nav class="main">
+      <ul class="container">
+        <li><a href="/">Home</a></li>
+        <li><a href="/upcoming">Upcoming budgets</a></li>
+      </ul>
+    </nav>
+  {% endblock %}
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+</html>
