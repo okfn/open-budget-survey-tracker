@@ -4,6 +4,7 @@
   "dependencies": {
     "bootstrap": "3.2.0",
     "jquery": "2.1.1",
-    "flag-icons": "http://www.famfamfam.com/lab/icons/flags/famfamfam_flag_icons.zip"
+    "flag-icons": "http://www.famfamfam.com/lab/icons/flags/famfamfam_flag_icons.zip",
+    "table-fixed-header": "https://github.com/oma/table-fixed-header/archive/master.zip"
   }
 }

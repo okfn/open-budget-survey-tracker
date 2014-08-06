@@ -60,40 +60,53 @@ nav.main {
 	}
 }
 
-#overview-table {
-	.badge {
-		position: relative;
-		top: 2px;
-		height: 14px;
-		width: 14px;
-		padding: 0;
-		border: 1px solid #000;
-		span {
-			display: none;
-		}
-		&.badge-late {
-			background-color: lighten(@state-color-late, 15%);
-			border-color: darken(@state-color-late, 15%);
-		}
-		&.badge-waiting {
-			background-color: lighten(@state-color-waiting, 15%);
-			border-color: darken(@state-color-waiting, 15%);
-		}
-		&.badge-available {
-			background-color: lighten(@state-color-available, 15%);
-			border-color: darken(@state-color-available, 15%);
-		}
+.header-fixed {
+	background-color: #FFF;
+}
+
+.state {
+	display: inline-block;
+	position: relative;
+	top: 2px;
+	height: 14px;
+	width: 14px;
+	padding: 0;
+	border: 1px solid #000;
+	span {
+		display: none;
 	}
-	tr:hover .badge {
-		&.badge-late {
+	&.state-late {
+		background-color: lighten(@state-color-late, 15%);
+		border-color: darken(@state-color-late, 15%);
+	}
+	&.state-waiting {
+		background-color: lighten(@state-color-waiting, 15%);
+		border-color: darken(@state-color-waiting, 15%);
+	}
+	&.state-available {
+		background-color: lighten(@state-color-available, 15%);
+		border-color: darken(@state-color-available, 15%);
+	}
+}
+
+#overview-table {
+	tr {
+		cursor: pointer;
+	}
+	tr:hover {
+		td a {
+	    color: @link-hover-color;
+	    text-decoration: underline;
+		}
+		.state-late {
 			background-color: @state-color-late;
 			border-color: darken(@state-color-late	, 30%);
 		}
-		&.badge-waiting {
+		.state-waiting {
 			background-color: @state-color-waiting;
 			border-color: darken(@state-color-waiting, 30%);
 		}
-		&.badge-available {
+		.state-available {
 			background-color: @state-color-available;
 			border-color: darken(@state-color-available, 30%);
 		}
