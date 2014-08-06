@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var _ = require('underscore');
 var i18n = require('i18n-abide');
 
-var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'messages.pot');
+// var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'messages.pot');
 var routes = require('./routes/index');
 
 var app = express();
@@ -26,11 +26,17 @@ app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // OK setup translation
-app.use(i18n.abide({
-  default_lang: 'en',
-  supported_languages: global.locales,
-  translation_directory: 'locale'
-}));
+// app.use(i18n.abide({
+//   default_lang: 'en',
+//   supported_languages: locales,
+//   translation_directory: 'i18n'
+// }));
+app.use(function (req, res, next) {
+  res.locals.gettext = function (text) {
+    return text;
+  };
+  next();
+});
 
 // Now routes...
 app.use('/', routes);
