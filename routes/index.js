@@ -1,8 +1,13 @@
 var express = require('express');
+var api = require('./../api.js');
 var router = express.Router();
 
 router.get('/', function(req, res) {
-  res.render('index', { });
+  api.call('overview', function (countries) {
+    res.render('index', {
+      'countries': countries
+    });
+  });
 });
 
 module.exports = router;

@@ -15,6 +15,7 @@
     "less-middleware": "~1.0.0",
     "swig": "~1.4.2",
     "i18n-abide": "0.0.22",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "request": "~2.39.0"
   }
 }

@@ -4,4 +4,54 @@
 
 {% block content %}
   <h1>{{ gettext("Open Budget Survey") }}</h1>
+  <div class="table-responsive">
+    <table id="overview-table" class="table table-hover">
+      <colgroup>
+        <col width="1%">
+        <col width="35%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+        <col width="8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Country</th>
+          <th class="text-center">Pre-Budget Statement</th>
+          <th class="text-center">Executive's Budget Proposal</th>
+          <th class="text-center">Enacted Budget</th>
+          <th class="text-center">Citizens Budget</th>
+          <th class="text-center">In-Year Reports</th>
+          <th class="text-center">Mid-Year Review</th>
+          <th class="text-center">Year-End Report</th>
+          <th class="text-center">Audit Report</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for country in countries %}
+          {% set code = country.code|lower %}
+          <tr>
+            <td class="text-right">
+              {% if code %}
+                <img src="/vendor/famfamfam-flags/{{ code }}.png">
+              {% endif %}
+            </td>
+            <td><a href="/country/{{ code }}">{{ country.country }}</a></td>
+            {% for cell in country.cells %}
+              <td class="text-center">
+                <span class="badge badge-{{ cell.state }}" data-toggle="tooltip" title="{{ cell.type }} - Expected: {{ cell.expected_year }}">
+                  <span>{{ cell.state }}</span>
+                </span>
+              </td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 {% endblock %}
