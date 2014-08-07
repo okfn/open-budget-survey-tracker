@@ -1,7 +1,9 @@
 Open Budget Survey
 ==================
 
-# Install
+![](https://secure.travis-ci.org/okfn/open-budget-survey-realtime.png?branch=master)
+
+# Manual install
 
 ## Dependancies
 - __node & npm__
@@ -9,7 +11,6 @@ Open Budget Survey
 
 ## Installation
 
-    npm install -g bower
     git clone https://github.com/okfn/open-budget-survey-realtime.git
     cd open-budget-survey-realtime
     bower update
