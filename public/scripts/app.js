@@ -2,7 +2,7 @@
   $(function () {
     var modal = $('#modal');
     $('[data-toggle="tooltip"]').tooltip();
-    $('#overview-table tr').on('click', function(event) {
+    $('#overview-table tbody tr').on('click', function(event) {
       event.preventDefault();
       var json = $(this).data('json');
       $('.modal-title', modal).text(json.country);
