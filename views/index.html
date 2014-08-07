@@ -7,6 +7,18 @@
     <div class="col-md-9">
       <div class="panel panel-default">
         <div class="panel-heading">{{ gettext("Latest country information") }}</div>
+        <div class="panel-body">
+          <form id="search-form" class="form-inline">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-search"></span>
+                </div>
+                <input type="text" name="q" class="form-control" value="{{ q }}" placeholder="{{ gettext("Filter countries") }}">
+              </div>
+            </div>
+          </form>
+        </div>
         <div class="table-responsive">
           <table id="overview-table" class="table table-hover">
             <colgroup>
@@ -37,7 +49,7 @@
             <tbody>
               {% for country in countries %}
                 {% set code = country.code|lower %}
-                <tr data-json="{{ country|json }}">
+                <tr data-search="{{ country.country|lower }}" data-json="{{ country|json }}">
                   <td class="text-right">
                     {% if code %}
                       <img src="/vendor/famfamfam-flags/{{ code }}.png">
@@ -53,6 +65,12 @@
                   {% endfor %}
                 </tr>
               {% endfor %}
+              <tr class="empty text-muted" style="display:none">
+                <td></td>
+                <td colspan="9">
+                  {{ gettext("No countries match your search") }}
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
