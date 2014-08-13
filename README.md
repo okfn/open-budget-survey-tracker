@@ -15,6 +15,12 @@ Open Budget Survey
     cd open-budget-survey-realtime
     bower update
     npm install
+    gulp build && gulp deploy
     npm start
-  
+
 Open: <http://localhost:3000/>
+
+## Development
+
+Whilst developing you should run `gulp watch` as it'll re-compile your assets
+for you.
