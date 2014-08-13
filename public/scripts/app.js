@@ -69,5 +69,9 @@
     }
     $(window).on('popstate', FilterTable);
 
+    $('#legend').scrollToFixed({
+      marginTop: 20
+    });
+
   });
 }(window.jQuery);
