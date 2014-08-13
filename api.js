@@ -15,14 +15,12 @@ function api_call (endpoint, callback) {
     should_get_from_cache = true;
     var stat = fs.statSync(cache_file);
     var difference = new Date().getTime() - stat.mtime.getTime();
-    console.log(difference);
     if (difference > cache_age) {
       should_update_cache = true;
       should_get_from_cache = false;
     }
   }
   if (should_get_from_cache) {
-    console.log(1);
     var data = fs.readFileSync(cache_file);
     callback(JSON.parse(data));
   } else {
