@@ -2,3 +2,4 @@ node_modules
 bower_components
 public/build/*
 cache/*.json
+npm-debug.log

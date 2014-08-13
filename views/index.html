@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block page_title %}{{ gettext("Open Budget Survey") }}{% endblock %}
+{% block page_title %}{{ gettext("Open Budget Survey - Tracker") }}{% endblock %}
 
 {% block content %}
   <div class="row">
@@ -85,9 +85,10 @@
     </div>
     <div class="col-md-3">
       <div class="panel panel-default">
-        <div class="panel-heading">{{ gettext("About this site") }}</div>
+        <div class="panel-heading">{{ gettext("What is the Open Budget Survey?") }}</div>
         <div class="panel-body">
-          {{ gettext("The Open Budget Survey is a comprehensive analysis and survey that evaluates whether governments give the public access to budget information and opportunities to participate in the budget process at the national level. The Survey also assesses the capacity and independence of formal oversight institutions. The IBP works with civil society partners in 100 countries to collect the data for the Survey.") }}
+          <p>{{ gettext("The IBP’s Open Budget Survey is the only independent, regular, and comparative assessment of budget transparency and participation worldwide. This rigorous, comprehensive assessment is conducted every two years and measures the amount of budget information a country’s central government makes publicly available, whether it engages citizens in budget processes, and the strength of formal oversight institutions.") }}</p>
+          <p><a href="/about">{{ gettext("Find out more") }} &rarr;</a></p>
         </div>
       </div>
       <div id="legend" class="panel panel-default">
