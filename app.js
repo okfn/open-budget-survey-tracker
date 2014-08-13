@@ -9,6 +9,7 @@ var i18n = require('i18n-abide');
 
 // var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'messages.pot');
 var routes = require('./routes/index');
+var manifest = require('./public/build/manifest.json');
 
 var app = express();
 
@@ -22,7 +23,7 @@ swig.setDefaults({ cache: false });
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-app.use(require('less-middleware')(path.join(__dirname, 'public')));
+// app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // OK setup translation
@@ -34,6 +35,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (req, res, next) {
   res.locals.gettext = function (text) {
     return text;
+  };
+  res.locals.asset = function (file) {
+    var index = file.substr(file.lastIndexOf('/')+1);
+    if (typeof manifest[index] === 'string') {
+      file = '/build'+file.replace(index, manifest[index]);
+    }
+    return file;
   };
   next();
 });

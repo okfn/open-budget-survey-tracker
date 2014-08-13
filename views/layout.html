@@ -10,8 +10,8 @@
   {% endblock %}
 
   {% block head %}
-    <link rel="stylesheet" href="/vendor/bootstrap-3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/app.css">
+    <link rel="stylesheet" href="{{ asset('/styles/vendor.css') }}">
+    <link rel="stylesheet" href="{{ asset('/styles/app.css') }}">
     <link rel="shortcut icon" href="/favicon.ico">
   {% endblock %}
 
@@ -40,12 +40,8 @@
   </div>
 
   {% block scripts %}
-    <script src="/vendor/jquery-2.1.1/jquery.min.js"></script>
-    <script src="/vendor/bootstrap-3.2.0/js/bootstrap.min.js"></script>
-    <script src="/vendor/swig-1.4.2/swig.min.js"></script>
-    <script src="/vendor/table-fixed-header/table-fixed-header.js"></script>
-    <script src="/vendor/scrolltofixed-1.0.6/jquery-scrolltofixed-min.js"></script>
-    <script src="/scripts/app.js"></script>
+    <script src="{{ asset('/scripts/vendor.js') }}"></script>
+    <script src="{{ asset('/scripts/app.js') }}"></script>
   {% endblock %}
 
 </body>
