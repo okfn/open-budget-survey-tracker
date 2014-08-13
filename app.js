@@ -5,7 +5,7 @@ var swig = require('swig');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
-var i18n = require('i18n-abide');
+// var i18n = require('i18n-abide');
 
 // var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'messages.pot');
 var routes = require('./routes/index');
@@ -23,7 +23,6 @@ swig.setDefaults({ cache: false });
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-// app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // OK setup translation
