@@ -1,5 +1,6 @@
 !function ($) {
 
+  var tmpl;
   var timeout;
   var value;
   var input;
@@ -28,21 +29,23 @@
     FilterTable();
   }
 
+  function GetText (text) {
+    return text;
+  }
+
   $(function () {
-    var modal = $('#modal');
+
+    $.get('/modal', function (data) {
+      tmpl = swig.compile(data, { locals: { gettext: GetText } });
+    });
+
     $('[data-toggle="tooltip"]').tooltip();
 
     $('#overview-table tbody tr').on('click', function(event) {
       event.preventDefault();
       var json = $(this).data('json');
-      $('.modal-title', modal).text(json.country);
-      if (json.code) {
-        $('.modal-footer a', modal).prop('href', '/country/'+json.code.toLowerCase())
-        $('.modal-footer', modal).show();
-      } else {
-        $('.modal-footer', modal).hide();
-      }
-      modal.modal();
+      $('#modal').remove();
+      $(tmpl(json)).appendTo('body').modal();
     });
     $('#overview-table').fixedHeader({ topOffset: 0 });
 

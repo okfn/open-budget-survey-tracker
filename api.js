@@ -14,4 +14,4 @@ function api_call (endpoint, callback) {
 
 module.exports = {
   call: api_call
-}
+};
