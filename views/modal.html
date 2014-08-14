@@ -5,12 +5,51 @@
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{{ gettext("Close") }}</span></button>
         <h4 class="modal-title">{{ country }}</h4>
       </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <a href="/country/{{ code|lower }}" class="btn btn-primary">{{ gettext("More info") }}</a>
-      </div>
+      {% if obi_score %}
+        <div class="modal-body">
+          <p><strong>Open Budge Index ({{ obi_year }}):</strong> {{ obi_score }}/100</p>
+        </div>
+      {% endif %}
+      <table class="table modal-table">
+        <thead>
+          <tr>
+            <th>{{ gettext("Document") }}</th>
+            <th>{{ gettext("Status") }}</th>
+            <th>{{ gettext("Date") }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for cell in cells %}
+            <tr>
+              <th scope="row">
+                {% if cell.type %}
+                  {{ cell.type }}
+                {% else %}
+                  <span class="text-muted">{{ gettext("Unavailable") }}</span>
+                {% endif %}
+              </th>
+              <td>
+                <span class="badge state state-{{ cell.state }}">
+                  <span>{{ cell.state|capitalize }}</span>
+                </span>
+                {{ cell.state|capitalize }}
+              </td>
+              <td>
+                {% if cell.date %}
+                  {{ cell.date|date('jS F Y') }}
+                {% else %}
+                  <span class="text-muted">{{ gettext("Unavailable") }}</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if code %}
+        <div class="modal-footer">
+          <a href="/country/{{ code|lower }}" class="btn btn-primary">{{ gettext("View historical information") }}</a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </div>
