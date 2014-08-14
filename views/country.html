@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% macro table_fields(index) %}
+  {% for item in country.data %}
+    <td class="text-center">
+      <span class="badge state state-{{ item.cells[index].state }}" data-toggle="popover" data-content="{{ item.cells[index].tooltip }}">
+        <span>{{ item.cells[index].state|capitalize }}</span>
+      </span>
+    </td>
+  {% endfor %}
+{% endmacro %}
+
+{% block page_title %}{{ country.country + gettext(" - Open Budget Survey - Tracker") }}{% endblock %}
+
+{% block content %}
+
+  <h1>{{ country.country }}</h1>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <th>{{ gettext("Document") }}</th>
+        {% for item in country.data %}
+          <th class="text-center">{{ item.date|date('jS F Y') }}</th>
+        {% endfor %}
+      </thead>
+      <tbody>
+        <tr>
+          <th>{{ gettext("Pre-Budget Statement") }}</th>
+          {{ table_fields(0) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("Executive's Budget Proposal") }}</th>
+          {{ table_fields(1) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("Enacted Budget") }}</th>
+          {{ table_fields(2) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("Citizens Budget") }}</th>
+          {{ table_fields(3) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("In-Year Reports") }}</th>
+          {{ table_fields(4) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("Mid-Year Review") }}</th>
+          {{ table_fields(5) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("Year-End Report") }}</th>
+          {{ table_fields(6) }}
+        </tr>
+        <tr>
+          <th>{{ gettext("Audit Report") }}</th>
+          {{ table_fields(7) }}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}

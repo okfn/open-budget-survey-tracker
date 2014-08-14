@@ -5,7 +5,8 @@ var uri = 'http://aquarium-staging.herokuapp.com/';
 // Sets the cache age to an hour
 var cache_age = 3600000;
 
-function api_call (endpoint, callback) {
+function api_call (endpoint, callback, force_cache) {
+  var force_cache = ( typeof force_cache == 'undefined' ) ? false : force_cache;
   var cache_file = './cache/'+endpoint+'.json';
   var should_get_from_cache = false;
   var should_update_cache = true;
@@ -20,7 +21,7 @@ function api_call (endpoint, callback) {
       should_get_from_cache = false;
     }
   }
-  if (should_get_from_cache) {
+  if (force_cache || should_get_from_cache) {
     var data = fs.readFileSync(cache_file);
     callback(JSON.parse(data));
   } else {
