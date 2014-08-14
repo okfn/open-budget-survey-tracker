@@ -52,7 +52,7 @@ router.get('/modal', function (req, res) {
 router.get('/', function (req, res) {
   api.call('overview', function (countries) {
     for (var i in countries) {
-      countries[i].cells = build_tooltips_in_cells(country.country, countries[i].cells);
+      countries[i].cells = build_tooltips_in_cells(countries[i].country, countries[i].cells);
     }
     res.render('index', {
       'q': req.param('q'),
