@@ -26,7 +26,7 @@ function build_tooltips_in_cells (country, cells) {
 }
 
 router.get('/country/:code', function (req, res) {
-  api.call('country-'+req.params.code, function (country) {
+  api.call('country:'+req.params.code, function (country) {
     for (var i in country.data) {
       country.data[i].cells = build_tooltips_in_cells(country.country, country.data[i].cells);
     }
@@ -37,7 +37,7 @@ router.get('/country/:code', function (req, res) {
       ],
       'country': country
     });
-  }, true);
+  });
 });
 
 router.get('/about', function (req, res) {

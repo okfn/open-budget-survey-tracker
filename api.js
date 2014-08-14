@@ -5,8 +5,7 @@ var uri = 'http://aquarium-staging.herokuapp.com/';
 // Sets the cache age to an hour
 var cache_age = 3600000;
 
-function api_call (endpoint, callback, force_cache) {
-  var force_cache = ( typeof force_cache == 'undefined' ) ? false : force_cache;
+function api_call (endpoint, callback) {
   var cache_file = './cache/'+endpoint+'.json';
   var should_get_from_cache = false;
   var should_update_cache = true;
@@ -21,11 +20,15 @@ function api_call (endpoint, callback, force_cache) {
       should_get_from_cache = false;
     }
   }
-  if (force_cache || should_get_from_cache) {
+  if (should_get_from_cache) {
     var data = fs.readFileSync(cache_file);
     callback(JSON.parse(data));
   } else {
     var url = uri+endpoint+'.json';
+    // temporary hack...
+    if (endpoint.substr(0, 8) == 'country:') {
+      url = 'https://gist.githubusercontent.com/johnmartin/b5b3a1666a60d47f3135/raw/8a6286ebbebb4cd0ff2faf81a66c6e51328d0d6f/country-bo.json';
+    }
     request(url, function (error, response, data) {
       if (!error && response.statusCode == 200) {
         if (should_update_cache) {
