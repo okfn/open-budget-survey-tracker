@@ -1,7 +1,7 @@
 Open Budget Survey
 ==================
 
-![](https://secure.travis-ci.org/okfn/open-budget-survey-realtime.png?branch=master)
+![](https://secure.travis-ci.org/okfn/open-budget-survey-tracker.png?branch=master)
 
 # Manual install
 
