@@ -16,7 +16,7 @@ Open Budget Survey
     bower update
     npm install
     gulp build && gulp deploy
-    npm start
+    ENV=development npm start
 
 Open: <http://localhost:3000/>
 
