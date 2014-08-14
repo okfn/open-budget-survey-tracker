@@ -3,3 +3,6 @@ bower_components
 public/build/*
 cache/*.json
 npm-debug.log
+public/styles/app.css
+public/styles/vendor.css
+public/scripts/vendor.js

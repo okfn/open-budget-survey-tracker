@@ -31,7 +31,8 @@
     "gulp-minify-css": "0.3.7",
     "gulp-rev": "1.0.0",
     "gulp-clean": "0.3.1",
-    "gulp-extend": "0.2.0"
+    "gulp-extend": "0.2.0",
+    "moment": "2.8.1"
   },
   "devDependencies": {
     "sinon": "~1.7.3",

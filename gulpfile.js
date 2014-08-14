@@ -91,10 +91,29 @@ gulp.task('manifest', function (callback) {
     .pipe(gulp.dest('public/build'));
 });
 
+gulp.task('dev_vendor_styles', function () {
+  return gulp.src(paths.vendor_styles)
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('public/styles/'));
+});
+
+gulp.task('dev_vendor_scripts', function () {
+  return gulp.src(paths.vendor_scripts)
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('public/scripts/'));
+});
+
+gulp.task('dev_styles', function () {
+  return gulp.src(paths.styles)
+    .pipe(less())
+    .pipe(concat('app.css'))
+    .pipe(gulp.dest('public/styles/'));
+});
+
 gulp.task('watch', function () {
-  gulp.watch(paths.scripts, ['default']);
-  gulp.watch(paths.styles, ['default']);
-  gulp.watch(paths.images, ['default']);
+  gulp.watch(paths.vendor_styles, ['dev_vendor_styles']);
+  gulp.watch(paths.vendor_scripts, ['dev_vendor_styles']);
+  gulp.watch(paths.styles, ['dev_styles']);
 });
 
 gulp.task('build', ['vendor_scripts', 'scripts', 'vendor_styles', 'styles', 'images']);

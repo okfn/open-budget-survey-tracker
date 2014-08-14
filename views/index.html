@@ -65,7 +65,7 @@
                   </td>
                   {% for cell in country.cells %}
                     <td class="text-center">
-                      <span class="badge state state-{{ cell.state }}" data-toggle="tooltip" title="{{ cell.state|capitalize }}">
+                      <span class="badge state state-{{ cell.state }}" data-toggle="popover" data-content="{{ cell.tooltip }}">
                         <span>{{ cell.state|capitalize }}</span>
                       </span>
                     </td>

@@ -36,6 +36,9 @@ app.use(function (req, res, next) {
     return text;
   };
   res.locals.asset = function (file) {
+    if (app.get('env') === 'development') {
+      return file;
+    }
     var index = file.substr(file.lastIndexOf('/')+1);
     if (typeof manifest[index] === 'string') {
       file = '/build'+file.replace(index, manifest[index]);
@@ -63,6 +66,7 @@ if (app.get('env') === 'development') {
   app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
+      status: err.status,
       message: err.message,
       error: err
     });
@@ -74,6 +78,7 @@ if (app.get('env') === 'development') {
 app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
+    status: err.status,
     message: err.message,
     error: {}
   });

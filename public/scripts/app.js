@@ -40,6 +40,11 @@
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover({
+      placement: 'top',
+      container: 'body',
+      trigger: 'hover'
+    });
 
     $('#overview-table tbody tr').on('click', function(event) {
       event.preventDefault();
