@@ -78,5 +78,18 @@
       marginTop: 20
     });
 
+    $('#more-links p').each(function () {
+      var html = $(this).html();
+      if (html.indexOf('<!-- more -->') > 0) {
+        var bits = html.split('<!-- more -->');
+        var new_html = bits[0]+' <span class="more-link">... <a href="#">more</a></span><span class="more">'+bits[1]+'</span>';
+        $(this).addClass('has-more-link').html(new_html);
+        $('.more-link a', this).on('click', function (event) {
+          event.preventDefault();
+          $(this).parents('p').addClass('more-expanded');
+        });
+      }
+    });
+
   });
 }(window.jQuery);

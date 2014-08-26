@@ -122,3 +122,25 @@ nav.main {
 		padding-right: 15px;
 	}
 }
+
+#more-links {
+	.panel-heading {
+		border-top: 1px solid #ddd;
+		&:first-child {
+			border-top-width: 0;
+		}
+	}
+	.has-more-link {
+		.more {
+			display: none;
+		}
+		&.more-expanded {
+			.more {
+				display: inline;
+			}
+			.more-link {
+				display: none;
+			}
+		}
+	}
+}
