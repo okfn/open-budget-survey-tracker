@@ -76,16 +76,16 @@ nav.main {
 		display: none;
 	}
 	&.state-late {
-		background-color: lighten(@state-color-late, 15%);
-		border-color: darken(@state-color-late, 15%);
+		background-color: lighten(@state-color-late, 15%) !important;
+		border-color: darken(@state-color-late, 15%) !important;
 	}
 	&.state-waiting {
-		background-color: lighten(@state-color-waiting, 15%);
-		border-color: darken(@state-color-waiting, 15%);
+		background-color: lighten(@state-color-waiting, 15%) !important;
+		border-color: darken(@state-color-waiting, 15%) !important;
 	}
 	&.state-available {
-		background-color: lighten(@state-color-available, 15%);
-		border-color: darken(@state-color-available, 15%);
+		background-color: lighten(@state-color-available, 15%) !important;
+		border-color: darken(@state-color-available, 15%) !important;
 	}
 }
 
@@ -111,6 +111,10 @@ nav.main {
 			border-color: darken(@state-color-available, 30%);
 		}
 	}
+}
+
+#heading .pull-right .item {
+	margin-left: 10px;
 }
 
 .modal-table {
