@@ -1,21 +1,24 @@
 !function ($) {
 
   var tmpl;
+  var timeout;
 
   function GetText (text) {
     return text;
+  }
+
+  function Popovers () {
+    $('[data-toggle="popover"]').popover({
+      placement: 'bottom',
+      container: 'body',
+      trigger: 'hover'
+    });
   }
 
   $(function () {
 
     $.get('/modal', function (data) {
       tmpl = swig.compile(data, { locals: { gettext: GetText } });
-    });
-
-    $('[data-toggle="popover"]').popover({
-      placement: 'top',
-      container: 'body',
-      trigger: 'hover'
     });
 
     $('#overview-table tbody tr').on('click', function(event) {
@@ -46,6 +49,12 @@
           $(this).parents('p').addClass('more-expanded');
         });
       }
+    });
+
+    Popovers();
+    $(window).on('scroll', function () {
+      clearTimeout(timeout);
+      timeout = setTimeout(Popovers, 500);
     });
 
   });
