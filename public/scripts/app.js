@@ -12,7 +12,6 @@
       tmpl = swig.compile(data, { locals: { gettext: GetText } });
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover({
       placement: 'top',
       container: 'body',
