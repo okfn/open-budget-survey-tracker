@@ -7,22 +7,32 @@
 @state-color-available: #28C926;
 
 header {
-	position: relative;
-	height: @header-height;
+  position: relative;
+  height: @header-height;
   .logo,
   .ibp-logo {
-  	position: absolute;
-  	display: block;
-  	height: @header-height - 10;
-  	background: transparent none 50% 100% no-repeat;
+    position: absolute;
+    display: block;
+    height: @header-height - 10;
+    background: transparent none 50% 100% no-repeat;
     span {
-    	display: none;
+      display: none;
     }
   }
   .logo {
     left: 0;
-    width: 270px;
+    width: 530px;
     background-image: url(/build/images/logo.png);
+    background-position: 0 30%;
+    i {
+      position: absolute;
+      left: 74px;
+      bottom: 0;
+      display: block;
+      font-style: normal;
+      color: @text-color;
+      font-size: @font-size-small;
+    }
   }
   .ibp-logo {
     right: 0;
@@ -32,123 +42,123 @@ header {
 }
 
 nav.main {
-	background: transparent url(/build/images/nav-background.gif) 0 0 repeat-x;
-	ul {
-		.clearfix;
-		padding-top: 0;
-		padding-bottom: 0;
-		li {
-			display: block;
-			float: left;
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-			line-height: 20px;
-			a {
-				display: block;
-				color: white;
-				font-size: 11px;
-				padding: 4px 10px 5px 10px;
-				margin: 4px 5px 2px 5px;
-				font-weight: bold;
-				&:hover {
-					color: #f7cc92;
-					text-decoration: none;
-				}
-			}
-		}
-	}
+  background: transparent url(/build/images/nav-background.gif) 0 0 repeat-x;
+  ul {
+    .clearfix;
+    padding-top: 0;
+    padding-bottom: 0;
+    li {
+      display: block;
+      float: left;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      line-height: 20px;
+      a {
+        display: block;
+        color: white;
+        font-size: 11px;
+        padding: 4px 10px 5px 10px;
+        margin: 4px 5px 2px 5px;
+        font-weight: bold;
+        &:hover {
+          color: #f7cc92;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
 .header-fixed {
-	background-color: #FFF;
+  background-color: #FFF;
 }
 
 .state {
-	display: inline-block;
-	position: relative;
-	top: 2px;
-	height: 14px;
-	width: 14px;
-	padding: 0;
-	border: 1px solid #000;
-	span {
-		display: none;
-	}
-	&.state-late {
-		background-color: lighten(@state-color-late, 15%) !important;
-		border-color: darken(@state-color-late, 15%) !important;
-	}
-	&.state-waiting {
-		background-color: lighten(@state-color-waiting, 15%) !important;
-		border-color: darken(@state-color-waiting, 15%) !important;
-	}
-	&.state-available {
-		background-color: lighten(@state-color-available, 15%) !important;
-		border-color: darken(@state-color-available, 15%) !important;
-	}
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  height: 14px;
+  width: 14px;
+  padding: 0;
+  border: 1px solid #000;
+  span {
+    display: none;
+  }
+  &.state-late {
+    background-color: lighten(@state-color-late, 15%) !important;
+    border-color: darken(@state-color-late, 15%) !important;
+  }
+  &.state-waiting {
+    background-color: lighten(@state-color-waiting, 15%) !important;
+    border-color: darken(@state-color-waiting, 15%) !important;
+  }
+  &.state-available {
+    background-color: lighten(@state-color-available, 15%) !important;
+    border-color: darken(@state-color-available, 15%) !important;
+  }
 }
 
 #overview-table tbody {
-	tr {
-		cursor: pointer;
-	}
-	tr:hover {
-		td a {
-	    color: @link-hover-color;
-	    text-decoration: underline;
-		}
-		.state-late {
-			background-color: @state-color-late;
-			border-color: darken(@state-color-late	, 30%);
-		}
-		.state-waiting {
-			background-color: @state-color-waiting;
-			border-color: darken(@state-color-waiting, 30%);
-		}
-		.state-available {
-			background-color: @state-color-available;
-			border-color: darken(@state-color-available, 30%);
-		}
-	}
+  tr {
+    cursor: pointer;
+  }
+  tr:hover {
+    td a {
+      color: @link-hover-color;
+      text-decoration: underline;
+    }
+    .state-late {
+      background-color: @state-color-late;
+      border-color: darken(@state-color-late  , 30%);
+    }
+    .state-waiting {
+      background-color: @state-color-waiting;
+      border-color: darken(@state-color-waiting, 30%);
+    }
+    .state-available {
+      background-color: @state-color-available;
+      border-color: darken(@state-color-available, 30%);
+    }
+  }
 }
 
 #heading .pull-right .item {
-	margin-left: 10px;
+  margin-left: 10px;
 }
 
 .modal-table {
-	margin-bottom: 10px;
-	thead tr th,
-	tbody tr th,
-	tbody tr td {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+  margin-bottom: 10px;
+  thead tr th,
+  tbody tr th,
+  tbody tr td {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 #more-links {
-	.panel-heading {
-		border-top: 1px solid #ddd;
-		&:first-child {
-			border-top-width: 0;
-		}
-	}
-	.has-more-link {
-		.more {
-			display: none;
-		}
-		&.more-expanded {
-			.more {
-				display: inline;
-			}
-			.more-link {
-				display: none;
-			}
-		}
-	}
+  .panel-heading {
+    border-top: 1px solid #ddd;
+    &:first-child {
+      border-top-width: 0;
+    }
+  }
+  .has-more-link {
+    .more {
+      display: none;
+    }
+    &.more-expanded {
+      .more {
+        display: inline;
+      }
+      .more-link {
+        display: none;
+      }
+    }
+  }
 }
 
 .popover {
-	max-width: 320px !important;
+  max-width: 320px !important;
 }
