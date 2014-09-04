@@ -45,7 +45,7 @@
                   {{ gettext("Open Budget Index") }}
                 </th>
                 {% for doc in docs %}
-                  <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext(doc.description) }}">
+                  <th class="text-center" data-toggle="popover" data-content="{{ gettext(doc.description) }}">
                     {{ gettext(doc.title) }}
                   </th>
                 {% endfor %}
@@ -56,13 +56,13 @@
                 {% set code = country.code|lower %}
                 <tr data-json="{{ country|json }}">
                   <td><a href="/country/{{ code }}">{{ country.country }}</a></td>
-                  <td class="text-center">
-                    {% if country.obi_score %}
-                      <span data-toggle="popover" data-content="From {{ country.obi_year }}">
-                        {{ country.obi_score }}
-                      </span>
-                    {% endif %}
-                  </td>
+                  {% if country.obi_scores %}
+                    <td class="text-center" data-toggle="popover" data-content="From {{ country.obi_scores|last.year }}">
+                      {{ country.obi_scores|last.score }}
+                    </td>
+                  {% else %}
+                    <td></td>
+                  {% endif %}
                   {% for doc in docs %}
                     {% set cells = country.documents[doc.title] %}
                     {% set cell = cells|last %}
