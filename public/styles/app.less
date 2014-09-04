@@ -3,7 +3,8 @@
 
 @header-height: 99px;
 @state-color-late: #CA2222;
-@state-color-waiting: #F5DD0C;
+@state-color-waiting: @state-color-late;
+@state-color-internal: #F5DD0C;
 @state-color-available: #28C926;
 
 header {
@@ -93,6 +94,10 @@ nav.main {
     background-color: lighten(@state-color-waiting, 15%) !important;
     border-color: darken(@state-color-waiting, 15%) !important;
   }
+  &.state-internal {
+    background-color: lighten(@state-color-internal, 15%) !important;
+    border-color: darken(@state-color-internal, 15%) !important;
+  }
   &.state-available {
     background-color: lighten(@state-color-available, 15%) !important;
     border-color: darken(@state-color-available, 15%) !important;
@@ -115,6 +120,10 @@ nav.main {
     .state-waiting {
       background-color: @state-color-waiting;
       border-color: darken(@state-color-waiting, 30%);
+    }
+    .state-internal {
+      background-color: @state-color-internal;
+      border-color: darken(@state-color-internal, 30%);
     }
     .state-available {
       background-color: @state-color-available;

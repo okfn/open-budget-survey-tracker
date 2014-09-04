@@ -40,29 +40,25 @@ var docs = [
   }
 ];
 
-function build_tooltips_in_cells (country, documents) {
-  for (var i in documents) {
-    var doc = documents[i];
-    var date = ( typeof doc.date_published === 'undefined' ) ? false : doc.date_published;
-    var tooltip = country+"'s "+doc.type+" is "+doc.state;
-    if (date) {
-      if (doc.state == 'waiting') {
-        tooltip += " and it is expected at "+date;
-      } else if (doc.state == 'late') {
-        tooltip += " and it was expected at "+date;
+router.get('/country/:country', function (req, res) {
+  api.call('country:'+req.params.country, function (country) {
+    res.render('country', {
+      'docs': docs,
+      'country': country
+    });
+  });
+});
+
+router.get('/modal/:country', function (req, res) {
+  api.call('overview', function (countries) {
+    var country = {};
+    for (var i in countries) {
+      if (countries[i].country == req.params.country) {
+        country = countries[i];
+        break;
       }
     }
-    documents[i].tooltip = tooltip;
-  }
-  return documents;
-}
-
-router.get('/country/:code', function (req, res) {
-  api.call('country:'+req.params.code, function (country) {
-    for (var i in country.data) {
-      country.data[i].cells = build_tooltips_in_cells(country.country, country.data[i].cells);
-    }
-    res.render('country', {
+    res.render('modal', {
       'docs': docs,
       'country': country
     });
@@ -73,24 +69,8 @@ router.get('/about', function (req, res) {
   res.render('about', {});
 });
 
-router.get('/modal', function (req, res) {
-  var data = fs.readFileSync(path.join(__dirname, '..', 'views', 'modal.html'));
-  res.send(data);
-});
-
-router.get('/docs', function (req, res) {
-  res.send(docs);
-});
-
 router.get('/', function (req, res) {
   api.call('overview', function (countries) {
-    for (var x in countries) {
-      for (var y in docs) {
-        if (typeof countries[x].documents[docs[y].title] != 'undefined') {
-          countries[x].documents[docs[y].title].tooltip = build_tooltips_in_cells(countries[x].country, countries[x].documents[docs[y].title]);
-        }
-      }
-    }
     res.render('index', {
       'docs': docs,
       'countries': countries

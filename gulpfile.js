@@ -13,7 +13,6 @@ var paths = {
   vendor_scripts: [
     'bower_components/jquery/dist/jquery.js',
     'bower_components/bootstrap/dist/js/bootstrap.js',
-    'node_modules/swig/dist/swig.js',
     'bower_components/table-fixed-header/table-fixed-header.js',
     'bower_components/ScrollToFixed/jquery-scrolltofixed.js'
   ],

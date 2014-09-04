@@ -1,13 +1,15 @@
+{% import "helpers.html" as h %}
+
 <div id="modal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{{ gettext("Close") }}</span></button>
-        <h4 class="modal-title">{{ country }}</h4>
+        <h4 class="modal-title">{{ country.country }}</h4>
       </div>
-      {% if obi_score %}
+      {% if country.obi_scores %}
         <div class="modal-body">
-          <p><strong>Open Budge Index ({{ obi_year }}):</strong> {{ obi_score }}/100</p>
+          <p><strong>Open Budget Index ({{ country.obi_scores|last.year }}):</strong> {{ country.obi_scores|last.score }}/100</p>
         </div>
       {% endif %}
       <table class="table modal-table">
@@ -20,7 +22,7 @@
         </thead>
         <tbody>
           {% for doc in docs %}
-            {% set cells = documents[doc.title] %}
+            {% set cells = country.documents|last[doc.title] %}
             <tr>
               <th scope="row">
                 {{ doc.title }}
@@ -28,19 +30,19 @@
               {% if cells %}
                 <td>
                   <span class="badge state state-{{ cells|last.state }}">
-                    <span>{{ cells|last.state|capitalize }}</span>
+                    <span>{{ h.state(cells|last.state) }}</span>
                   </span>
-                  {{ cells|last.state|capitalize }}
+                  {{ h.state(cells|last.state) }}
                 </td>
                 <td>
-                  {{ cells|last.date_published}}
+                  {{ cells|last.date_published }}
                 </td>
               {% else %}
                 <td>
-                  <span class="badge state state-late" data-toggle="popover">
-                    <span>{{ gettext("Not available") }}</span>
+                  <span class="badge state state-late">
+                    <span>{{ gettext("Not produced") }}</span>
                   </span>
-                  {{ gettext("Not available") }}
+                  {{ gettext("Not produced") }}
                 </td>
                 <td>
                   <span class="text-muted">{{ gettext("Unavailable") }}</span>
@@ -51,11 +53,9 @@
           {% endfor %}
         </tbody>
       </table>
-      {% if code %}
-        <div class="modal-footer">
-          <a href="/country/{{ code|lower }}" class="btn btn-primary">{{ gettext("View historical information") }}</a>
-        </div>
-      {% endif %}
+      <div class="modal-footer">
+        <a href="/country/{{ country.country }}" class="btn btn-primary">{{ gettext("View historical information") }}</a>
+      </div>
     </div>
   </div>
 </div>

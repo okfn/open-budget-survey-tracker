@@ -1,0 +1,18 @@
+{%- macro state(check) -%}
+  {%- if check == "available" -%}
+    {{ gettext("Publicly available") }}
+  {%- elif check == "available" -%}
+    {{ gettext("Internally available") }}
+  {%- else -%}
+    {{ gettext("Not produced") }}
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- macro tooltip(country, doc) -%}
+  {{ country.country }}'s {{ doc.type }} is {{ state(doc.state) }}
+  {%- if doc.date_published -%}
+    and was published {{ doc.date_published }}
+  {%- elif doc.date_expected -%}
+    and was expected {{ doc.date_expected }}
+  {%- endif -%}
+{%- endmacro -%}

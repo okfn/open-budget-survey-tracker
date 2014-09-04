@@ -18,19 +18,13 @@
 
   $(function () {
 
-    $.get('/modal', function (data) {
-      tmpl = swig.compile(data, { locals: { gettext: GetText } });
-    });
-
-    $.get('/docs', function (data) {
-      docs = data;
-    });
-
     $('#overview-table tbody tr').on('click', function(event) {
       event.preventDefault();
-      var json = $.extend($(this).data('json'), { docs: docs });
       $('#modal').remove();
-      $(tmpl(json)).appendTo('body').modal();
+      var country = $(this).data('country');
+      $.get('/modal/'+country, function (html) {
+        $(html).appendTo('body').modal();
+      });
     });
     $('#overview-table').fixedHeader({
       topOffset: 40
