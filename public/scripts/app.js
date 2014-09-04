@@ -2,6 +2,7 @@
 
   var tmpl;
   var timeout;
+  var docs;
 
   function GetText (text) {
     return text;
@@ -21,9 +22,13 @@
       tmpl = swig.compile(data, { locals: { gettext: GetText } });
     });
 
+    $.get('/docs', function (data) {
+      docs = data;
+    });
+
     $('#overview-table tbody tr').on('click', function(event) {
       event.preventDefault();
-      var json = $(this).data('json');
+      var json = $.extend($(this).data('json'), { docs: docs });
       $('#modal').remove();
       $(tmpl(json)).appendTo('body').modal();
     });

@@ -15,32 +15,38 @@
           <tr>
             <th>{{ gettext("Document") }}</th>
             <th>{{ gettext("Status") }}</th>
-            <th>{{ gettext("Date") }}</th>
+            <th>{{ gettext("Date Published") }}</th>
           </tr>
         </thead>
         <tbody>
-          {% for cell in cells %}
+          {% for doc in docs %}
+            {% set cells = documents[doc.title] %}
             <tr>
               <th scope="row">
-                {% if cell.type %}
-                  {{ cell.type }}
-                {% else %}
-                  <span class="text-muted">{{ gettext("Unavailable") }}</span>
-                {% endif %}
+                {{ doc.title }}
               </th>
-              <td>
-                <span class="badge state state-{{ cell.state }}">
-                  <span>{{ cell.state|capitalize }}</span>
-                </span>
-                {{ cell.state|capitalize }}
-              </td>
-              <td>
-                {% if cell.date %}
-                  {{ cell.date|date('jS F Y') }}
-                {% else %}
+              {% if cells %}
+                <td>
+                  <span class="badge state state-{{ cells|last.state }}">
+                    <span>{{ cells|last.state|capitalize }}</span>
+                  </span>
+                  {{ cells|last.state|capitalize }}
+                </td>
+                <td>
+                  {{ cells|last.date_published}}
+                </td>
+              {% else %}
+                <td>
+                  <span class="badge state state-late" data-toggle="popover">
+                    <span>{{ gettext("Not available") }}</span>
+                  </span>
+                  {{ gettext("Not available") }}
+                </td>
+                <td>
                   <span class="text-muted">{{ gettext("Unavailable") }}</span>
-                {% endif %}
-              </td>
+                </td>
+              {% endif %}
+              
             </tr>
           {% endfor %}
         </tbody>

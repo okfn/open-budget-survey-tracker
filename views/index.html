@@ -44,30 +44,11 @@
                 <th class="text-center" data-toggle="popover" data-content="{{ gettext("The Open Budget Index (OBI) uses Open Budget Survey data to calculate a transparency score (0 to 100) for each country in the Survey based on the amount of budget information that governments make public.") }}">
                   {{ gettext("Open Budget Index") }}
                 </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("The purpose of the Pre-Budget Statement is to disclose the parameters of the Executive's Budget Proposal. It outlines the government's macroeconomic assumptions as well as anticipated total revenue and expenditures, and it sets out the debt that will be incurred during the upcoming budget year. The Pre-Budget Statement should be available no less than one month prior to the introduction of the Executive's Budget Proposal. If the Pre-Budget Statement is published less than a month before the Executive's Budget Proposal is submitted to the legislature, it is considered to be 'not publicly available'.") }}">
-                  {{ gettext("Pre-Budget Statement") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("The nature of the Executive's Budget Proposal varies from country to country. Sometimes it is a single document, sometimes multiple documents. The Executive's Budget Proposal is the document or documents that the executive submits to the legislature for its approval. It details expected government revenue and the sources of that revenue, as well as allocations to be made to all ministries, and to subnational governments in countries where the national government provides funding to the latter. The Executive's Budget Proposal should be made publicly available when it is first presented to the legislature, or, at a minimum, before the legislature approves it.") }}">
-                  {{ gettext("Executive's Budget Proposal") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("The Enacted Budget is the budget that has been passed into law by the legislature. Unlike most budget documents, the Enacted Budget should be available from the committee within the legislature that deals with the budget, although the Ministry of Finance or other body that houses the executive's budget documents may also have a copy of the Enacted Budget. The Enacted Budget must be released to the public no later than three months after the legislature has approved it.") }}">
-                  {{ gettext("Enacted Budget") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("A Citizens Budget is a version of the Executive's Budget Proposal, the Enacted Budget, or any other budget document that is simpler and less technical than the full document. It is normally shorter than the document on which it is based and is specifically designed to convey the key information in the particular document to the general public. A Citizens Budget should be available at the same time that the underlying document is made available. For example, if the Citizens Budget is a simplified version of the Executive's Budget Proposal, it should be released at the same time as the Executive's Budget Proposal.") }}">
-                  {{ gettext("Citizens Budget") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("These may be issued on a quarterly or monthly basis. They may be in the form of a consolidated report for the entire government or multiple reports from different agencies. In-Year Reports should be issued no later than three months after the end of the reporting period. If the report is issued after this date, it is considered as 'not publicly available.'") }}">
-                  {{ gettext("In-Year Reports") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("The Mid-Year Review contains a comprehensive update on the implementation of the budget as of the middle of the fiscal year, including a review of economic assumptions underlying the budget, and an updated forecast of the budget outcome for the fiscal year. The Mid-Year Review should be available no later than three months after the end of the first six months of the fiscal year.") }}">
-                  {{ gettext("Mid-Year Review") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("Generally the Year-End Report is issued as a single, consolidated report for the entire government, but individual ministries may issue separate Year-End Reports. The Year-End Report should be released no later than one year after the end of the fiscal year. The Year-End Report is 'not publicly available' if issued later than one year after the end of the fiscal year it reports on.") }}">
-                  {{ gettext("Year-End Report") }}
-                </th>
-                <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext("The Audit Report is issued by the country's supreme audit institution (SAI). It attests to the soundness and completeness of the government's year-end accounts. Unlike most other budget documents, the Audit Report is housed with the SAI. To be considered 'publicly available' the Audit Report must be published within 18 months after the end of the fiscal year to which it relates. The Audit Report would be 'not publicly available' if it is issued after that 18 month period.") }}">
-                  {{ gettext("Audit Report") }}
-                </th>
+                {% for doc in docs %}
+                  <th class="text-center" data-toggle="popover" data-placment="bottom" data-content="{{ gettext(doc.description) }}">
+                    {{ gettext(doc.title) }}
+                  </th>
+                {% endfor %}
               </tr>
             </thead>
             <tbody>
@@ -82,12 +63,22 @@
                       </span>
                     {% endif %}
                   </td>
-                  {% for cell in country.cells %}
-                    <td class="text-center">
-                      <span class="badge state state-{{ cell.state }}" data-toggle="popover" data-content="{{ cell.tooltip }}">
-                        <span>{{ cell.state|capitalize }}</span>
-                      </span>
-                    </td>
+                  {% for doc in docs %}
+                    {% set cells = country.documents[doc.title] %}
+                    {% set cell = cells|last %}
+                    {% if cell %}
+                      <td class="text-center" data-toggle="popover" data-content="{{ cell.tooltip }}">
+                        <span class="badge state state-{{ cell.state }}">
+                          <span>{{ cell.state|capitalize }}</span>
+                        </span>
+                      </td>
+                    {% else %}
+                      <td class="text-center" data-toggle="popover" data-content="{{ country.country }}'s {{ doc.title }} is not available">
+                        <span class="badge state state-late">
+                          <span>Not available</span>
+                        </span>
+                      </td>
+                    {% endif %}
                   {% endfor %}
                 </tr>
               {% endfor %}
