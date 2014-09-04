@@ -1,14 +1,5 @@
 {% extends "layout.html" %}
-
-{% macro table_fields(index) %}
-  {% for item in country.data %}
-    <td class="text-center">
-      <span class="badge state state-{{ item.cells[index].state }}" data-toggle="popover" data-content="{{ item.cells[index].tooltip }}">
-        <span>{{ item.cells[index].state|capitalize }}</span>
-      </span>
-    </td>
-  {% endfor %}
-{% endmacro %}
+{% import "helpers.html" as h %}
 
 {% block page_title %}{{ country.country + gettext(" - Open Budget Survey - Tracker") }}{% endblock %}
 
@@ -16,47 +7,94 @@
 
   <h1>{{ country.country }}</h1>
 
+  <h2>{{ gettext("Open Budget Index") }}</h2>
   <div class="table-responsive">
     <table class="table">
       <thead>
-        <th>{{ gettext("Document") }}</th>
-        {% for item in country.data %}
-          <th class="text-center">{{ item.date|date('jS F Y') }}</th>
-        {% endfor %}
+        <tr>
+          {% for score in country.obi_scores %}
+            <th scope="row">{{ score.year }}</th>
+          {% endfor %}
+        </tr>
       </thead>
       <tbody>
         <tr>
-          <th>{{ gettext("Pre-Budget Statement") }}</th>
-          {{ table_fields(0) }}
+          {% for score in country.obi_scores %}
+            <td>{{ score.score }}</td>
+          {% endfor %}
         </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>{{ gettext("Documents") }}</h2>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <th></th>
+        {% for year in country.documents %}
+          <th>{{ loop.key }}</th>
+        {% endfor %}
+      </thead>
+      <tbody>
+        {% for doc in docs %}
+          <tr>
+            <th scope="row">{{ doc.title }}</th>
+            {% for years in country.documents %}
+              {% set found = false %}
+              {% for items in years %}
+                {% if loop.key == doc.title %}
+                  {% set item = items|last %}
+                  {% set found = true %}
+                  <td data-toggle="popover" data-content="{{ h.tooltip(country, item) }}">
+                    <span class="badge state state-{{ item.state }}">
+                      <span>{{ h.state(item.state) }}</span>
+                    </span>
+                    {{ h.state(item.state) }}
+                  </td>
+                {% endif %}
+              {% endfor %}
+              {% if not found %}
+                <td data-toggle="popover" data-content="{{ h.tooltip(country, item) }}">
+                  <span class="badge state state-late">
+                    <span>{{ gettext("Not produced") }}</span>
+                  </span>
+                  {{ gettext("Not produced") }}
+                </td>
+              {% endif %}
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>{{ gettext("Sites") }}</h2>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
         <tr>
-          <th>{{ gettext("Executive's Budget Proposal") }}</th>
-          {{ table_fields(1) }}
+          <th>Title</th>
+          <th>Type</th>
+          <th>From</th>
+          <th>To</th>
+          <th></th>
         </tr>
-        <tr>
-          <th>{{ gettext("Enacted Budget") }}</th>
-          {{ table_fields(2) }}
-        </tr>
-        <tr>
-          <th>{{ gettext("Citizens Budget") }}</th>
-          {{ table_fields(3) }}
-        </tr>
-        <tr>
-          <th>{{ gettext("In-Year Reports") }}</th>
-          {{ table_fields(4) }}
-        </tr>
-        <tr>
-          <th>{{ gettext("Mid-Year Review") }}</th>
-          {{ table_fields(5) }}
-        </tr>
-        <tr>
-          <th>{{ gettext("Year-End Report") }}</th>
-          {{ table_fields(6) }}
-        </tr>
-        <tr>
-          <th>{{ gettext("Audit Report") }}</th>
-          {{ table_fields(7) }}
-        </tr>
+      </thead>
+      <tbody>
+        {% for site in country.sites %}
+          <tr>
+            <td>{{ site.title }}</td>
+            <td>{{ site.type }}</td>
+            <td>{{ date_format(site.search_dates.start, "Do MMMM YYYY") }}</td>
+            <td>{{ date_format(site.search_dates.end, "Do MMMM YYYY") }}</td>
+            <td>
+              {% if site.url %}
+                <a href="{{ site.url }}" target="_blank">{{ gettext("View") }}</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>

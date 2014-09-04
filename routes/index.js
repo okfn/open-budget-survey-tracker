@@ -41,7 +41,14 @@ var docs = [
 ];
 
 router.get('/country/:country', function (req, res) {
-  api.call('country:'+req.params.country, function (country) {
+  api.call('overview', function (countries) {
+    var country = {};
+    for (var i in countries) {
+      if (countries[i].country == req.params.country) {
+        country = countries[i];
+        break;
+      }
+    }
     res.render('country', {
       'docs': docs,
       'country': country

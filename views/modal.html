@@ -1,6 +1,6 @@
 {% import "helpers.html" as h %}
 
-<div id="modal" class="modal fade">
+<div id="modal" class="modal wide fade">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,12 +12,19 @@
           <p><strong>Open Budget Index ({{ country.obi_scores|last.year }}):</strong> {{ country.obi_scores|last.score }}/100</p>
         </div>
       {% endif %}
-      <table class="table modal-table">
+      <table class="table table-hover modal-table">
+        <colgroup>
+          <col width="40%">
+          <col width="20%">
+          <col width="20%">
+          <col width="20%">
+        </colgroup>
         <thead>
           <tr>
             <th>{{ gettext("Document") }}</th>
             <th>{{ gettext("Status") }}</th>
-            <th>{{ gettext("Date Published") }}</th>
+            <th>{{ gettext("Date of publication") }}</th>
+            <th><span class="text-muted">{{ gettext("Expected date") }}</span></th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +44,11 @@
                 <td>
                   {{ cells|last.date_published }}
                 </td>
+                <td>
+                  <span class="text-muted">
+                    {{ cells|last.date_expected }}
+                  </span>
+                </td>
               {% else %}
                 <td>
                   <span class="badge state state-late">
@@ -47,8 +59,10 @@
                 <td>
                   <span class="text-muted">{{ gettext("Unavailable") }}</span>
                 </td>
+                <td>
+                  <span class="text-muted">{{ gettext("Unavailable") }}</span>
+                </td>
               {% endif %}
-              
             </tr>
           {% endfor %}
         </tbody>

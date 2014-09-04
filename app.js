@@ -4,6 +4,7 @@ var express = require('express');
 var swig = require('swig');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var moment = require('moment');
 var _ = require('underscore');
 // var i18n = require('i18n-abide');
 
@@ -44,6 +45,9 @@ app.use(function (req, res, next) {
       file = '/build'+file.replace(index, manifest[index]);
     }
     return file;
+  };
+  res.locals.date_format = function (date, format) {
+    return moment(date).format(format);
   };
   next();
 });

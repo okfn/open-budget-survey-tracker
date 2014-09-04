@@ -25,10 +25,6 @@ function api_call (endpoint, callback) {
     callback(JSON.parse(data));
   } else {
     var url = uri+endpoint+'.json';
-    // temporary hack...
-    if (endpoint.substr(0, 8) == 'country:') {
-      url = 'https://gist.githubusercontent.com/johnmartin/b5b3a1666a60d47f3135/raw/8a6286ebbebb4cd0ff2faf81a66c6e51328d0d6f/country-bo.json';
-    }
     request(url, function (error, response, data) {
       if (!error && response.statusCode == 200) {
         if (should_update_cache) {
