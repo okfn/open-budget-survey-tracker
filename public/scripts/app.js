@@ -23,9 +23,9 @@
       var country = $(this).data('country');
       $('#modal').remove();
       $(loading_modal.replace('{{ country }}', country)).appendTo('body').modal();
-      // $.get('/modal/'+country, function (html) {
-        // $('#modal').html(html);
-      // });
+      $.get('/modal/'+country, function (html) {
+        $('#modal').html(html);
+      });
     });
     $('#overview-table').fixedHeader({
       topOffset: 40
