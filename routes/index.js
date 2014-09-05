@@ -72,6 +72,10 @@ router.get('/modal/:country', function (req, res) {
   });
 });
 
+router.get('/press', function (req, res) {
+  res.render('press', {});
+});
+
 router.get('/about', function (req, res) {
   res.render('about', {});
 });

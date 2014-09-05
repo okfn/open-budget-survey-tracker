@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block page_title %}{{ gettext("Press - Open Budget Survey - Tracker") }}{% endblock %}
+
+{% block extrahead %}
+<link rel="profile" href="http://microformats.org/profile/hcard">
+{% endblock%}
+
+{% block content %}
+
+<div class="row">
+
+  <div class="col-md-4 vcard">
+    <h2>Media Contact</h2>
+    <div class="fn">Delaine McCullough</div>
+    <div class="title">Communications Manager</div>
+    <div><a href="mailto:dmccullough@internationalbudget.org" class="email">dmccullough@internationalbudget.org</a></div>
+    <div class="tel"><span class="type">Phone</span>: <span class="value">+1-202-408-1080</span></div>
+    <div class="tel"><span class="type">Mobile</span>: <span class="value">+1-202-360-3057</span></div>
+  </div>
+
+</div>
+
+{% endblock %}
