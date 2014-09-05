@@ -1,7 +1,7 @@
 {%- macro state(check) -%}
   {%- if check == "available" -%}
     {{ gettext("Publicly available") }}
-  {%- elif check == "available" -%}
+  {%- elif check == "internal" -%}
     {{ gettext("Internally available") }}
   {%- else -%}
     {{ gettext("Not produced") }}
