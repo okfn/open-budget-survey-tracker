@@ -9,7 +9,7 @@
 {%- endmacro -%}
 
 {%- macro tooltip(country, doc) -%}
-  {{ country.country }}'s {{ doc.type }} is {{ state(doc.state) }}
+  {{ country.country }}'s {% if doc.type %}{{ doc.type }}{% else %}{{ doc.title}}{% endif %} is {{ state(doc.state) }}
   {%- if doc.date_published -%}
     and was published {{ doc.date_published }}
   {%- elif doc.date_expected -%}
