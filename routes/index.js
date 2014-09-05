@@ -41,7 +41,7 @@ var docs = [
 ];
 
 router.get('/country/:country', function (req, res) {
-  api.call('overview', function (countries) {
+  api.call('countries', function (countries) {
     var country = {};
     for (var i in countries) {
       if (countries[i].country == req.params.country) {
@@ -57,7 +57,7 @@ router.get('/country/:country', function (req, res) {
 });
 
 router.get('/modal/:country', function (req, res) {
-  api.call('overview', function (countries) {
+  api.call('countries', function (countries) {
     var country = {};
     for (var i in countries) {
       if (countries[i].country == req.params.country) {
@@ -85,7 +85,7 @@ router.get('/about', function (req, res) {
 });
 
 router.get('/', function (req, res) {
-  api.call('overview', function (countries) {
+  api.call('countries', function (countries) {
     res.render('index', {
       'docs': docs,
       'countries': countries
