@@ -72,6 +72,10 @@ router.get('/modal/:country', function (req, res) {
   });
 });
 
+router.get('/datagathering', function (req, res) {
+  res.render('gathering', {});
+});
+
 router.get('/press', function (req, res) {
   res.render('press', {});
 });
