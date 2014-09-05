@@ -65,7 +65,10 @@
                     <td></td>
                   {% endif %}
                   {% for doc in docs %}
-                    {% set cells = country.documents|last[doc.title] %}
+		    {% set cells = [] %}
+		    {% if country.documents|last %}
+                       {% set cells = country.documents|last[doc.title] %}
+                    {% endif %}
                     {% set cell = cells|last %}
                     {% if cell %}
                       <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
