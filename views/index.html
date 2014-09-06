@@ -20,7 +20,7 @@
               {{ gettext("Internally available") }}
             </span>
             <span class="item">
-              <span class="badge state state-waiting"><span>{{ gettext("Not produced") }}</span></span>
+              <span class="badge state state-not-produced"><span>{{ gettext("Not produced") }}</span></span>
               {{ gettext("Not produced") }}
             </span>
           </div>
@@ -72,7 +72,7 @@
                     {% set cell = cells|last %}
                     {% if cell %}
                       <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
-                        <span class="badge state state-{{ cell.state }}">
+                        <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
                           <span>{{ h.state(cell.state) }}</span>
                         </span>
                       </td>

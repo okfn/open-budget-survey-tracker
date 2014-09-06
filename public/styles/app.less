@@ -3,7 +3,7 @@
 
 @header-height: 99px;
 @state-color-late: #CA2222;
-@state-color-waiting: @state-color-late;
+@state-color-not-produced: @state-color-late;
 @state-color-internal: #F5DD0C;
 @state-color-available: #28C926;
 
@@ -90,9 +90,9 @@ nav.main {
     background-color: lighten(@state-color-late, 15%) !important;
     border-color: darken(@state-color-late, 15%) !important;
   }
-  &.state-waiting {
-    background-color: lighten(@state-color-waiting, 15%) !important;
-    border-color: darken(@state-color-waiting, 15%) !important;
+  &.state-not-produced {
+    background-color: lighten(@state-color-not-produced, 15%) !important;
+    border-color: darken(@state-color-not-produced, 15%) !important;
   }
   &.state-internal {
     background-color: lighten(@state-color-internal, 15%) !important;
@@ -117,9 +117,9 @@ nav.main {
       background-color: @state-color-late;
       border-color: darken(@state-color-late  , 30%);
     }
-    .state-waiting {
-      background-color: @state-color-waiting;
-      border-color: darken(@state-color-waiting, 30%);
+    .state-not-produced {
+      background-color: @state-color-not-produced;
+      border-color: darken(@state-color-not-produced, 30%);
     }
     .state-internal {
       background-color: @state-color-internal;
