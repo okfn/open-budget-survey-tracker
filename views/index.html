@@ -65,11 +65,14 @@
                     <td></td>
                   {% endif %}
                   {% for doc in docs %}
-		    {% set cells = [] %}
-		    {% if country.documents|last %}
-                       {% set cells = country.documents|last[doc.title] %}
-                    {% endif %}
-                    {% set cell = cells|last %}
+		    {% set cell = undefined %}
+		    {% for year in country.documents|reverse %}
+                      {% if not cell %}
+                        {% if doc.title in country.documents[year] %}
+                          {% set cell = country.documents[year][doc.title]|last %}
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
                     {% if cell %}
                       <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
                         <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
