@@ -47,7 +47,7 @@
                   {% set item = items|last %}
                   {% set found = true %}
                   <td data-toggle="popover" data-content="{{ h.tooltip(country, item) }}">
-                    <span class="badge state state-{{ item.state }}">
+                    <span class="badge state state-{{ item.state|replace(' ', '-') }}">
                       <span>{{ h.state(item.state) }}</span>
                     </span>
                     {{ h.state(item.state) }}
