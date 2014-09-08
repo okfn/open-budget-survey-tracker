@@ -35,7 +35,7 @@
             </th>
             {% if cells %}
               <td>
-                <span class="badge state state-{{ cells|last.state }}">
+                <span class="badge state state-{{ cells|last.state|replace(' ', '-') }}">
                   <span>{{ h.state(cells|last.state) }}</span>
                 </span>
                 {{ h.state(cells|last.state) }}
