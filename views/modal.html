@@ -45,7 +45,20 @@
               </td>
               <td>
                 <span class="text-muted">
-                  {{ cells|last.date_expected }}
+                  {#
+                  Special cases:
+                  * In-Year Report
+                  * Citizen's Budget
+
+                  For these next publication should just be described with
+                  static text since they cannot be computed and are dependent
+                  on each government's budget cycle.
+                  #}
+                  {% set static_expected = {
+                      'in-year report': 'Publishing period for each report is one to three months after a particular month/quarter ends.',
+                      "citizen's budget": 'Same as either the Executive Budget Proposal or Enacted Budget.' }
+                  %}
+                  {{ static_expected[doc.title|lower]|default(cells|last.date_expected) }}
                 </span>
               </td>
             {% else %}
