@@ -41,7 +41,7 @@
                 {{ h.state(cells|last.state) }}
               </td>
               <td>
-                {{ cells|last.date_published }}
+                {{ cells|last.date_published|default(gettext("Unavailable")) }}
               </td>
               <td>
                 <span class="text-muted">
@@ -58,7 +58,7 @@
                       'in-year report': 'Publishing period for each report is one to three months after a particular month/quarter ends.',
                       "citizen's budget": 'Same as either the Executive Budget Proposal or Enacted Budget.' }
                   %}
-                  {{ static_expected[doc.title|lower]|default(cells|last.date_expected) }}
+                  {{ static_expected[doc.title|lower]|default(cells|last.date_expected)|default(gettext("Unavailable")) }}
                 </span>
               </td>
             {% else %}
