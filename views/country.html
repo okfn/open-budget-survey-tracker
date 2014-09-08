@@ -32,17 +32,17 @@
     <table class="table table-hover">
       <thead>
         <th></th>
-        {% for year in country.documents %}
-          <th>{{ loop.key }}</th>
+        {% for year in country.documents|reverse %}
+          <th>{{ year }}</th>
         {% endfor %}
       </thead>
       <tbody>
         {% for doc in docs %}
           <tr>
             <th scope="row">{{ doc.title }}</th>
-            {% for years in country.documents %}
+            {% for years in country.documents|reverse %}
               {% set found = false %}
-              {% for items in years %}
+              {% for items in country.documents[years] %}
                 {% if loop.key == doc.title %}
                   {% set item = items|last %}
                   {% set found = true %}
