@@ -41,7 +41,13 @@
                 {{ h.state(cells|last.state) }}
               </td>
               <td>
-                {{ cells|last.date_published|default(gettext("Unavailable")) }}
+                {% if cells|last.date_published %}
+                {{ cells|last.date_published }}
+                {% else %}
+                <span class="text-muted">
+                  {{ gettext("Unavailable") }}
+                </span>
+                {% endif %}
               </td>
               <td>
                 <span class="text-muted">
