@@ -1,7 +1,7 @@
 var request = require('request');
 var fs = require('fs');
 
-var uri = 'http://aquarium-staging.herokuapp.com/';
+var uri = 'http://obstracker.internationalbudget.org/';
 // Sets the cache age to an hour
 var cache_age = 3600000;
 
