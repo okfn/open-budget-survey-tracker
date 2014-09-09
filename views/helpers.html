@@ -3,16 +3,25 @@
     {{ gettext("Publicly available") }}
   {%- elif check == "internal" -%}
     {{ gettext("Internally available") }}
+  {%- elif check == 'late' - %}
+    {{ gettext("Published late") }}
   {%- else -%}
     {{ gettext("Not produced") }}
   {%- endif -%}
 {%- endmacro -%}
 
 {%- macro tooltip(country, doc) -%}
-  {{ country.country }}'s {% if doc.type %}{{ doc.type }}{% else %}{{ doc.title}}{% endif %} is {{ state(doc.state) }}
+  {{ country.country }}'s {% if doc.type %}{{ doc.type }}{% else %}{{ doc.title}}{% endif %} 
+  {%- if doc.state == 'available' %}
+    {{ gettext("is publicly available") }}
+  {%- elif doc.state == "internal" %}
+    {{ gettext("is produced and available for internal use only") }}
+  {%- elif doc.state == 'late' %}
+    {{ gettext("was late") }}
+  {%- else %}
+    {{ gettext("is not produced") }}
+  {%- endif -%}
   {%- if doc.date_published -%}
-    and was published {{ doc.date_published }}
-  {%- elif doc.date_expected -%}
-    and was expected {{ doc.date_expected }}
+    {{ gettext("and was published on") }} {{ doc.date_published }}
   {%- endif -%}
 {%- endmacro -%}
