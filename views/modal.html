@@ -28,21 +28,28 @@
       </thead>
       <tbody>
         {% for doc in docs %}
-          {% set cells = country.documents|last[doc.title] %}
+          {% set cell = undefined %}
+          {% for year in country.documents|reverse %}
+            {% if not cell %}
+              {% if doc.title in country.documents[year] %}
+                {% set cell = country.documents[year][doc.title]|last %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
           <tr>
             <th scope="row">
               {{ doc.title }}
             </th>
-            {% if cells %}
+            {% if cell %}
               <td>
-                <span class="badge state state-{{ cells|last.state|replace(' ', '-') }}">
-                  <span>{{ h.state(cells|last.state) }}</span>
+                <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
+                  <span>{{ h.state(cell.state) }}</span>
                 </span>
-                {{ h.state(cells|last.state) }}
+                {{ h.state(cell.state) }}
               </td>
               <td>
-                {% if cells|last.date_published %}
-                {{ cells|last.date_published }}
+                {% if cell.date_published %}
+                {{ cell.date_published }}
                 {% else %}
                 <span class="text-muted">
                   {{ gettext("Unavailable") }}
@@ -64,7 +71,7 @@
                       'in-year report': 'Publishing period for each report is one to three months after a particular month/quarter ends.',
                       "citizen's budget": 'Same as either the Executive Budget Proposal or Enacted Budget.' }
                   %}
-                  {{ static_expected[doc.title|lower]|default(cells|last.date_expected)|default(gettext("Unavailable")) }}
+                  {{ static_expected[doc.title|lower]|default(cell.date_expected)|default(gettext("Unavailable")) }}
                 </span>
               </td>
             {% else %}
