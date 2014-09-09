@@ -13,10 +13,10 @@
     {% endif %}
     <table class="table table-hover modal-table">
       <colgroup>
-        <col width="40%">
+        <col width="30%">
         <col width="20%">
         <col width="20%">
-        <col width="20%">
+        <col width="30%">
       </colgroup>
       <thead>
         <tr>
@@ -68,10 +68,29 @@
                   on each government's budget cycle.
                   #}
                   {% set static_expected = {
-                      'in-year report': 'Publishing period for each report is one to three months after a particular month/quarter ends.',
-                      "citizens budget": 'Same as either the Executive Budget Proposal or Enacted Budget.' }
+                      'in-year report': gettext('Publishing period for each report is one to three months after a particular month/quarter ends.'),
+                      "citizens budget": gettext('Same as either the Executive Budget Proposal or Enacted Budget.') }
                   %}
-                  {{ static_expected[doc.title|lower]|default(cell.date_expected)|default(gettext("Unavailable")) }}
+                  {% if doc.title|lower in static_expected %}
+                    {{ static_expected[doc.title|lower] }}
+                  {% else %}
+                    {% set search_dates_found = false %}
+		    {% for site in country.sites %}
+                      {% if site.type == doc.title && !search_dates_found %}
+                        {% set start_date = Date.parse(site.search_dates.start) %}
+                        {%- if start_date < Date.now() %}
+                          Before
+                        {%- else %}
+                        {{ Date.parse(site.search_dates.start)|date('d M Y') }} -
+                        {% endif %}
+{{ Date.parse(site.search_dates.end)|date('d M Y') }}
+                       {% set search_dates_found = true %}
+		      {% endif %}
+                    {% endfor %}
+                    {% if !search_dates_found %}
+                       {{ gettext("Unavailable") }}
+                    {% endif %}
+                  {% endif %}
                 </span>
               </td>
             {% else %}
