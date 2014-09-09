@@ -19,7 +19,7 @@ var docs = [
     "description": "The Enacted Budget is the budget that has been passed into law by the legislature. Unlike most budget documents, the Enacted Budget should be available from the committee within the legislature that deals with the budget, although the Ministry of Finance or other body that houses the executive's budget documents may also have a copy of the Enacted Budget. The Enacted Budget must be released to the public no later than three months after the legislature has approved it."
   },
   {
-    "title": "Citizen's Budget",
+    "title": "Citizens Budget",
     "description": "A Citizens Budget is a version of the Executive's Budget Proposal, the Enacted Budget, or any other budget document that is simpler and less technical than the full document. It is normally shorter than the document on which it is based and is specifically designed to convey the key information in the particular document to the general public. A Citizens Budget should be available at the same time that the underlying document is made available. For example, if the Citizens Budget is a simplified version of the Executive's Budget Proposal, it should be released at the same time as the Executive's Budget Proposal."
   },
   {

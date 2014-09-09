@@ -61,7 +61,7 @@
                   {#
                   Special cases:
                   * In-Year Report
-                  * Citizen's Budget
+                  * Citizens Budget
 
                   For these next publication should just be described with
                   static text since they cannot be computed and are dependent
@@ -69,7 +69,7 @@
                   #}
                   {% set static_expected = {
                       'in-year report': 'Publishing period for each report is one to three months after a particular month/quarter ends.',
-                      "citizen's budget": 'Same as either the Executive Budget Proposal or Enacted Budget.' }
+                      "citizens budget": 'Same as either the Executive Budget Proposal or Enacted Budget.' }
                   %}
                   {{ static_expected[doc.title|lower]|default(cell.date_expected)|default(gettext("Unavailable")) }}
                 </span>
