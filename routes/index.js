@@ -27,7 +27,7 @@ var docs = [
     "description": "These may be issued on a quarterly or monthly basis. They may be in the form of a consolidated report for the entire government or multiple reports from different agencies. In-Year Reports should be issued no later than three months after the end of the reporting period. If the report is issued after this date, it is considered as 'not publicly available'."
   },
   {
-    "title": "Mid-year Review",
+    "title": "Mid-Year Review",
     "description": "The Mid-Year Review contains a comprehensive update on the implementation of the budget as of the middle of the fiscal year, including a review of economic assumptions underlying the budget, and an updated forecast of the budget outcome for the fiscal year. The Mid-Year Review should be available no later than three months after the end of the first six months of the fiscal year."
   },
   {
