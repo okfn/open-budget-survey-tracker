@@ -55,7 +55,7 @@
                 {% endif %}
               {% endfor %}
               {% if not found %}
-                <td data-toggle="popover" data-content="{{ h.tooltip(country, item) }}">
+                <td data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
                   <span class="badge state state-late">
                     <span>{{ gettext("Not produced") }}</span>
                   </span>
