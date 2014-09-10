@@ -76,6 +76,10 @@ router.get('/datagathering', function (req, res) {
   res.render('gathering', {});
 });
 
+router.get('/publications', function (req, res) {
+  res.render('publications', {});
+});
+
 router.get('/press', function (req, res) {
   res.render('press', {});
 });

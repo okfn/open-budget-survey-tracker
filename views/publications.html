@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block page_title %}{{ gettext("Press - Open Budget Survey - Tracker") }}{% endblock %}
+
+{% block extrahead %}
+<link rel="profile" href="http://microformats.org/profile/hcard">
+{% endblock%}
+
+{% block content %}
+
+<div class="row">
+
+  <div class="col-md-4">
+    <h2>Reports</h2>
+    <a href="{{ asset('/pdfs/sept_2014_obstracker_report.pdf') }}">September 2014 Open Budget Survey Tracker Report</a>
+  </div>
+</div>
+
+{% endblock %}
