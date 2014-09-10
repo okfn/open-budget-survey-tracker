@@ -32,37 +32,55 @@
     <table class="table table-hover">
       <thead>
         <th></th>
-        {% for year in country.documents|reverse %}
-          <th>{{ year }}</th>
+	{% set obi_latest = country.obi.availability|sort|last %}
+	<th>OBS {{ obi_latest }}</th>
+	{% for snapshot in country.snapshots|sort %}
+          <th>{{ Date.parse(snapshot)|date('d M Y') }}</th>
         {% endfor %}
       </thead>
       <tbody>
         {% for doc in docs %}
           <tr>
             <th scope="row">{{ doc.title }}</th>
-            {% for years in country.documents|reverse %}
-              {% set found = false %}
-              {% for items in country.documents[years] %}
-                {% if loop.key == doc.title %}
-                  {% set item = items|last %}
-                  {% set found = true %}
-                  <td data-toggle="popover" data-content="{{ h.tooltip(country, item) }}">
-                    <span class="badge state state-{{ item.state|replace(' ', '-') }}">
-                      <span>{{ h.state(item.state) }}</span>
-                    </span>
-                    {{ h.state(item.state) }}
-                  </td>
+	    <td>
+	      {% if obi_latest %}
+	      {% set state = country.obi.availability[obi_latest][doc.title] %}
+              <span class="badge state state-{{ state|replace(' ', '-') }}">
+                <span>{{ h.state(state) }}</span>
+              </span>
+              {{ h.state(state) }}
+	      {% else %}
+              <span class="badge state state-untracked }}">
+                <span>{{ gettext("Not tracked") }}</span>
+              </span>
+              {{ gettext("Not tracked") }}
+	      {% endif %}
+	    </td>
+	    {% for snapshot in country.snapshots %}
+              {% set cell = undefined %}
+	      {% for year in snapshot|reverse %}
+                {% if not cell %}
+                  {% if doc.title in snapshot[year] %}
+                    {% set cell = snapshot[year][doc.title]|last %}
+                  {% endif %}
                 {% endif %}
               {% endfor %}
-              {% if not found %}
-                <td data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
-                  <span class="badge state state-late">
-                    <span>{{ gettext("Not produced") }}</span>
-                  </span>
-                  {{ gettext("Not produced") }}
-                </td>
-              {% endif %}
-            {% endfor %}
+              {% if cell %}
+                 <td data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
+                   <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
+                   <span>{{ h.state(cell.state) }}</span>
+                 </span>
+		     {{ h.state(cell.state) }}
+                 </td>
+              {% else %}
+                 <td data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
+                 <span class="badge state state-late">
+                    <span>{{ h.state("late") }}</span>
+                 </span>
+                 {{ h.state("late") }}
+                 </td>
+               {% endif %}
+             {% endfor %}
           </tr>
         {% endfor %}
       </tbody>
