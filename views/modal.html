@@ -95,10 +95,10 @@
               </td>
             {% else %}
               <td>
-                <span class="badge state state-late">
-                  <span>{{ gettext("Not produced") }}</span>
+                <span class="badge state state-not-produced">
+                  <span>{{ h.state("not produced") }}</span>
                 </span>
-                {{ gettext("Not produced") }}
+                {{ h.state("not produced") }}
               </td>
               <td>
                 <span class="text-muted">{{ gettext("Unavailable") }}</span>
