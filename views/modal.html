@@ -56,6 +56,17 @@
                 </span>
                 {% endif %}
               </td>
+            {% else %}
+              <td>
+                <span class="badge state state-not-produced">
+                  <span>{{ h.state("not produced") }}</span>
+                </span>
+                {{ h.state("not produced") }}
+              </td>
+              <td>
+                <span class="text-muted">{{ gettext("Unavailable") }}</span>
+              </td>
+            {% endif %}
               <td>
                 <span class="text-muted">
                   {#
@@ -76,15 +87,18 @@
                   {% else %}
                     {% set search_dates_found = false %}
 		    {% for site in country.sites %}
-                      {% if site.type == doc.title && !search_dates_found %}
+                      {% if !search_dates_found && site.type == doc.title %}
                         {% set start_date = Date.parse(site.search_dates.start) %}
-                        {%- if start_date < Date.now() %}
-                          Before
-                        {%- else %}
-                        {{ Date.parse(site.search_dates.start)|date('d M Y') }} -
+		        {% set end_date = Date.parse(site.search_dates.end) %}
+                        {% if end_date >= Date.now() %}
+                          {%- if start_date < Date.now() %}
+                            Before
+                          {%- else %}
+                          {{ Date.parse(site.search_dates.start)|date('d M Y') }} -
+                          {% endif %}
+                          {{ Date.parse(site.search_dates.end)|date('d M Y') }}
+                          {% set search_dates_found = true %}
                         {% endif %}
-{{ Date.parse(site.search_dates.end)|date('d M Y') }}
-                       {% set search_dates_found = true %}
 		      {% endif %}
                     {% endfor %}
                     {% if !search_dates_found %}
@@ -93,20 +107,6 @@
                   {% endif %}
                 </span>
               </td>
-            {% else %}
-              <td>
-                <span class="badge state state-not-produced">
-                  <span>{{ h.state("not produced") }}</span>
-                </span>
-                {{ h.state("not produced") }}
-              </td>
-              <td>
-                <span class="text-muted">{{ gettext("Unavailable") }}</span>
-              </td>
-              <td>
-                <span class="text-muted">{{ gettext("Unavailable") }}</span>
-              </td>
-            {% endif %}
           </tr>
         {% endfor %}
       </tbody>
