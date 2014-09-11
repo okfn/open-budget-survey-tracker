@@ -35,7 +35,7 @@
 	{% set obi_latest = country.obi.availability|sort|last %}
 	<th>OBS {{ obi_latest }}</th>
 	{% for snapshot in country.snapshots|sort %}
-          <th>{{ Date.parse(snapshot)|date('d M Y') }}</th>
+          <th>{{ Date.parse(snapshot)|date('M Y') }}</th>
         {% endfor %}
       </thead>
       <tbody>
