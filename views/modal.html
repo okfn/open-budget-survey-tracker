@@ -32,7 +32,7 @@
           {% for year in country.documents|reverse %}
             {% if not cell %}
               {% if doc.title in country.documents[year] %}
-                {% set cell = country.documents[year][doc.title]|last %}
+                {% set cell = country.documents[year][doc.title]|first %}
               {% endif %}
             {% endif %}
           {% endfor %}
