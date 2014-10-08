@@ -35,7 +35,7 @@
 	{% set obi_latest = country.obi.availability|sort|last %}
 	<th>OBS {{ obi_latest }}</th>
 	{% for snapshot in country.snapshots|sort %}
-          <th>{{ Date.parse(snapshot)|date('M Y') }}</th>
+          <th>{{ Date.parse(snapshot.date)|date('M Y') }}</th>
         {% endfor %}
       </thead>
       <tbody>
@@ -56,7 +56,8 @@
               {{ gettext("Not tracked") }}
 	      {% endif %}
 	    </td>
-	    {% for snapshot in country.snapshots %}
+	    {% for item in country.snapshots %}
+	      {% set snapshot = item.snapshot %}
               {% set cell = undefined %}
 	      {% for year in snapshot|reverse %}
                 {% if not cell %}
