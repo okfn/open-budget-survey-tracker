@@ -33,29 +33,15 @@
       <thead>
         <th></th>
 	{% set obi_latest = country.obi.availability|sort|last %}
-	<th>OBS {{ obi_latest }}</th>
 	{% for snapshot in country.snapshots|sort %}
           <th>{{ Date.parse(snapshot.date)|date('M Y') }}</th>
         {% endfor %}
+	<th>OBS {{ obi_latest }}</th>
       </thead>
       <tbody>
         {% for doc in docs %}
           <tr>
             <th scope="row">{{ doc.title }}</th>
-	    <td>
-	      {% if obi_latest %}
-	      {% set state = country.obi.availability[obi_latest][doc.title] %}
-              <span class="badge state state-{{ state|replace(' ', '-') }}">
-                <span>{{ h.state(state) }}</span>
-              </span>
-              {{ h.state(state) }}
-	      {% else %}
-              <span class="badge state state-untracked }}">
-                <span>{{ gettext("Not tracked") }}</span>
-              </span>
-              {{ gettext("Not tracked") }}
-	      {% endif %}
-	    </td>
 	    {% for item in country.snapshots %}
 	      {% set snapshot = item.snapshot %}
               {% set cell = undefined %}
@@ -82,6 +68,20 @@
                  </td>
                {% endif %}
              {% endfor %}
+	    <td>
+	      {% if obi_latest %}
+	      {% set state = country.obi.availability[obi_latest][doc.title] %}
+              <span class="badge state state-{{ state|replace(' ', '-') }}">
+                <span>{{ h.state(state) }}</span>
+              </span>
+              {{ h.state(state) }}
+	      {% else %}
+              <span class="badge state state-untracked }}">
+                <span>{{ gettext("Not tracked") }}</span>
+              </span>
+              {{ gettext("Not tracked") }}
+	      {% endif %}
+	    </td>
           </tr>
         {% endfor %}
       </tbody>
