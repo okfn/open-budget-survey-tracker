@@ -90,9 +90,23 @@ router.get('/about', function (req, res) {
 
 router.get('/', function (req, res) {
   api.call('countries', function (countries) {
+    // If today is less than the 22nd of the month the data is from
+    // the last date of two months ago else it's from last date of one
+    // month ago
+    var last_update = new Date();
+    if (last_update.getDate() < 22) {
+      last_update = new Date(last_update.getFullYear(),
+                             last_update.getMonth()-1, 0);
+    }
+    else {
+      last_update = new Date(last_update.getFullYear(),
+                             last_update.getMonth(), 0);
+    }
+
     res.render('index', {
       'docs': docs,
-      'countries': countries
+      'countries': countries,
+      'last_update': last_update
     });
   });
 });
