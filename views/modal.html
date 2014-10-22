@@ -13,14 +13,16 @@
     {% endif %}
     <table class="table table-hover modal-table">
       <colgroup>
-        <col width="30%">
         <col width="20%">
+	<col width="8%">
+        <col width="22%">
         <col width="20%">
         <col width="30%">
       </colgroup>
       <thead>
         <tr>
           <th>{{ gettext("Document") }}</th>
+	  <th>{{ gettext("Fiscal Year") }}</th>
           <th>{{ gettext("Current Status") }}</th>
           <th>{{ gettext("Date of Publication") }}</th>
           <th><span class="text-muted">{{ gettext("Next Publishing Period") }}</span></th>
@@ -29,9 +31,11 @@
       <tbody>
         {% for doc in docs %}
           {% set cell = undefined %}
+	  {% set fiscal_year = '-' %}
           {% for year in country.documents|reverse %}
             {% if not cell %}
               {% if doc.title in country.documents[year] %}
+                {% set fiscal_year = year %}
                 {% set cell = country.documents[year][doc.title]|first %}
               {% endif %}
             {% endif %}
@@ -40,6 +44,7 @@
             <th scope="row">
               {{ doc.title }}
             </th>
+            <td>{{ fiscal_year }}</td>
             {% if cell %}
               <td>
                 <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
