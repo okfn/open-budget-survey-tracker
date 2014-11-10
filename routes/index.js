@@ -88,6 +88,56 @@ router.get('/about', function (req, res) {
   res.render('about', {});
 });
 
+router.get('/data.csv', function (req, res) {
+    // Generate header row
+    var csv = "";
+    var headers = ['country','code','month','year'];
+    for (var i in docs) {
+	headers.push(docs[i].title);
+    }
+    csv += headers.join(',')+'\n';
+
+    api.call('countries', function(countries) {
+	for (var c in countries) {
+	    var country = countries[c];
+	    var snapshots = countries[c].snapshots;
+	    for (var s in snapshots) {
+		var data = [];
+		data.push(country.country);
+		data.push(country.code);
+		var snapshot = snapshots[s];
+		var date = moment(snapshot.date);
+		data.push(date.month());
+		data.push(date.year());
+		for (var d in docs) {
+		    var doc = docs[d];
+		    var cell = undefined;
+		    var years = Object.keys(snapshot.snapshot).sort().reverse()
+		    for (var y in years) {
+			var year_data = snapshot.snapshot[years[y]];
+			if (cell === undefined) {
+			    if (doc.title in year_data) {
+				var year_docs = year_data[doc.title];
+				cell = year_docs[year_docs.length-1];
+			    }
+			}
+		    }
+		    if (cell) {
+			data.push(cell.state);
+		    }
+		    else {
+			data.push('not produced');
+		    }
+		}
+		csv += data.join(',')+'\n';
+	    }
+	}
+	res.charset = 'utf-8';
+	res.set('Content-Type', 'text/csv');
+	res.send(csv);
+    });
+});
+
 router.get('/', function (req, res) {
   api.call('countries', function (countries) {
     // If today is less than the 22nd of the month the data is from
