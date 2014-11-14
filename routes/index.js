@@ -107,7 +107,7 @@ router.get('/data.csv', function (req, res) {
 		data.push(country.code);
 		var snapshot = snapshots[s];
 		var date = moment(snapshot.date);
-		data.push(date.month());
+		data.push(date.month()+1);  // Months in js start from 0
 		data.push(date.year());
 		for (var d in docs) {
 		    var doc = docs[d];
