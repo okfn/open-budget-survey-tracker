@@ -138,6 +138,18 @@ router.get('/data.csv', function (req, res) {
     });
 });
 
+router.get('/updates/:update', function (req, res) {
+    res.render('updates/'+req.params.update, {}, function(err, html) {
+	if (err) {
+	    console.log(err);
+	    res.status(404).send('Not found');
+	}
+	else {
+	    res.send(html)
+	}
+    });
+});
+
 router.get('/', function (req, res) {
   api.call('countries', function (countries) {
     // If today is less than the 22nd of the month the data is from
