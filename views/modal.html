@@ -4,11 +4,11 @@
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">{{ gettext("Close") }}</span></button>
-      <h4 class="modal-title">{{ country.country }}</h4>
+      <h4 class="modal-title">{{ gettext(country.country) }}</h4>
     </div>
     {% if country.obi_scores %}
       <div class="modal-body">
-        <p><strong>Open Budget Index ({{ country.obi_scores|last.year }}):</strong> {{ country.obi_scores|last.score }}/100</p>
+        <p><strong>gettext("Open Budget Index") ({{ country.obi_scores|last.year }}):</strong> {{ country.obi_scores|last.score }}/100</p>
       </div>
     {% endif %}
     <table class="table table-hover modal-table">

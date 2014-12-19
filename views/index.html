@@ -56,7 +56,7 @@
               {% for country in countries %}
                 {% set code = country.code|lower %}
                 <tr data-country="{{ country.country }}">
-                  <td><a href="/country/{{ code }}">{{ country.country }}</a></td>
+                  <td><a href="/country/{{ code }}">{{ gettext(country.country) }}</a></td>
                   {% if country.obi_scores %}
                     <td class="text-center" data-toggle="popover" data-content="From {{ country.obi_scores|last.year }}">
                       {{ country.obi_scores|last.score }}
