@@ -24,3 +24,11 @@ Open: <http://localhost:3000/>
 
 Whilst developing you should run `gulp watch` as it'll re-compile your assets
 for you.
+
+
+## Translations
+
+To extract strings for translations  you can run:
+
+    ./node_modules/.bin/extract-pot --locale i18n --exclude bower_components -t jinja -f html .
+
