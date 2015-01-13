@@ -6,9 +6,9 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var moment = require('moment');
 var _ = require('underscore');
-// var i18n = require('i18n-abide');
+var i18n = require('i18n-abide');
 
-// var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'messages.pot');
+var locales = _.without(fs.readdirSync(path.join(__dirname, '/i18n')), 'templates');
 var routes = require('./routes/index');
 var manifest = require('./public/build/manifest.json');
 
@@ -27,15 +27,12 @@ app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // OK setup translation
-// app.use(i18n.abide({
-//   default_lang: 'en',
-//   supported_languages: locales,
-//   translation_directory: 'i18n'
-// }));
+app.use(i18n.abide({
+  default_lang: 'en',
+  supported_languages: locales,
+  translation_directory: 'public/i18n'
+}));
 app.use(function (req, res, next) {
-  res.locals.gettext = function (text) {
-    return text;
-  };
   res.locals.asset = function (file) {
     if (app.get('env') === 'development') {
       return file;

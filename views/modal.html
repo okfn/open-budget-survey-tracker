@@ -42,7 +42,7 @@
           {% endfor %}
           <tr>
             <th scope="row">
-              {{ doc.title }}
+              {{ gettext(doc.title) }}
             </th>
             <td>{{ fiscal_year }}</td>
             {% if cell %}

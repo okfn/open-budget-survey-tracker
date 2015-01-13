@@ -41,7 +41,7 @@
       <tbody>
         {% for doc in docs %}
           <tr>
-            <th scope="row">{{ doc.title }}</th>
+            <th scope="row">{{ gettext(doc.title) }}</th>
 	    {% for item in country.snapshots %}
 	      {% set snapshot = item.snapshot %}
               {% set cell = undefined %}

@@ -11,7 +11,7 @@
 {%- endmacro -%}
 
 {%- macro tooltip(country, doc) -%}
-  {{ country.country }}'s {% if doc.type %}{{ doc.type }}{% else %}{{ doc.title}}{% endif %} 
+  {{ country.country }}'s {% if doc.type %}{{ gettext(doc.type) }}{% else %}{{ gettext(doc.title) }}{% endif %} 
   {%- if doc.state == 'available' %}
     {{ gettext("is publicly available") }}
   {%- elif doc.state == "internal" %}
