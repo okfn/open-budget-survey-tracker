@@ -4,6 +4,7 @@ var express = require('express');
 var swig = require('swig');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var moment = require('moment');
 var _ = require('underscore');
 var i18n = require('i18n-abide');
@@ -25,6 +26,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 
 // OK setup translation
 app.use(i18n.abide({
@@ -33,6 +35,9 @@ app.use(i18n.abide({
   translation_directory: 'public/i18n'
 }));
 app.use(function (req, res, next) {
+  if (req.cookies.obstracker_language) {
+    req.setLocale(req.cookies.obstracker_language);
+  }
   res.locals.asset = function (file) {
     if (app.get('env') === 'development') {
       return file;

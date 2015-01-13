@@ -150,6 +150,11 @@ router.get('/updates/:update', function (req, res) {
     });
 });
 
+router.get('/locale/:locale', function (req, res) {
+    res.cookie('obstracker_language', req.params.locale, { maxAge: 900000 })
+    res.redirect('/');
+});
+
 router.get('/', function (req, res) {
   api.call('countries', function (countries) {
     // If today is less than the 22nd of the month the data is from
