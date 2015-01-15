@@ -9,7 +9,7 @@
       <div class="panel panel-default">
         <div id="heading" class="panel-heading">
           {{ gettext("Data as of") }} {{ last_update|date('F d\, Y') }}
-          <div class="pull-right">
+          <div class="pull-right"{% if lang == 'ru'%} style="font-size:70%;"{% endif %}>
             <strong>{{ gettext("Key") }}:</strong>
             <span class="item">
               <span class="badge state state-available"><span>{{ gettext("Publicly available") }}</span></span>
@@ -42,11 +42,11 @@
             <thead class="header">
               <tr>
                 <th>{{ gettext("Country") }}</th>
-                <th class="text-center" data-toggle="popover" data-content="{{ gettext("The Open Budget Index (OBI) uses Open Budget Survey data to calculate a transparency score (0 to 100) for each country in the Survey based on the amount of budget information that governments make public.") }}">
+                <th class="text-center" data-toggle="popover" data-content="{{ gettext("The Open Budget Index (OBI) uses Open Budget Survey data to calculate a transparency score (0 to 100) for each country in the Survey based on the amount of budget information that governments make public.") }}"{% if lang == 'ru'%} style="font-size:70%;"{% endif %}>
                   {{ gettext("Open Budget Index") }}
                 </th>
                 {% for doc in docs %}
-                  <th class="text-center" data-toggle="popover" data-content="{{ gettext(doc.description) }}"{% if lang == 'es' %} style="font-size:90%;"{% endif %}>
+                  <th class="text-center" data-toggle="popover" data-content="{{ gettext(doc.description) }}"{% if lang == 'es' %} style="font-size:90%;"{% endif %}{% if lang == 'ru' %} style="font-size:70%;"{% endif %}>
                     {{ gettext(doc.title) }}
                   </th>
                 {% endfor %}
