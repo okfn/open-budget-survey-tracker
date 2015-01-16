@@ -3,13 +3,14 @@
 
 {% block page_title %}{{ gettext("Open Budget Survey - Tracker") }}{% endblock %}
 
+{% block shortinfo %}{{ gettext("Data as of") }} {{ last_update|date('F d\, Y') }}{% endblock%}
+
 {% block content %}
   <div class="row">
     <div class="col-md-9">
       <div class="panel panel-default">
         <div id="heading" class="panel-heading">
-          {{ gettext("Data as of") }} {{ last_update|date('F d\, Y') }}
-          <div class="pull-right"{% if lang == 'ru'%} style="font-size:70%;"{% endif %}>
+          <div class="text-right"{% if lang == 'ru'%} style="font-size:70%;"{% endif %}>
             <strong>{{ gettext("Key") }}:</strong>
             <span class="item">
               <span class="badge state state-available"><span>{{ gettext("Publicly available") }}</span></span>
@@ -21,7 +22,7 @@
             </span>
             <span class="item">
               <span class="badge state state-not-produced"><span>{{ gettext("Not produced") }}</span></span>
-              {{ gettext("Not produced") }}
+              {{ gettext("Not produced") }} / {{ gettext("Published late") }}
             </span>
           </div>
         </div>
