@@ -139,7 +139,10 @@ router.get('/data.csv', function (req, res) {
 });
 
 router.get('/updates/:update', function (req, res) {
-    res.render('updates/'+req.params.update, {}, function(err, html) {
+    var locale = "";
+    if (!req.lang) { locale = "en"; }
+    else { locale = req.lang; }
+    res.render('updates/'+locale+'/'+req.params.update, {}, function(err, html) {
 	if (err) {
 	    console.log(err);
 	    res.status(404).send('Not found');

@@ -35,7 +35,11 @@ app.use(i18n.abide({
   translation_directory: 'public/i18n'
 }));
 app.use(function (req, res, next) {
-  if (req.cookies.obstracker_language) {
+  if (req.query.locale) {
+    req.setLocale(req.query.locale);
+    res.cookie('obstracker_language', req.query.locale, { maxAge: 900000 })
+  }
+  else if (req.cookies.obstracker_language) {
     req.setLocale(req.cookies.obstracker_language);
   }
   res.locals.asset = function (file) {
