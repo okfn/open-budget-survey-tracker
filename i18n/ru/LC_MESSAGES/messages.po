@@ -2,36 +2,37 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-01-06 14:40+0000\n"
+"POT-Creation-Date: 2015-01-30 15:17+0000\n"
 "PO-Revision-Date: 2015-01-13 19:50-0600\n"
 "Last-Translator: Alex <alex.artyukov@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/helpers.html:3
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:15
 #: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:16
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:17
 msgid "Publicly available"
 msgstr "Общедоступен"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/helpers.html:5
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:20
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:21
 msgid "Internal use only"
 msgstr "Только для внутреннего пользования"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/helpers.html:7
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:25
 msgid "Published late"
 msgstr "Опубликовано с опазданием"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/helpers.html:9
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:23
 #: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:24
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:25
 msgid "Not produced"
 msgstr "Не разрабатывался"
 
@@ -59,23 +60,23 @@ msgstr "и был опубликован"
 msgid "Open Budget Survey - Tracker"
 msgstr "Опрос для оценки открытости бюджета - опросный лист"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:11
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:6
 msgid "Data as of"
 msgstr "Данные на"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:13
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:14
 msgid "Key"
 msgstr "Ключевые"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:19
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:20
 msgid "Internally available"
 msgstr "доступно для внутреннего пользования"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:44
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:45
 msgid "Country"
 msgstr "Страна"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:45
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:46
 msgid ""
 "The Open Budget Index (OBI) uses Open Budget Survey data to calculate a "
 "transparency score (0 to 100) for each country in the Survey based on the "
@@ -86,28 +87,28 @@ msgstr ""
 "по каждой стране на основании количества бюджетной информации, "
 "обнародованной правительствами."
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:46
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:47
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:10
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:11
 msgid "Open Budget Index"
 msgstr "Индекс открытости бюджета"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:100
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:101
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:10
 msgid "What is the Open Budget Survey?"
 msgstr "Что представляет собой Опрос для оценки открытости бюджета?"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:103
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:104
 msgid ""
-"The <strong>IBP's Open Budget Survey (OBS)</strong> is the only "
-"independent, regular, and comparative assessment of budget transparency and "
-"participation worldwide. <!-- more -->This rigorous, comprehensive "
-"assessment is conducted every two years and measures the amount of budget "
-"information a country's central government makes publicly available, "
-"whether it engages citizens in budget processes, and the strength of formal "
-"oversight institutions. The <strong>Open Budget Index</strong> uses OBS "
-"data to calculate a transparency score (0 to 100) for each country in the "
-"OBS based on the amount of budget information that governments make public."
+"The <strong>IBP's Open Budget Survey (OBS)</strong> is the only independent, "
+"regular, and comparative assessment of budget transparency and participation "
+"worldwide. <!-- more -->This rigorous, comprehensive assessment is conducted "
+"every two years and measures the amount of budget information a country's "
+"central government makes publicly available, whether it engages citizens in "
+"budget processes, and the strength of formal oversight institutions. The "
+"<strong>Open Budget Index</strong> uses OBS data to calculate a transparency "
+"score (0 to 100) for each country in the OBS based on the amount of budget "
+"information that governments make public."
 msgstr ""
 "<strong>Опрос для оценки открытости бюджета(ОООБ)МБП</strong> является "
 "единственно независимым, регулярным  и сравнительным анализом прозрачности "
@@ -121,47 +122,46 @@ msgstr ""
 "стране на основании количества бюджетной информации, обнародованной "
 "правительствами."
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:106
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:107
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:18
 msgid "What is the OBS Tracker?"
 msgstr "Что такое опросный лист к Опросу для оценки открытости бюджета?"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:109
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:110
 msgid ""
 "A tool that provides regular monthly updates on whether the central "
-"government of the countries publish each of the key budget documents on "
-"time as per international standards."
+"government of the countries publish each of the key budget documents on time "
+"as per international standards."
 msgstr ""
 "Инструмент, обеспечивающий регулярные ежемесячные обновления относительно "
 "своевременности публикации  центральным правительством стран каждого из "
 "ключевых бюджетных документов в соответствии с международными стандартами."
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:112
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:113
 msgid "Where can I get the data?"
 msgstr "Где я могу получить эти данные?"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:115
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:116
 msgid "You can download our data as <a href=\"/data.csv\">a csv file</a>."
 msgstr "Вы можете загрузить эти данные с <a href=\"/data.csv\">файла CSV</a>."
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:118
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:119
 msgid "How do Tracker results relate to Open Budget Index scores?"
 msgstr ""
 "Как результаты опросного листа соотносятся с показателями Индекса открытости "
 "бюджета?"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:121
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:122
 msgid ""
 "A country's Open Budget Index score is the most comprehensive measure of "
 "budget transparency at the central government level but is updated only "
 "every two years. The <strong>OBS Tracker</strong> monitors on monthly basis "
 "one of the factors included in the Open Budget Index: whether governments "
-"are at least releasing the eight key budget documents to the public (it "
-"does not assess the level of detailed information provided). <!-- more "
-"-->Though the Open Budget Index score is the gold standard measure, the "
-"<strong>Tracker</strong> allows for tracking a country's progress on "
-"meeting basic international standards for the publication of budget "
-"documents."
+"are at least releasing the eight key budget documents to the public (it does "
+"not assess the level of detailed information provided). <!-- more -->Though "
+"the Open Budget Index score is the gold standard measure, the "
+"<strong>Tracker</strong> allows for tracking a country's progress on meeting "
+"basic international standards for the publication of budget documents."
 msgstr ""
 "Показатель Индекса открытости бюджета страны является наиболее всеобъемлющим "
 "мерилом прозрачности бюджета на уровне центрального правительства, но с "
@@ -175,22 +175,22 @@ msgstr ""
 "позволяет отслеживать процесс исполнения страны для соответствия основным "
 "международным стандартам в вопросе публикации бюджетных документов."
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:124
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:125
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:26
 msgid "Why do we need to know about government budgets?"
 msgstr "Зачем нам нужны знания о государственных бюджетах?"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:127
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:128
 msgid ""
 "Budgets are a government's most powerful tool to meet the needs and "
 "priorities of a country and its people. <!-- more --> Civil society "
-"organizations, legislators, auditors, the media, and the broader public "
-"need timely budget information to hold the government accountable for how "
-"it uses public resources. Without such scrutiny, the government can make "
-"bad choices on unpopular or inappropriate programs, waste money, and open "
-"the door to corruption. On the other hand, when ordinary people have "
-"information and opportunities to participate in government budget "
-"processes, they can promote real improvements in governance and policy."
+"organizations, legislators, auditors, the media, and the broader public need "
+"timely budget information to hold the government accountable for how it uses "
+"public resources. Without such scrutiny, the government can make bad choices "
+"on unpopular or inappropriate programs, waste money, and open the door to "
+"corruption. On the other hand, when ordinary people have information and "
+"opportunities to participate in government budget processes, they can "
+"promote real improvements in governance and policy."
 msgstr ""
 "Бюджеты являются наиболее мощным инструментом правительства для "
 "удовлетворения потребностей и приоритетов страны и её народа. <!-- more --> "
@@ -204,20 +204,20 @@ msgstr ""
 "возможностями для участия в бюджетных процессах государства, они могут "
 "способствовать реальным улучшениям в управлении и политике."
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:130
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:131
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:13
 msgid "Open Budget Survey Data"
 msgstr "Данные Опроса для оценки открытости бюджета"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:133
+#: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:134
 msgid ""
 "To see the complete results of four rounds of the Open Budget Survey, visit "
 "our interactive <a href=\"http://survey.internationalbudget.org/\">Open "
 "Budget Survey Data Explorer</a>."
 msgstr ""
 "Для ознакомления с всеобъемлющими результатами четырёх выпусков Опроса для "
-"оценки открытости бюджета пройдите на наш интерактивный вебсайт <a "
-"href=\"http://survey.internationalbudget.org/\">Проводник данных Опроса для "
+"оценки открытости бюджета пройдите на наш интерактивный вебсайт <a href="
+"\"http://survey.internationalbudget.org/\">Проводник данных Опроса для "
 "оценки открытости бюджета</a>."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/layout.html:33
@@ -254,7 +254,7 @@ msgstr "Пресс-центр"
 msgid "About this site"
 msgstr "О вебсайте"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/layout.html:59
+#: /home/tryggvib/work/open-budget-survey-tracker/views/layout.html:75
 msgid "Site created by"
 msgstr "Создатель вебсайта"
 
@@ -299,11 +299,11 @@ msgstr ""
 #: /home/tryggvib/work/open-budget-survey-tracker/views/gathering.html:11
 msgid ""
 "The OBS Tracker is updated on a monthly basis to record the publication of "
-"new budget documents in a country.  These documents include budget plans "
-"for the forthcoming fiscal year, budget execution reports for the fiscal "
-"year underway, and implementation and evaluation reports for budgets "
-"covering prior fiscal years. As such, the Tracker analyzes the public "
-"availability of budget documents that pertain to multiple years."
+"new budget documents in a country.  These documents include budget plans for "
+"the forthcoming fiscal year, budget execution reports for the fiscal year "
+"underway, and implementation and evaluation reports for budgets covering "
+"prior fiscal years. As such, the Tracker analyzes the public availability of "
+"budget documents that pertain to multiple years."
 msgstr ""
 "Опросный лист Опроса для оценки открытости бюджета обновляется на "
 "ежемесячной основе для регистрации публикаций новых бюджетных документов в "
@@ -333,8 +333,8 @@ msgstr ""
 #: /home/tryggvib/work/open-budget-survey-tracker/views/gathering.html:16
 msgid ""
 "an Executive’s Budget Proposal and Citizens Budget related to the "
-"forthcoming budget is often released one to three months before the start "
-"of the next fiscal year;"
+"forthcoming budget is often released one to three months before the start of "
+"the next fiscal year;"
 msgstr ""
 "бюджетное предложение исполнительной власти и гражданский бюджет, связанные "
 "с предстоящим бюджетом зачастую выпускаются за один - шесть месяцев до "
@@ -375,11 +375,11 @@ msgstr ""
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/gathering.html:21
 msgid ""
-"an Audit Report is often released anytime between six to 18 months after "
-"the end of the fiscal year. Thus, when this report is released, it may "
-"cover the previous budget (if it is released within 12 months of the end of "
-"the budget) or even the year prior to the previous budget (if it is "
-"released after 12 months of the end of the budget)."
+"an Audit Report is often released anytime between six to 18 months after the "
+"end of the fiscal year. Thus, when this report is released, it may cover the "
+"previous budget (if it is released within 12 months of the end of the "
+"budget) or even the year prior to the previous budget (if it is released "
+"after 12 months of the end of the budget)."
 msgstr ""
 "аудиторский отчет часто выпускается в любое время между шестью и 18-тью "
 "месяцами после окончания финансового года. Таким образом, на момент "
@@ -392,8 +392,8 @@ msgstr ""
 msgid ""
 "For example, in a country where the fiscal year and the calendar year are "
 "the same, the government could release a Pre-Budget Statement (next fiscal "
-"year), a Mid-Year Review (current fiscal year), and a Year-End Report "
-"(prior fiscal year) in August or September of the current fiscal year."
+"year), a Mid-Year Review (current fiscal year), and a Year-End Report (prior "
+"fiscal year) in August or September of the current fiscal year."
 msgstr ""
 "Например, в стране, где финансовый год совпадет с календарным годом, "
 "правительство может выпустить Предварительное бюджетное заявление (на "
@@ -404,22 +404,22 @@ msgstr ""
 #: /home/tryggvib/work/open-budget-survey-tracker/views/gathering.html:26
 msgid ""
 "The full cycle for a single budget could take close to two years to "
-"complete, beginning with the publication of the Pre-Budget Statement "
-"several months prior to the start of the fiscal year covered by the budget "
-"and ending with the publication of the Audit Report up to 18 months after "
-"fiscal year has ended.  The Tracker is designed to anticipate when each of "
-"these key documents should be made available to the public in a country "
-"based on its budget cycle, and then report on whether the government has "
-"actually made them available."
+"complete, beginning with the publication of the Pre-Budget Statement several "
+"months prior to the start of the fiscal year covered by the budget and "
+"ending with the publication of the Audit Report up to 18 months after fiscal "
+"year has ended.  The Tracker is designed to anticipate when each of these "
+"key documents should be made available to the public in a country based on "
+"its budget cycle, and then report on whether the government has actually "
+"made them available."
 msgstr ""
 "Завершение полного цикла одного бюджета может занять около двух лет, начиная "
 "с публикации Предварительного бюджетного заявления за несколько месяцев до "
 "начала финансового года, охваченного бюджетом, и заканчивая публикацией "
 "аудиторского отчёта до 18 месяцев после окончания финансового года.  "
 "Опросный лист предназначен для прогнозирования, когда должна быть обеспечена "
-"доступность общественности по каждому из этих ключевых документов  по "
-"стране на основе их бюджетного цикла, а затем указать в отчёте, "
-"действительно ли правительство обеспечила их доступность."
+"доступность общественности по каждому из этих ключевых документов  по стране "
+"на основе их бюджетного цикла, а затем указать в отчёте, действительно ли "
+"правительство обеспечила их доступность."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/gathering.html:30
 msgid "More information"
@@ -455,12 +455,11 @@ msgstr "О программе - Опрос для оценки открытос�
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:11
 msgid ""
 "The <strong>IBP’s Open Budget Survey</strong> is the only independent, "
-"regular, and comparative assessment of budget transparency and "
-"participation worldwide. This rigorous, comprehensive assessment is "
-"conducted every two years and measures the amount of budget information a "
-"country’s central government makes publicly available, whether it engages "
-"citizens in budget processes, and the strength of formal oversight "
-"institutions."
+"regular, and comparative assessment of budget transparency and participation "
+"worldwide. This rigorous, comprehensive assessment is conducted every two "
+"years and measures the amount of budget information a country’s central "
+"government makes publicly available, whether it engages citizens in budget "
+"processes, and the strength of formal oversight institutions."
 msgstr ""
 "<strong>Опрос для оценки открытости бюджета МБП</strong> является "
 "единственно независимым, регулярным  и сравнительным анализом прозрачности "
@@ -472,9 +471,9 @@ msgstr ""
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:12
 msgid ""
-"Survey data on the amount of budget information that governments make "
-"public are used to calculate the <strong>Open Budget Index</strong>, which "
-"gives each country a transparency score from 0 to 100."
+"Survey data on the amount of budget information that governments make public "
+"are used to calculate the <strong>Open Budget Index</strong>, which gives "
+"each country a transparency score from 0 to 100."
 msgstr ""
 "Данные опроса по количеству бюджетной информации, которое правительство "
 "открывает общественности, используются для расчета <strong>Индекса "
@@ -488,9 +487,9 @@ msgid ""
 "Budget Survey Data Explorer</a>."
 msgstr ""
 "Для ознакомления с всеобъемлющими результатами четырёх выпусков Опроса для "
-"оценки открытости бюджета пройдите на наш интерактивный вебсайт <a "
-"href=\"http://survey.internationalbudget.org\">Проводник данных Опроса для "
-"оценки открытости бюджета</a>."
+"оценки открытости бюджета пройдите на наш интерактивный вебсайт <a href="
+"\"http://survey.internationalbudget.org\">Проводник данных Опроса для оценки "
+"открытости бюджета</a>."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:19
 msgid ""
@@ -512,35 +511,35 @@ msgstr ""
 "организаций гражданского общества в каждой стране."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:21
-msgid "How does a country’s Tracker results relate to its Open Budget Index score?"
+msgid ""
+"How does a country’s Tracker results relate to its Open Budget Index score?"
 msgstr ""
 "Как соотносятся результаты опросного листа к показателю Индекса открытости "
 "бюджета ?"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:22
 msgid ""
-"A country’s Open Budget Index score is the most comprehensive measure of "
-"its budget transparency but is updated only every two years. The "
-"<strong>OBS Tracker</strong>, on the other hand, monitors on monthly basis "
-"one of the factors included in the Open Budget Index: whether governments "
-"are at least releasing the eight key budget documents to the public (it "
-"does not assess the level of detailed information provided). Though the "
-"Open Budget Index score is the gold standard measure, the "
-"<strong>Tracker</strong> allows for tracking a country’s progress on "
-"meeting basic international standards for the publication of budget "
-"documents."
+"A country’s Open Budget Index score is the most comprehensive measure of its "
+"budget transparency but is updated only every two years. The <strong>OBS "
+"Tracker</strong>, on the other hand, monitors on monthly basis one of the "
+"factors included in the Open Budget Index: whether governments are at least "
+"releasing the eight key budget documents to the public (it does not assess "
+"the level of detailed information provided). Though the Open Budget Index "
+"score is the gold standard measure, the <strong>Tracker</strong> allows for "
+"tracking a country’s progress on meeting basic international standards for "
+"the publication of budget documents."
 msgstr ""
 "Показатель индекса открытости бюджета страны является наиболее всеобъемлющим "
-"мерилом прозрачности бюджета, но с производством обновления только раз в "
-"два года. <strong>Опросный лист для Опроса для оценки открытости "
-"бюджета</strong> с другой стороны производит мониторинг на ежемесячной "
-"основе одного из факторов, включенных в Индекс открытости бюджета:  "
-"публикуют ли правительства, по крайней мере, восемь ключевых бюджетных "
-"документов для общественности (настоящим не даётся оценка уровню подробности "
-"представленной информации). Хотя показатель Индекса открытости бюджета "
-"является золотым стандартом измерения, <strong>опросный лист</strong> "
-"позволяет отслеживать процесс исполнения страны для соответствия основным "
-"международным стандартам в вопросе публикации бюджетных документов."
+"мерилом прозрачности бюджета, но с производством обновления только раз в два "
+"года. <strong>Опросный лист для Опроса для оценки открытости бюджета</"
+"strong> с другой стороны производит мониторинг на ежемесячной основе одного "
+"из факторов, включенных в Индекс открытости бюджета:  публикуют ли "
+"правительства, по крайней мере, восемь ключевых бюджетных документов для "
+"общественности (настоящим не даётся оценка уровню подробности представленной "
+"информации). Хотя показатель Индекса открытости бюджета является золотым "
+"стандартом измерения, <strong>опросный лист</strong> позволяет отслеживать "
+"процесс исполнения страны для соответствия основным международным стандартам "
+"в вопросе публикации бюджетных документов."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/about.html:27
 msgid ""
@@ -588,15 +587,15 @@ msgstr "Предварительное бюджетное заявление"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:4
 msgid ""
-"The purpose of the Pre-Budget Statement is to disclose the parameters of "
-"the Executive's Budget Proposal. It outlines the government's macroeconomic "
+"The purpose of the Pre-Budget Statement is to disclose the parameters of the "
+"Executive's Budget Proposal. It outlines the government's macroeconomic "
 "assumptions as well as anticipated total revenue and expenditures, and it "
-"sets out the debt that will be incurred during the upcoming budget year. "
-"The Pre-Budget Statement should be available no less than one month prior "
-"to the introduction of the Executive's Budget Proposal. If the Pre-Budget "
-"Statement is published less than a month before the Executive's Budget "
-"Proposal is submitted to the legislature, it is considered to be 'not "
-"publicly available'."
+"sets out the debt that will be incurred during the upcoming budget year. The "
+"Pre-Budget Statement should be available no less than one month prior to the "
+"introduction of the Executive's Budget Proposal. If the Pre-Budget Statement "
+"is published less than a month before the Executive's Budget Proposal is "
+"submitted to the legislature, it is considered to be 'not publicly "
+"available'."
 msgstr ""
 "Целью предварительного бюджетного заявления является раскрытие параметров "
 "бюджетного предложения исполнительной власти. В нем изложены "
@@ -622,16 +621,16 @@ msgid ""
 "to be made to all ministries, and to subnational governments in countries "
 "where the national government provides funding to the latter. The "
 "Executive's Budget Proposal should be made publicly available when it is "
-"first presented to the legislature, or, at a minimum, before the "
-"legislature approves it."
+"first presented to the legislature, or, at a minimum, before the legislature "
+"approves it."
 msgstr ""
 "Характер бюджетного предложения исполнительной власти может быть различным в "
 "разных странах. Иногда это один документ, а иногда несколько документов. "
 "Бюджетное предложение исполнительной власти является документом или "
 "документами, которые исполнительные органы представляет в законодательные "
 "органы для утверждения. В нём подробно описываются ожидаемые государственные "
-"доходы и источники этих доходов, а также ассигнования для всех министерств "
-"и субнациональных правительств в странах, где национальное правительство "
+"доходы и источники этих доходов, а также ассигнования для всех министерств и "
+"субнациональных правительств в странах, где национальное правительство "
 "финансирует субнациональное. Бюджетное предложение исполнительной власти "
 "должно быть общедоступно, когда оно впервые представляется в законодательный "
 "орган, или, как минимум, до его утверждения законодательным органом."
@@ -646,9 +645,9 @@ msgid ""
 "legislature. Unlike most budget documents, the Enacted Budget should be "
 "available from the committee within the legislature that deals with the "
 "budget, although the Ministry of Finance or other body that houses the "
-"executive's budget documents may also have a copy of the Enacted Budget. "
-"The Enacted Budget must be released to the public no later than three "
-"months after the legislature has approved it."
+"executive's budget documents may also have a copy of the Enacted Budget. The "
+"Enacted Budget must be released to the public no later than three months "
+"after the legislature has approved it."
 msgstr ""
 "Утвержденный бюджет это бюджет, который был принят в качестве закона "
 "законодательным органом. В отличие от большинства бюджетных документов, "
@@ -679,12 +678,12 @@ msgstr ""
 "власти, утверждённого бюджета или любого другого бюджетного документа более "
 "простого и менее технического, чем полный документ. Как правило, он короче "
 "того документа, на котором он основан и специально предназначен для передачи "
-"ключевой информации, в частности, документа для широкой публики. "
-"Гражданский бюджет должен быть доступен в то же время, когда становится "
-"доступным  базовый документ. Например, если гражданский бюджет является "
-"упрощённой версией бюджетного предложения исполнительной власти, то он "
-"должен быть выпущен в то же самое время, как и бюджетное предложение "
-"исполнительной власти."
+"ключевой информации, в частности, документа для широкой публики. Гражданский "
+"бюджет должен быть доступен в то же время, когда становится доступным  "
+"базовый документ. Например, если гражданский бюджет является упрощённой "
+"версией бюджетного предложения исполнительной власти, то он должен быть "
+"выпущен в то же самое время, как и бюджетное предложение исполнительной "
+"власти."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:11
 msgid "In-Year Report"
@@ -692,11 +691,11 @@ msgstr "Текущий отчет"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:12
 msgid ""
-"These may be issued on a quarterly or monthly basis. They may be in the "
-"form of a consolidated report for the entire government or multiple reports "
-"from different agencies. In-Year Reports should be issued no later than "
-"three months after the end of the reporting period. If the report is issued "
-"after this date, it is considered as 'not publicly available'."
+"These may be issued on a quarterly or monthly basis. They may be in the form "
+"of a consolidated report for the entire government or multiple reports from "
+"different agencies. In-Year Reports should be issued no later than three "
+"months after the end of the reporting period. If the report is issued after "
+"this date, it is considered as 'not publicly available'."
 msgstr ""
 "Они могут выпускаться на ежеквартальной или ежемесячной основе. Они могут "
 "быть в виде сводного отчёта правительства в целом или нескольких отчётов "
@@ -710,8 +709,8 @@ msgstr "Полугодовой обзор"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:14
 msgid ""
-"The Mid-Year Review contains a comprehensive update on the implementation "
-"of the budget as of the middle of the fiscal year, including a review of "
+"The Mid-Year Review contains a comprehensive update on the implementation of "
+"the budget as of the middle of the fiscal year, including a review of "
 "economic assumptions underlying the budget, and an updated forecast of the "
 "budget outcome for the fiscal year. The Mid-Year Review should be available "
 "no later than three months after the end of the first six months of the "
@@ -730,12 +729,11 @@ msgstr "Годовой отчет"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:16
 msgid ""
-"Generally the Year-End Report is issued as a single, consolidated report "
-"for the entire government, but individual ministries may issue separate "
-"Year-End Reports. The Year-End Report should be released no later than one "
-"year after the end of the fiscal year. The Year-End Report is 'not publicly "
-"available' if issued later than one year after the end of the fiscal year "
-"it reports on."
+"Generally the Year-End Report is issued as a single, consolidated report for "
+"the entire government, but individual ministries may issue separate Year-End "
+"Reports. The Year-End Report should be released no later than one year after "
+"the end of the fiscal year. The Year-End Report is 'not publicly available' "
+"if issued later than one year after the end of the fiscal year it reports on."
 msgstr ""
 "Как правило, годовой отчет выпускается в виде отдельного сводного отчёта "
 "правительства в целом, но отдельные министерства могут издавать отдельные "
@@ -750,21 +748,21 @@ msgstr "Аудиторский отчёт"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:18
 msgid ""
-"The Audit Report is issued by the country's supreme audit institution "
-"(SAI). It attests to the soundness and completeness of the government's "
-"year-end accounts. Unlike most other budget documents, the Audit Report is "
-"housed with the SAI. To be considered 'publicly available' the Audit Report "
-"must be published within 18 months after the end of the fiscal year to "
-"which it relates. The Audit Report would be 'not publicly available' if it "
-"is issued after that 18 month period."
+"The Audit Report is issued by the country's supreme audit institution (SAI). "
+"It attests to the soundness and completeness of the government's year-end "
+"accounts. Unlike most other budget documents, the Audit Report is housed "
+"with the SAI. To be considered 'publicly available' the Audit Report must be "
+"published within 18 months after the end of the fiscal year to which it "
+"relates. The Audit Report would be 'not publicly available' if it is issued "
+"after that 18 month period."
 msgstr ""
 "Аудиторский отчёт выпускается высшим контрольным органам страны (ВКО). Это "
 "подтверждает обоснованность и полноту финансовой отчётности правительства на "
-"конец года. В отличие от большинства прочих бюджетных документов "
-"аудиторский отчёт хранится в ВКО. Чтобы считаться «общедоступным», "
-"аудиторский отчёт должен быть опубликован в течение 18-ти месяцев после "
-"окончания финансового года, к которому он относится. Аудиторский отчёт не "
-"считается «общедоступным», если он выпущен после срока 18 месяцев."
+"конец года. В отличие от большинства прочих бюджетных документов аудиторский "
+"отчёт хранится в ВКО. Чтобы считаться «общедоступным», аудиторский отчёт "
+"должен быть опубликован в течение 18-ти месяцев после окончания финансового "
+"года, к которому он относится. Аудиторский отчёт не считается "
+"«общедоступным», если он выпущен после срока 18 месяцев."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:20
 msgid ""
@@ -779,6 +777,126 @@ msgid "Same as either the Executive Budget Proposal or Enacted Budget."
 msgstr ""
 "Это относится также к бюджетному предложению исполнительной власти либо "
 "утверждённому бюджету."
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:23
+msgid "Armenia"
+msgstr "Армения"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:24
+msgid "Bolivia"
+msgstr "Боливия"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:25
+msgid "Côte d’Ivoire"
+msgstr "Кот-д’Ивуар"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:26
+msgid "Dem. Rep. of Congo"
+msgstr "Дем. Рес. Конго"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:27
+msgid "Dominican Republic"
+msgstr "Доминиканская Республика"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:28
+msgid "Ecuador"
+msgstr "Эквадор"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:29
+msgid "Egypt"
+msgstr "Египет"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:30
+msgid "El Salvador"
+msgstr "Сальвадор"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:31
+msgid "Fiji"
+msgstr "Фиджи"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:32
+msgid "Georgia"
+msgstr "Грузия"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:33
+msgid "Ghana"
+msgstr "Гана"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:34
+msgid "Greece"
+msgstr "Греция"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:35
+msgid "Hungary"
+msgstr "Венгрия"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:36
+msgid "Iraq"
+msgstr "Ирак"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:37
+msgid "Kenya"
+msgstr "Кения"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:38
+msgid "Kyrgyz Republic"
+msgstr "Киргизия"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:39
+msgid "Macedonia"
+msgstr "Рес. Македония"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:40
+msgid "Mali"
+msgstr "Мали"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:41
+msgid "Myanmar"
+msgstr "Мьянма"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:42
+msgid "Nicaragua"
+msgstr "Никарагуа"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:43
+msgid "Niger"
+msgstr "Нигер"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:44
+msgid "Nigeria"
+msgstr "Нигерия"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:45
+msgid "Palestine"
+msgstr "Государство Палестина"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:46
+msgid "Philippines"
+msgstr "Филиппины"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:47
+msgid "Senegal"
+msgstr "Сенегал"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:48
+msgid "Sierra Leone"
+msgstr "Сьерра-Леоне"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:49
+msgid "Tanzania"
+msgstr "Танзания"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:50
+msgid "Timor-Leste"
+msgstr "Тимор-Лешти"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:51
+msgid "Tunisia"
+msgstr "Тунис"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/on-the-fly-translations.html:52
+msgid "Vietnam"
+msgstr "Вьетнам"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:6
 msgid "Close"
@@ -836,5 +954,8 @@ msgstr "Дополнительная информация"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:24
 #: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:27
+#: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:30
+#: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:33
+#: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:36
 msgid "Open Budget Survey Tracker Update"
 msgstr "Обновление опросного листа к Опросу для оценки открытости бюджета "

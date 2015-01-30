@@ -32,6 +32,10 @@ To extract strings for translations you can run:
 
     ./node_modules/.bin/extract-pot --locale i18n --exclude bower_components -t jinja -f html .
 
+To updated po files with new strings you can run:
+
+    ./node_modules/.bin/merge-po i18n
+
 To compile translated po files (to json message files) you can run:
 
     ./node_modules/.bin/compile-json i18n public/i18n

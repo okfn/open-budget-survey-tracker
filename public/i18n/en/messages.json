@@ -1,7 +1,7 @@
 {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nLanguage-Team: LANGUAGE <LL@li.org>\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPOT-Creation-Date: 2015-01-06 14:40+0000\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 15:17+0000\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
       },
       "Publicly available": [
          null,
@@ -376,6 +376,126 @@
          ""
       ],
       "Same as either the Executive Budget Proposal or Enacted Budget.": [
+         null,
+         ""
+      ],
+      "Armenia": [
+         null,
+         ""
+      ],
+      "Bolivia": [
+         null,
+         ""
+      ],
+      "Côte d’Ivoire": [
+         null,
+         ""
+      ],
+      "Dem. Rep. of Congo": [
+         null,
+         ""
+      ],
+      "Dominican Republic": [
+         null,
+         ""
+      ],
+      "Ecuador": [
+         null,
+         ""
+      ],
+      "Egypt": [
+         null,
+         ""
+      ],
+      "El Salvador": [
+         null,
+         ""
+      ],
+      "Fiji": [
+         null,
+         ""
+      ],
+      "Georgia": [
+         null,
+         ""
+      ],
+      "Ghana": [
+         null,
+         ""
+      ],
+      "Greece": [
+         null,
+         ""
+      ],
+      "Hungary": [
+         null,
+         ""
+      ],
+      "Iraq": [
+         null,
+         ""
+      ],
+      "Kenya": [
+         null,
+         ""
+      ],
+      "Kyrgyz Republic": [
+         null,
+         ""
+      ],
+      "Macedonia": [
+         null,
+         ""
+      ],
+      "Mali": [
+         null,
+         ""
+      ],
+      "Myanmar": [
+         null,
+         ""
+      ],
+      "Nicaragua": [
+         null,
+         ""
+      ],
+      "Niger": [
+         null,
+         ""
+      ],
+      "Nigeria": [
+         null,
+         ""
+      ],
+      "Palestine": [
+         null,
+         ""
+      ],
+      "Philippines": [
+         null,
+         ""
+      ],
+      "Senegal": [
+         null,
+         ""
+      ],
+      "Sierra Leone": [
+         null,
+         ""
+      ],
+      "Tanzania": [
+         null,
+         ""
+      ],
+      "Timor-Leste": [
+         null,
+         ""
+      ],
+      "Tunisia": [
+         null,
+         ""
+      ],
+      "Vietnam": [
          null,
          ""
       ],

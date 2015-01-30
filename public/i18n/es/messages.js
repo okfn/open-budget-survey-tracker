@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-06 14:40+0000\nPO-Revision-Date: 2015-01-08 16:42-0300\nLast-Translator: Alito <horen.andrea@gmail.com>\nLanguage-Team: PC old\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=utf-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 15:17+0000\nPO-Revision-Date: 2015-01-08 16:42-0300\nLast-Translator: Alito <horen.andrea@gmail.com>\nLanguage-Team: PC old\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -378,6 +378,126 @@
       "Same as either the Executive Budget Proposal or Enacted Budget.": [
          null,
          "Lo mismo se aplica a la Propuesta de presupuesto del Ejecutivo o al Presupuesto aprobado."
+      ],
+      "Armenia": [
+         null,
+         "Armenia"
+      ],
+      "Bolivia": [
+         null,
+         "Bolivia"
+      ],
+      "Côte d’Ivoire": [
+         null,
+         "Costa de Marfil"
+      ],
+      "Dem. Rep. of Congo": [
+         null,
+         "Rep. Dem. del Congo"
+      ],
+      "Dominican Republic": [
+         null,
+         "República Dominicana"
+      ],
+      "Ecuador": [
+         null,
+         "Ecuador"
+      ],
+      "Egypt": [
+         null,
+         "Egipto"
+      ],
+      "El Salvador": [
+         null,
+         "El Salvador"
+      ],
+      "Fiji": [
+         null,
+         "Fiyi"
+      ],
+      "Georgia": [
+         null,
+         "Georgia"
+      ],
+      "Ghana": [
+         null,
+         "Ghana"
+      ],
+      "Greece": [
+         null,
+         "Grecia"
+      ],
+      "Hungary": [
+         null,
+         "Hungría"
+      ],
+      "Iraq": [
+         null,
+         "Irak"
+      ],
+      "Kenya": [
+         null,
+         "Kenia"
+      ],
+      "Kyrgyz Republic": [
+         null,
+         "Kirguistán"
+      ],
+      "Macedonia": [
+         null,
+         "Rep. de Macedonia"
+      ],
+      "Mali": [
+         null,
+         "Malí"
+      ],
+      "Myanmar": [
+         null,
+         "Myanmar"
+      ],
+      "Nicaragua": [
+         null,
+         "Nicaragua"
+      ],
+      "Niger": [
+         null,
+         "Níger"
+      ],
+      "Nigeria": [
+         null,
+         "Nigeria"
+      ],
+      "Palestine": [
+         null,
+         "Palestina"
+      ],
+      "Philippines": [
+         null,
+         "Filipinas"
+      ],
+      "Senegal": [
+         null,
+         "Senegal"
+      ],
+      "Sierra Leone": [
+         null,
+         "Sierra Leone"
+      ],
+      "Tanzania": [
+         null,
+         "Tanzania"
+      ],
+      "Timor-Leste": [
+         null,
+         "Timor Oriental"
+      ],
+      "Tunisia": [
+         null,
+         "Túnez"
+      ],
+      "Vietnam": [
+         null,
+         "Vietnam"
       ],
       "Close": [
          null,
