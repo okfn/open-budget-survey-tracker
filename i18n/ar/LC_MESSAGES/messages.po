@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-01-30 15:17+0000\n"
+"POT-Creation-Date: 2015-01-30 21:48+0000\n"
 "PO-Revision-Date: 2015-01-08 20:32+0200\n"
 "Last-Translator: Ayman El Shemy <ayman_shemy@hotmail.com>\n"
 "Language-Team: Shemy\n"
@@ -882,15 +882,19 @@ msgstr "فترة النشر التالية"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:60
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:72
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:110
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:109
 msgid "Unavailable"
 msgstr "غير متاح"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:100
+msgid "Before %s"
+msgstr "قبل %s"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:119
 msgid "View the Budget Library"
 msgstr "عرض مكتبة الموازنة"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:121
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
 msgid "View historical information"
 msgstr "عرض المعلومات التاريخية"
 

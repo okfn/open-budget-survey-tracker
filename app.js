@@ -32,15 +32,17 @@ app.use(cookieParser());
 app.use(i18n.abide({
   default_lang: 'en',
   supported_languages: locales,
-  translation_directory: 'public/i18n'
+  translation_directory: 'public/i18n',
 }));
 app.use(function (req, res, next) {
   if (req.query.locale) {
     req.setLocale(req.query.locale);
+    moment.locale(req.query.locale);      
     res.cookie('obstracker_language', req.query.locale, { maxAge: 900000 })
   }
   else if (req.cookies.obstracker_language) {
     req.setLocale(req.cookies.obstracker_language);
+    moment.locale(req.cookies.obstracker_language);
   }
   res.locals.asset = function (file) {
     if (app.get('env') === 'development') {
@@ -52,6 +54,7 @@ app.use(function (req, res, next) {
     }
     return file;
   };
+  res.locals.i18nformat = req.format;
   res.locals.date_format = function (date, format) {
     return moment(date).format(format);
   };

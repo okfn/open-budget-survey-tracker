@@ -44,7 +44,7 @@
             <th scope="row">
               {{ gettext(doc.title) }}
             </th>
-            <td>{{ fiscal_year }}</td>
+            <td>{{ date_format({'year':fiscal_year}, 'YYYY') }}</td>
             {% if cell %}
               <td>
                 <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
@@ -54,7 +54,7 @@
               </td>
               <td>
                 {% if cell.date_published %}
-                {{ cell.date_published }}
+                {{ date_format(Date.parse(cell.date_published), 'll') }}
                 {% else %}
                 <span class="text-muted">
                   {{ gettext("Unavailable") }}
@@ -97,11 +97,10 @@
 		        {% set end_date = Date.parse(site.search_dates.end) %}
                         {% if end_date >= Date.now() %}
                           {%- if start_date < Date.now() %}
-                            Before
+                            {{ i18nformat(gettext('Before %s'), [date_format(Date.parse(site.search_dates.end), 'll')]) }}
                           {%- else %}
-                          {{ Date.parse(site.search_dates.start)|date('d M Y') }} -
+                          {{ date_format(Date.parse(site.search_dates.start), 'll') }} - {{ date_format(Date.parse(site.search_dates.end), 'll') }}
                           {% endif %}
-                          {{ Date.parse(site.search_dates.end)|date('d M Y') }}
                           {% set search_dates_found = true %}
                         {% endif %}
 		      {% endif %}

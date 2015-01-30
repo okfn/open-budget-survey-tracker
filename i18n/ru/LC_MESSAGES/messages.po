@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-01-30 15:17+0000\n"
+"POT-Creation-Date: 2015-01-30 21:48+0000\n"
 "PO-Revision-Date: 2015-01-13 19:50-0600\n"
 "Last-Translator: Alex <alex.artyukov@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -924,15 +924,19 @@ msgstr "Следующий срок публикации"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:60
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:72
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:110
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:109
 msgid "Unavailable"
 msgstr "Недоступен"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:100
+msgid "Before %s"
+msgstr "До %s"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:119
 msgid "View the Budget Library"
 msgstr "Обратиться в бюджетную библиотеку"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:121
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
 msgid "View historical information"
 msgstr "См. историческую информацию"
 

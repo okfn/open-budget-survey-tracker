@@ -3,7 +3,7 @@
 
 {% block page_title %}{{ gettext("Open Budget Survey - Tracker") }}{% endblock %}
 
-{% block shortinfo %}{{ gettext("Data as of") }} {{ last_update|date('F d\, Y') }}{% endblock%}
+{% block shortinfo %}{{ gettext("Data as of") }} {{ date_format(last_update, 'LL') }}{% endblock%}
 
 {% block content %}
   <div class="row">

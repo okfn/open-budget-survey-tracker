@@ -24,7 +24,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-01-30 15:17+0000\n"
+"POT-Creation-Date: 2015-01-30 21:48+0000\n"
 "PO-Revision-Date: 2015-01-09 16:09-0600\n"
 "Last-Translator: amandine <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -943,15 +943,19 @@ msgstr "Prochaine période de publication"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:60
 #: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:72
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:110
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:109
 msgid "Unavailable"
 msgstr "Non disponible"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:100
+msgid "Before %s"
+msgstr "Avant le %s"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:119
 msgid "View the Budget Library"
 msgstr "Consulter la bibliothèque du budget"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:121
+#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
 msgid "View historical information"
 msgstr "Consulter les données historiques"
 

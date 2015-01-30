@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 15:17+0000\nPO-Revision-Date: 2015-01-08 16:42-0300\nLast-Translator: Alito <horen.andrea@gmail.com>\nLanguage-Team: PC old\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 21:48+0000\nPO-Revision-Date: 2015-01-08 16:42-0300\nLast-Translator: Alito <horen.andrea@gmail.com>\nLanguage-Team: PC old\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -526,6 +526,10 @@
       "Unavailable": [
          null,
          "No disponible"
+      ],
+      "Before %s": [
+         null,
+         "Antes de %s"
       ],
       "View the Budget Library": [
          null,

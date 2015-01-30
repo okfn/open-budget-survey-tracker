@@ -13,7 +13,7 @@
       <thead>
         <tr>
           {% for score in country.obi_scores %}
-            <th scope="row">{{ score.year }}</th>
+            <th scope="row">{{ date_format(Date.parse(score.year), 'YYYY') }}</th>
           {% endfor %}
         </tr>
       </thead>
@@ -34,9 +34,9 @@
         <th></th>
 	{% set obi_latest = country.obi.availability|sort|last %}
 	{% for snapshot in country.snapshots|sort %}
-          <th>{{ Date.parse(snapshot.date)|date('M Y') }}</th>
+          <th>{{ date_format(Date.parse(snapshot.date), 'MMM YYYY')|capitalize }}</th>
         {% endfor %}
-	<th>OBS {{ obi_latest }}</th>
+	<th>OBS {{ date_format(Date.parse(obi_latest), 'YYYY') }}</th>
       </thead>
       <tbody>
         {% for doc in docs %}

@@ -13,7 +13,7 @@
     <h2>{{ gettext("Reports") }}</h2>
     <ul>
       <li>
-	<a href="{{ asset('/pdfs/sept_2014_obstracker_report_'+lang+'.pdf') }}">September 2014 {{ gettext("Open Budget Survey Tracker Report") }}</a>
+	<a href="{{ asset('/pdfs/sept_2014_obstracker_report_'+lang+'.pdf') }}">{{ date_format(Date.parse('September 2014'), 'MMMM YYYY')|capitalize }} {{ gettext("Open Budget Survey Tracker Report") }}</a>
       </li>
     </ul>
   </div>
@@ -21,19 +21,19 @@
     <h2>{{ gettext("Updates") }}</h2>
     <ul>
       <li>
-	<a href="/updates/2014-12">December 2014 {{ gettext("Open Budget Survey Tracker Update") }}</a>
+	<a href="/updates/2014-12">{{ date_format(Date.parse('December 2014'), 'MMMM YYYY')|capitalize }} {{ gettext("Open Budget Survey Tracker Update") }}</a>
       </li>
       <li>
-	<a href="/updates/2014-11">November 2014 {{ gettext("Open Budget Survey Tracker Update") }}</a>
+	<a href="/updates/2014-11">{{ date_format(Date.parse('November 2014'), 'MMMM YYYY')|capitalize }} {{ gettext("Open Budget Survey Tracker Update") }}</a>
       </li>
       <li>
-	<a href="/updates/2014-10">October 2014 {{ gettext("Open Budget Survey Tracker Update") }}</a>
+	<a href="/updates/2014-10">{{ date_format(Date.parse('October 2014'), 'MMMM YYYY')|capitalize }} {{ gettext("Open Budget Survey Tracker Update") }}</a>
       </li>
       <li>
-	<a href="/updates/2014-09">September 2014 {{ gettext("Open Budget Survey Tracker Update") }}</a>
+	<a href="/updates/2014-09">{{ date_format(Date.parse('September 2014'), 'MMMM YYYY')|capitalize }} {{ gettext("Open Budget Survey Tracker Update") }}</a>
       </li>
       <li>
-	<a href="/updates/2014-08">August 2014 {{ gettext("Open Budget Survey Tracker Update") }}</a>
+	<a href="/updates/2014-08">{{ date_format(Date.parse('August 2014'), 'MMMM YYYY')|capitalize }} {{ gettext("Open Budget Survey Tracker Update") }}</a>
       </li>
     </ul>
   </div>

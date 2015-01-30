@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 15:17+0000\nPO-Revision-Date: 2015-01-08 20:32+0200\nLast-Translator: Ayman El Shemy <ayman_shemy@hotmail.com>\nLanguage-Team: Shemy\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 21:48+0000\nPO-Revision-Date: 2015-01-08 20:32+0200\nLast-Translator: Ayman El Shemy <ayman_shemy@hotmail.com>\nLanguage-Team: Shemy\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -526,6 +526,10 @@
       "Unavailable": [
          null,
          "غير متاح"
+      ],
+      "Before %s": [
+         null,
+         "قبل %s"
       ],
       "View the Budget Library": [
          null,
