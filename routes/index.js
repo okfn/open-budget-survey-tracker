@@ -164,7 +164,7 @@ router.get('/', function (req, res) {
     // the last date of two months ago else it's from last date of one
     // month ago
     var last_update = new Date();
-    if (last_update.getDate() < 17) {
+    if (last_update.getDate() < 22) {
       last_update = new Date(last_update.getFullYear(),
                              last_update.getMonth()-1, 0);
     }
