@@ -60,7 +60,16 @@ app.use(function (req, res, next) {
   };
   res.locals.i18nformat = req.format;
   res.locals.date_format = function (date, format) {
-    return moment(date).format(format);
+      var parsed_date = moment(date);
+      if (parsed_date.isValid()) {
+        return parsed_date.format(format);
+      }
+      else if (typeof date === 'object' && 'year' in date) { 
+        return date.year;
+      }
+      else {
+        return date;
+      }
   };
   next();
 });
