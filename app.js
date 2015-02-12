@@ -44,6 +44,10 @@ app.use(function (req, res, next) {
     req.setLocale(req.cookies.obstracker_language);
     moment.locale(req.cookies.obstracker_language);
   }
+  else {
+    req.setLocale('en');
+    moment.locale('en');
+  }
   res.locals.asset = function (file) {
     if (app.get('env') === 'development') {
       return file;
