@@ -48,7 +48,7 @@
 	      {% for year in snapshot|reverse %}
                 {% if not cell %}
                   {% if doc.title in snapshot[year] %}
-                    {% set cell = snapshot[year][doc.title]|last %}
+                    {% set cell = snapshot[year][doc.title]|first %}
                   {% endif %}
                 {% endif %}
               {% endfor %}
