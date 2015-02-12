@@ -65,7 +65,12 @@ app.use(function (req, res, next) {
         return parsed_date.format(format);
       }
       else if (typeof date === 'object' && 'year' in date) { 
-        return date.year;
+        var split_years = date.year.split('/');
+	var formatted = [];
+	for (var idx in split_years) {
+          formatted.push(res.locals.date_format(split_years[idx], format))
+        }
+        return formatted.join('/');
       }
       else {
         return date;
