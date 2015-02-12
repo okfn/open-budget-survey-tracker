@@ -2,7 +2,6 @@
 
   var timeout;
   var docs;
-  var loading_modal = '<div id="modal" class="modal wide"><div class="modal-dialog"><div class="modal-content"><div class="modal-body">Loading {{ country }}...</div></div></div></div>';
 
   function GetText (text) {
     return text;
@@ -17,16 +16,6 @@
   }
 
   $(function () {
-
-    $('#overview-table tbody tr').on('click', function(event) {
-      event.preventDefault();
-      var country = $(this).data('country');
-      $('#modal').remove();
-      $(loading_modal.replace('{{ country }}', country)).appendTo('body').modal();
-      $.get('/modal/'+country, function (html) {
-        $('#modal').html(html);
-      });
-    });
     $('#overview-table').fixedHeader({
       topOffset: 40
     });

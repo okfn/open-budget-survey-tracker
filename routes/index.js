@@ -56,7 +56,7 @@ router.get('/country/:country', function (req, res) {
   });
 });
 
-router.get('/modal/:country', function (req, res) {
+router.get('/status/:country', function (req, res) {
   api.call('countries', function (countries) {
     var country = {};
     for (var i in countries) {
@@ -65,7 +65,7 @@ router.get('/modal/:country', function (req, res) {
         break;
       }
     }
-    res.render('modal', {
+    res.render('status', {
       'docs': docs,
       'country': country
     });
