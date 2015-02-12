@@ -36,7 +36,7 @@
 	{% for snapshot in country.snapshots|sort %}
           <th>{{ date_format(Date.parse(snapshot.date), 'MMM YYYY')|capitalize }}</th>
         {% endfor %}
-	<th>OBS {{ date_format(Date.parse(obi_latest), 'YYYY') }}</th>
+	<th>OBS{% if obi_latest %} {{ date_format(Date.parse(obi_latest), 'YYYY') }}{% endif %}</th>
       </thead>
       <tbody>
         {% for doc in docs %}
