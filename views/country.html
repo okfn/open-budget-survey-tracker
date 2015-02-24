@@ -5,26 +5,38 @@
 
 {% block content %}
 
-  <h1>{{ gettext(country.country) }}</h1>
+  <div class="row">
+    <div class="col-md-9">
+      <h1>{{ gettext(country.country) }}</h1>
 
-  <h2>{{ gettext("Open Budget Index") }}</h2>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          {% for score in country.obi_scores %}
-            <th scope="row">{{ date_format(Date.parse(score.year), 'YYYY') }}</th>
-          {% endfor %}
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          {% for score in country.obi_scores %}
-            <td>{{ score.score }}</td>
-          {% endfor %}
-        </tr>
-      </tbody>
-    </table>
+      <h2>{{ gettext("Open Budget Index") }}</h2>
+      <div class="table-responsive">
+	<table class="table">
+	  <thead>
+            <tr>
+              {% for score in country.obi_scores %}
+              <th scope="row">{{ date_format(Date.parse(score.year), 'YYYY') }}</th>
+              {% endfor %}
+            </tr>
+	  </thead>
+	  <tbody>
+            <tr>
+              {% for score in country.obi_scores %}
+              <td>{{ score.score }}</td>
+              {% endfor %}
+            </tr>
+	  </tbody>
+	</table>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row top20">
+	<a href="{{ country.library }}" target="_blank" class="btn btn-primary col-md-12">{{ gettext("View the Budget Library") }}</a>
+      </div>
+      <div class="row top5">
+	<a href="/status/{{ country.country }}" class="btn btn-primary col-md-12">{{ gettext("View current status") }}</a>
+      </div>
+    </div>
   </div>
 
   <h2>{{ gettext("Documents") }}</h2>
