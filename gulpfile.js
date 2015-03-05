@@ -22,6 +22,9 @@ var paths = {
   ],
   styles: 'public/styles/*.less',
   images: 'public/images/**/*',
+  vendor_fonts: [
+    'bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.*'
+  ],
   rev: [
     'public/build/scripts/*.js',
     'public/build/styles/*.css'
@@ -83,6 +86,11 @@ gulp.task('images', ['clean'], function () {
     .pipe(gulp.dest('public/build/images'));
 });
 
+gulp.task('vendor_fonts', ['clean'], function () {
+  return gulp.src(paths.vendor_fonts)
+    .pipe(gulp.dest('public/build/fonts'));
+});
+
 gulp.task('manifest', function (callback) {
   gulp.src(paths.manifest)
     .pipe(clean({ force: true }))
@@ -115,5 +123,5 @@ gulp.task('watch', function () {
   gulp.watch(paths.styles, ['dev_styles']);
 });
 
-gulp.task('build', ['vendor_scripts', 'scripts', 'vendor_styles', 'styles', 'images']);
+gulp.task('build', ['vendor_scripts', 'scripts', 'vendor_styles', 'styles', 'vendor_fonts', 'images']);
 gulp.task('deploy', ['manifest'])

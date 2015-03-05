@@ -9,22 +9,22 @@
     <div class="col-md-9">
       <h1>{{ gettext(country.country) }}</h1>
 
-      <h2>{{ gettext("Open Budget Index") }}</h2>
+      <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
       <div class="table-responsive">
 	<table class="table">
 	  <thead>
-            <tr>
-              {% for score in country.obi_scores %}
-              <th scope="row">{{ date_format(Date.parse(score.year), 'YYYY') }}</th>
-              {% endfor %}
-            </tr>
+	    <tr>
+	      {% for score in country.obi_scores %}
+	      <th scope="row">{{ date_format(Date.parse(score.year), 'YYYY') }}</th>
+	      {% endfor %}
+	    </tr>
 	  </thead>
 	  <tbody>
-            <tr>
-              {% for score in country.obi_scores %}
-              <td>{{ score.score }}</td>
-              {% endfor %}
-            </tr>
+	    <tr>
+	      {% for score in country.obi_scores %}
+	      <td>{{ score.score }}</td>
+	      {% endfor %}
+	    </tr>
 	  </tbody>
 	</table>
       </div>
