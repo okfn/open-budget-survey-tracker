@@ -9,6 +9,7 @@
     <div class="col-md-9">
       <h1>{{ gettext(country.country) }}</h1>
 
+      {% if country.obi_scores %}
       <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
       <div class="table-responsive">
 	<table class="table">
@@ -28,6 +29,7 @@
 	  </tbody>
 	</table>
       </div>
+      {% endif %}
     </div>
     <div class="col-md-3">
       <div class="row top20">
