@@ -11,7 +11,7 @@
 
     {% if country.obi_scores %}
     <div>
-      <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></h2>
+      <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
       <p>
 	{{ country.obi_scores|last.score }}/100
 	({{ country.obi_scores|last.year }})
