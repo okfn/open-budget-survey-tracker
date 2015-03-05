@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-01-30 21:48+0000\n"
+"POT-Creation-Date: 2015-03-05 21:58+0000\n"
 "PO-Revision-Date: 2015-01-08 20:32+0200\n"
 "Last-Translator: Ayman El Shemy <ayman_shemy@hotmail.com>\n"
 "Language-Team: Shemy\n"
@@ -87,8 +87,8 @@ msgstr ""
 "الموازنة التي تتيحها الدولة."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:47
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:10
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:11
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:14
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:13
 msgid "Open Budget Index"
 msgstr "مؤشر الموازنة المفتوحة"
 
@@ -246,6 +246,64 @@ msgstr "نبذة عن هذا الموقع"
 #: /home/tryggvib/work/open-budget-survey-tracker/views/layout.html:75
 msgid "Site created by"
 msgstr "تم عمل الموقع من خلال"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:4
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:4
+msgid " - Open Budget Survey - Tracker"
+msgstr "- مسح الموازنة المفتوحة -  برنامج التتبع"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:24
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:36
+msgid "View the Budget Library"
+msgstr "عرض مكتبة الموازنة"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:27
+msgid "View historical information"
+msgstr "عرض المعلومات التاريخية"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:32
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:46
+msgid "Current Status"
+msgstr "الحالة الحالية"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:44
+msgid "Document"
+msgstr "الوثيقة"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:45
+msgid "Fiscal Year"
+msgstr "العام المالي"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:47
+msgid "Date of Publication"
+msgstr "تاريخ النشر"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:48
+msgid "Next Publishing Period"
+msgstr "فترة النشر التالية"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:49
+#, fuzzy
+msgid "Comments"
+msgstr "الوثائق"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:81
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:93
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:130
+msgid "Unavailable"
+msgstr "غير متاح"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:121
+msgid "Before %s"
+msgstr "قبل %s"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:137
+msgid "Comment on:"
+msgstr ""
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:137
+msgid "(untranslated)"
+msgstr ""
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:3
 msgid "Press - Open Budget Survey - Tracker"
@@ -412,16 +470,18 @@ msgstr "دليل برنامج تتبع مسح الموازنة المفتوحة"
 msgid "Research partners"
 msgstr "شركاء الأبحاث"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:4
-msgid " - Open Budget Survey - Tracker"
-msgstr "- مسح الموازنة المفتوحة -  برنامج التتبع"
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:39
+#, fuzzy
+msgid "View current status"
+msgstr "الحالة الحالية"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:30
-msgid "Documents"
-msgstr "الوثائق"
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:44
+#, fuzzy
+msgid "Historical Information"
+msgstr "عرض المعلومات التاريخية"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:80
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:82
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:94
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:96
 msgid "Not tracked"
 msgstr "بدون تتبع"
 
@@ -856,48 +916,6 @@ msgstr "تونس"
 msgid "Vietnam"
 msgstr "فيتنام"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:6
-msgid "Close"
-msgstr "إغلاق"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:24
-msgid "Document"
-msgstr "الوثيقة"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:25
-msgid "Fiscal Year"
-msgstr "العام المالي"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:26
-msgid "Current Status"
-msgstr "الحالة الحالية"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:27
-msgid "Date of Publication"
-msgstr "تاريخ النشر"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:28
-msgid "Next Publishing Period"
-msgstr "فترة النشر التالية"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:60
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:72
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:109
-msgid "Unavailable"
-msgstr "غير متاح"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:100
-msgid "Before %s"
-msgstr "قبل %s"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:119
-msgid "View the Budget Library"
-msgstr "عرض مكتبة الموازنة"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/modal.html:120
-msgid "View historical information"
-msgstr "عرض المعلومات التاريخية"
-
 #: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:3
 msgid "Publications - Open Budget Survey - Tracker"
 msgstr "المنشورات - مسح الموازنة المفتوحة -  برنامج التتبع"
@@ -919,5 +937,9 @@ msgstr "التحديثات"
 #: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:30
 #: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:33
 #: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:36
+#: /home/tryggvib/work/open-budget-survey-tracker/views/publications.html:39
 msgid "Open Budget Survey Tracker Update"
 msgstr "تحديث برنامج تتبع مسح الموازنة المفتوحة"
+
+#~ msgid "Close"
+#~ msgstr "إغلاق"

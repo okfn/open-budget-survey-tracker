@@ -32,11 +32,12 @@
 <h2>{{ gettext("Current Status") }}</h2>
 <table class="table table-hover status-table">
   <colgroup>
-    <col width="20%">
-    <col width="8%">
     <col width="22%">
+    <col width="8%">
     <col width="20%">
+    <col width="16%">
     <col width="30%">
+    <col width="4%">
   </colgroup>
   <thead>
     <tr>
@@ -45,6 +46,7 @@
       <th>{{ gettext("Current Status") }}</th>
       <th>{{ gettext("Date of Publication") }}</th>
       <th><span class="text-muted">{{ gettext("Next Publishing Period") }}</span></th>
+      <th>{{ gettext("Comments") }}</th>
     </tr>
   </thead>
   <tbody>
@@ -130,16 +132,14 @@
           {% endif %}
 	</span>
       </td>
-    </tr>
-    {% if cell.comments %}
-    <tr>
-      <td class="table-comments" colspan="5">
-	<small>
-	  {{ cell.comments }}
-	</small>
+      <td class="text-center">
+	{% if cell.comments %}
+	<span data-toggle="popover" data-title="{{ gettext('Comment on:') }} {{ doc.title }} {{ gettext('(untranslated)') }}" data-placement="top" data-content="{{ cell.comments }}" class="text-info glyphicon glyphicon-comment"></span>
+	{% else %}
+	<span class="text-danger glyphicon glyphicon-remove"></span>
+	{% endif %}
       </td>
     </tr>
-    {% endif %}
     {% endfor %}
   </tbody>
 </table>
