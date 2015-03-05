@@ -9,7 +9,6 @@
 
   function Popovers () {
     $('[data-toggle="popover"]').popover({
-      placement: 'bottom',
       container: 'body',
       trigger: 'hover'
     });

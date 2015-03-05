@@ -60,7 +60,7 @@
         {% endif %}
       {% endfor %}
     <tr>
-      <th scope="row">
+      <th scope="row" data-toggle="popover" data-placement="top" data-content="{{ gettext(doc.description) }}"{% if lang == 'es' %} style="font-size:90%;"{% endif %}{% if lang == 'ru' %} style="font-size:70%;"{% endif %}>
         {{ gettext(doc.title) }}
       </th>
       <td>{{ date_format({'year':fiscal_year}, 'YYYY') }}</td>
