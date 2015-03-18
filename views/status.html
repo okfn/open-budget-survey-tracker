@@ -33,11 +33,11 @@
 <table class="table table-hover status-table">
   <colgroup>
     <col width="22%">
-    <col width="8%">
-    <col width="20%">
+    <col width="10%">
+    <col width="18%">
     <col width="16%">
-    <col width="30%">
     <col width="4%">
+    <col width="30%">
   </colgroup>
   <thead>
     <tr>
@@ -45,8 +45,8 @@
       <th>{{ gettext("Fiscal Year") }}</th>
       <th>{{ gettext("Current Status") }}</th>
       <th>{{ gettext("Date of Publication") }}</th>
-      <th><span class="text-muted">{{ gettext("Next Publishing Period") }}</span></th>
       <th>{{ gettext("Comments") }}</th>
+      <th><span class="text-muted">{{ gettext("Next Publishing Period") }}</span></th>
     </tr>
   </thead>
   <tbody>
@@ -65,7 +65,7 @@
       <th scope="row" data-toggle="popover" data-placement="top" data-content="{{ gettext(doc.description) }}"{% if lang == 'es' %} style="font-size:90%;"{% endif %}{% if lang == 'ru' %} style="font-size:70%;"{% endif %}>
         {{ gettext(doc.title) }}
       </th>
-      <td>{{ date_format({'year':fiscal_year}, 'YYYY') }}</td>
+      <td class="text-center">{{ date_format({'year':fiscal_year}, 'YYYY') }}</td>
       {% if cell %}
       <td>
         <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
@@ -93,6 +93,13 @@
         <span class="text-muted">{{ gettext("Unavailable") }}</span>
       </td>
       {% endif %}
+      <td class="text-center">
+	{% if cell.state == 'comments' %}
+	<span data-toggle="popover" data-title="{{ gettext('Comment on:') }} {{ doc.title }} {{ gettext('(untranslated)') }}" data-placement="top" data-content="{{ cell.comments }}" class="text-info glyphicon glyphicon-comment"></span>
+	{% else %}
+	<span class="text-danger glyphicon glyphicon-remove"></span>
+	{% endif %}
+      </td>
       <td>
         <span class="text-muted">
           {#
@@ -131,13 +138,6 @@
             {% endif %}
           {% endif %}
 	</span>
-      </td>
-      <td class="text-center">
-	{% if cell.comments %}
-	<span data-toggle="popover" data-title="{{ gettext('Comment on:') }} {{ doc.title }} {{ gettext('(untranslated)') }}" data-placement="top" data-content="{{ cell.comments }}" class="text-info glyphicon glyphicon-comment"></span>
-	{% else %}
-	<span class="text-danger glyphicon glyphicon-remove"></span>
-	{% endif %}
       </td>
     </tr>
     {% endfor %}
