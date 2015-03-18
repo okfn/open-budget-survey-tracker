@@ -98,6 +98,7 @@
             {% endfor %}
             <td class="text-center">
             {% if cell %}
+	    <div {% if cell.comments %}style="padding-left:18px;"{% endif %}>
               <span class="badge state state-{{ cell.state|replace(' ', '-') }}" data-toggle="popover" data-placement="top" data-content="{{ h.tooltip(country, cell) }}">
                 <span>{{ h.state(cell.state) }}</span>
               </span>
@@ -108,6 +109,7 @@
               <span class="badge state state-not-produced" data-placement="top" data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
 		<span>{{ h.state("not produced") }}</span>
               </span>
+            </div>
             {% endif %}
             </td>
           {% endfor %}
