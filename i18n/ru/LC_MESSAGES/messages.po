@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-03-05 21:58+0000\n"
+"POT-Creation-Date: 2015-03-18 11:30+0000\n"
 "PO-Revision-Date: 2015-01-13 19:50-0600\n"
 "Last-Translator: Alex <alex.artyukov@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,8 +88,8 @@ msgstr ""
 "обнародованной правительствами."
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/index.html:47
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:14
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:13
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:13
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:12
 msgid "Open Budget Index"
 msgstr "Индекс открытости бюджета"
 
@@ -263,57 +263,91 @@ msgstr "Создатель вебсайта"
 msgid " - Open Budget Survey - Tracker"
 msgstr " - Опрос для оценки открытости бюджета  - опросный лист"
 
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:22
+msgid ""
+"Provides <strong>scant</strong> information to the public in its budget "
+"documents during the year"
+msgstr "СКУДНАЯ ИЛИ ОТСУТСТВИЕ ИНФОРМАЦИИ"
+
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:24
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:36
+msgid ""
+"Provides <strong>minimal</strong> information to the public in its budget "
+"documents during the year"
+msgstr "МИНИМАЛЬНАЯ ИНФОРМАЦИИ"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:26
+msgid ""
+"Provides <strong>some</strong> information to the public in its budget "
+"documents during the year"
+msgstr "НЕКОТОРАЯ ИНФОРМАЦИИ"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:28
+msgid ""
+"Provides <strong>significant</strong> information to the public in its "
+"budget documents during the year"
+msgstr "ЗНАЧИТЕЛЬНАЯ ИНФОРМАЦИИ"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:30
+msgid ""
+"Provides <strong>extensive</strong> information to the public in its budget "
+"documents during the year"
+msgstr "ОБШИРНАЯ ИНФОРМАЦИЯ"
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:36
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:33
+#, fuzzy
+msgid "N/A -- This country was not included in the Open Budget Survey"
+msgstr ""
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:42
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:38
 msgid "View the Budget Library"
 msgstr "Обратиться в бюджетную библиотеку"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:27
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:45
 msgid "View historical information"
 msgstr "См. историческую информацию"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:32
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:46
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:50
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:64
 msgid "Current Status"
 msgstr "Текущее состояние"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:44
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:62
 msgid "Document"
 msgstr "Документ"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:45
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:63
 msgid "Fiscal Year"
 msgstr "Финансовый год"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:47
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:65
+#, fuzzy
+msgid "Comments"
+msgstr ""
+
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:66
 msgid "Date of Publication"
 msgstr "Дата публикации"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:48
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:67
 msgid "Next Publishing Period"
 msgstr "Следующий срок публикации"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:49
-#, fuzzy
-msgid "Comments"
-msgstr "Документы"
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:81
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:93
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:130
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:111
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:115
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:152
 msgid "Unavailable"
 msgstr "Недоступен"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:121
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:143
 msgid "Before %s"
 msgstr "До %s"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:137
-msgid "Comment on:"
-msgstr ""
-
-#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:137
-msgid "(untranslated)"
+#: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:164
+msgid ""
+"Note: Comments are only shown if present and only available in English or "
+"language of origin/researcher"
 msgstr ""
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:3
@@ -328,19 +362,19 @@ msgstr "Пресс-релизы"
 msgid "OBS Tracker in the News"
 msgstr "Опросный лист к Опросу для оценки открытости бюджета в новостях\t"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:61
+#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:78
 msgid "Media Contact"
 msgstr "Контакт со СМИ"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:63
+#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:80
 msgid "Communications Manager"
 msgstr "Управляющей службой коммуникаций"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:65
+#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:82
 msgid "Phone"
 msgstr "Телефон"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:66
+#: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:83
 msgid "Mobile"
 msgstr "Мобильный телефон"
 
@@ -493,18 +527,18 @@ msgstr ""
 msgid "Research partners"
 msgstr "Научно-исследовательские партнеры"
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:39
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:41
 #, fuzzy
 msgid "View current status"
-msgstr "Текущее состояние"
+msgstr ""
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:44
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:46
 #, fuzzy
 msgid "Historical Information"
-msgstr "См. историческую информацию"
+msgstr ""
 
-#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:94
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:96
+#: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:98
 msgid "Not tracked"
 msgstr "Не отслеживается"
 

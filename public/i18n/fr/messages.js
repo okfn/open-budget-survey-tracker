@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 21:48+0000\nPO-Revision-Date: 2015-01-09 16:09-0600\nLast-Translator: amandine <>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-01-09 16:09-0600\nLast-Translator: amandine <>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -151,6 +151,78 @@
          null,
          "Site créé par"
       ],
+      " - Open Budget Survey - Tracker": [
+         null,
+         " - Enquête sur le budget ouvert - Outil de suivi budgétaire"
+      ],
+      "Provides <strong>scant</strong> information to the public in its budget documents during the year": [
+         null,
+         "<strong>Très peu</strong> d’informations budgétaires disponibles au publique"
+      ],
+      "Provides <strong>minimal</strong> information to the public in its budget documents during the year": [
+         null,
+         "Informations budgétaires <strong>minimales</strong> disponibles au publique"
+      ],
+      "Provides <strong>some</strong> information to the public in its budget documents during the year": [
+         null,
+         "<strong>Quelques</strong> informations budgétaires disponibles au publique"
+      ],
+      "Provides <strong>significant</strong> information to the public in its budget documents during the year": [
+         null,
+         "Informations budgétaires <strong>significatives</strong> disponibles au publique"
+      ],
+      "Provides <strong>extensive</strong> information to the public in its budget documents during the year": [
+         null,
+         "Informations budgétaires <strong>approfondies</strong> disponibles au publique"
+      ],
+      "N/A -- This country was not included in the Open Budget Survey": [
+         null,
+         ""
+      ],
+      "View the Budget Library": [
+         null,
+         "Consulter la bibliothèque du budget"
+      ],
+      "View historical information": [
+         null,
+         "Consulter les données historiques"
+      ],
+      "Current Status": [
+         null,
+         "État actuel"
+      ],
+      "Document": [
+         null,
+         "Document"
+      ],
+      "Fiscal Year": [
+         null,
+         "Exercice budgétaire"
+      ],
+      "Comments": [
+         null,
+         ""
+      ],
+      "Date of Publication": [
+         null,
+         "Date de publication"
+      ],
+      "Next Publishing Period": [
+         null,
+         "Prochaine période de publication"
+      ],
+      "Unavailable": [
+         null,
+         "Non disponible"
+      ],
+      "Before %s": [
+         null,
+         "Avant le %s"
+      ],
+      "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
+         null,
+         ""
+      ],
       "Press - Open Budget Survey - Tracker": [
          null,
          "Presse - Enquête sur le budget ouvert - Outil de suivi budgétaire"
@@ -243,13 +315,13 @@
          null,
          "Partenaires de recherche"
       ],
-      " - Open Budget Survey - Tracker": [
+      "View current status": [
          null,
-         " - Enquête sur le budget ouvert - Outil de suivi budgétaire"
+         ""
       ],
-      "Documents": [
+      "Historical Information": [
          null,
-         "Documents"
+         ""
       ],
       "Not tracked": [
          null,
@@ -498,46 +570,6 @@
       "Vietnam": [
          null,
          "Viêt Nam"
-      ],
-      "Close": [
-         null,
-         "Fermer"
-      ],
-      "Document": [
-         null,
-         "Document"
-      ],
-      "Fiscal Year": [
-         null,
-         "Exercice budgétaire"
-      ],
-      "Current Status": [
-         null,
-         "État actuel"
-      ],
-      "Date of Publication": [
-         null,
-         "Date de publication"
-      ],
-      "Next Publishing Period": [
-         null,
-         "Prochaine période de publication"
-      ],
-      "Unavailable": [
-         null,
-         "Non disponible"
-      ],
-      "Before %s": [
-         null,
-         "Avant le %s"
-      ],
-      "View the Budget Library": [
-         null,
-         "Consulter la bibliothèque du budget"
-      ],
-      "View historical information": [
-         null,
-         "Consulter les données historiques"
       ],
       "Publications - Open Budget Survey - Tracker": [
          null,

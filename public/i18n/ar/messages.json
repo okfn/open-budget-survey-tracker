@@ -1,7 +1,7 @@
 {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 21:48+0000\nPO-Revision-Date: 2015-01-08 20:32+0200\nLast-Translator: Ayman El Shemy <ayman_shemy@hotmail.com>\nLanguage-Team: Shemy\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-01-08 20:32+0200\nLast-Translator: Ayman El Shemy <ayman_shemy@hotmail.com>\nLanguage-Team: Shemy\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -151,6 +151,78 @@
          null,
          "تم عمل الموقع من خلال"
       ],
+      " - Open Budget Survey - Tracker": [
+         null,
+         "- مسح الموازنة المفتوحة -  برنامج التتبع"
+      ],
+      "Provides <strong>scant</strong> information to the public in its budget documents during the year": [
+         null,
+         "معلومات ضئيلة أو عدم وجود معلومات"
+      ],
+      "Provides <strong>minimal</strong> information to the public in its budget documents during the year": [
+         null,
+         "الحد الأدنى من المعلومات"
+      ],
+      "Provides <strong>some</strong> information to the public in its budget documents during the year": [
+         null,
+         "بعض المعلومات"
+      ],
+      "Provides <strong>significant</strong> information to the public in its budget documents during the year": [
+         null,
+         "معلومات مهمة"
+      ],
+      "Provides <strong>extensive</strong> information to the public in its budget documents during the year": [
+         null,
+         "معلومات شاملة"
+      ],
+      "N/A -- This country was not included in the Open Budget Survey": [
+         null,
+         ""
+      ],
+      "View the Budget Library": [
+         null,
+         "عرض مكتبة الموازنة"
+      ],
+      "View historical information": [
+         null,
+         "عرض المعلومات التاريخية"
+      ],
+      "Current Status": [
+         null,
+         "الحالة الحالية"
+      ],
+      "Document": [
+         null,
+         "الوثيقة"
+      ],
+      "Fiscal Year": [
+         null,
+         "العام المالي"
+      ],
+      "Comments": [
+         null,
+         ""
+      ],
+      "Date of Publication": [
+         null,
+         "تاريخ النشر"
+      ],
+      "Next Publishing Period": [
+         null,
+         "فترة النشر التالية"
+      ],
+      "Unavailable": [
+         null,
+         "غير متاح"
+      ],
+      "Before %s": [
+         null,
+         "قبل %s"
+      ],
+      "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
+         null,
+         ""
+      ],
       "Press - Open Budget Survey - Tracker": [
          null,
          "الصحافة - مسح الموازنة المفتوحة - برنامج التتبع"
@@ -243,13 +315,13 @@
          null,
          "شركاء الأبحاث"
       ],
-      " - Open Budget Survey - Tracker": [
+      "View current status": [
          null,
-         "- مسح الموازنة المفتوحة -  برنامج التتبع"
+         ""
       ],
-      "Documents": [
+      "Historical Information": [
          null,
-         "الوثائق"
+         ""
       ],
       "Not tracked": [
          null,
@@ -498,46 +570,6 @@
       "Vietnam": [
          null,
          "فيتنام"
-      ],
-      "Close": [
-         null,
-         "إغلاق"
-      ],
-      "Document": [
-         null,
-         "الوثيقة"
-      ],
-      "Fiscal Year": [
-         null,
-         "العام المالي"
-      ],
-      "Current Status": [
-         null,
-         "الحالة الحالية"
-      ],
-      "Date of Publication": [
-         null,
-         "تاريخ النشر"
-      ],
-      "Next Publishing Period": [
-         null,
-         "فترة النشر التالية"
-      ],
-      "Unavailable": [
-         null,
-         "غير متاح"
-      ],
-      "Before %s": [
-         null,
-         "قبل %s"
-      ],
-      "View the Budget Library": [
-         null,
-         "عرض مكتبة الموازنة"
-      ],
-      "View historical information": [
-         null,
-         "عرض المعلومات التاريخية"
       ],
       "Publications - Open Budget Survey - Tracker": [
          null,

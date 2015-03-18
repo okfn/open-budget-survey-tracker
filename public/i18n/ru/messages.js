@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 21:48+0000\nPO-Revision-Date: 2015-01-13 19:50-0600\nLast-Translator: Alex <alex.artyukov@gmail.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-01-13 19:50-0600\nLast-Translator: Alex <alex.artyukov@gmail.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -151,6 +151,78 @@
          null,
          "Создатель вебсайта"
       ],
+      " - Open Budget Survey - Tracker": [
+         null,
+         " - Опрос для оценки открытости бюджета  - опросный лист"
+      ],
+      "Provides <strong>scant</strong> information to the public in its budget documents during the year": [
+         null,
+         "СКУДНАЯ ИЛИ ОТСУТСТВИЕ ИНФОРМАЦИИ"
+      ],
+      "Provides <strong>minimal</strong> information to the public in its budget documents during the year": [
+         null,
+         "МИНИМАЛЬНАЯ ИНФОРМАЦИИ"
+      ],
+      "Provides <strong>some</strong> information to the public in its budget documents during the year": [
+         null,
+         "НЕКОТОРАЯ ИНФОРМАЦИИ"
+      ],
+      "Provides <strong>significant</strong> information to the public in its budget documents during the year": [
+         null,
+         "ЗНАЧИТЕЛЬНАЯ ИНФОРМАЦИИ"
+      ],
+      "Provides <strong>extensive</strong> information to the public in its budget documents during the year": [
+         null,
+         "ОБШИРНАЯ ИНФОРМАЦИЯ"
+      ],
+      "N/A -- This country was not included in the Open Budget Survey": [
+         null,
+         ""
+      ],
+      "View the Budget Library": [
+         null,
+         "Обратиться в бюджетную библиотеку"
+      ],
+      "View historical information": [
+         null,
+         "См. историческую информацию"
+      ],
+      "Current Status": [
+         null,
+         "Текущее состояние"
+      ],
+      "Document": [
+         null,
+         "Документ"
+      ],
+      "Fiscal Year": [
+         null,
+         "Финансовый год"
+      ],
+      "Comments": [
+         null,
+         ""
+      ],
+      "Date of Publication": [
+         null,
+         "Дата публикации"
+      ],
+      "Next Publishing Period": [
+         null,
+         "Следующий срок публикации"
+      ],
+      "Unavailable": [
+         null,
+         "Недоступен"
+      ],
+      "Before %s": [
+         null,
+         "До %s"
+      ],
+      "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
+         null,
+         ""
+      ],
       "Press - Open Budget Survey - Tracker": [
          null,
          "Пресса - Опрос для оценки открытости бюджета  - опросный лист"
@@ -243,13 +315,13 @@
          null,
          "Научно-исследовательские партнеры"
       ],
-      " - Open Budget Survey - Tracker": [
+      "View current status": [
          null,
-         " - Опрос для оценки открытости бюджета  - опросный лист"
+         ""
       ],
-      "Documents": [
+      "Historical Information": [
          null,
-         "Документы"
+         ""
       ],
       "Not tracked": [
          null,
@@ -498,46 +570,6 @@
       "Vietnam": [
          null,
          "Вьетнам"
-      ],
-      "Close": [
-         null,
-         "Закрыть"
-      ],
-      "Document": [
-         null,
-         "Документ"
-      ],
-      "Fiscal Year": [
-         null,
-         "Финансовый год"
-      ],
-      "Current Status": [
-         null,
-         "Текущее состояние"
-      ],
-      "Date of Publication": [
-         null,
-         "Дата публикации"
-      ],
-      "Next Publishing Period": [
-         null,
-         "Следующий срок публикации"
-      ],
-      "Unavailable": [
-         null,
-         "Недоступен"
-      ],
-      "Before %s": [
-         null,
-         "До %s"
-      ],
-      "View the Budget Library": [
-         null,
-         "Обратиться в бюджетную библиотеку"
-      ],
-      "View historical information": [
-         null,
-         "См. историческую информацию"
       ],
       "Publications - Open Budget Survey - Tracker": [
          null,

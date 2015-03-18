@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-01-30 21:48+0000\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: \nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
       },
       "Publicly available": [
          null,
@@ -151,6 +151,78 @@
          null,
          ""
       ],
+      " - Open Budget Survey - Tracker": [
+         null,
+         ""
+      ],
+      "Provides <strong>scant</strong> information to the public in its budget documents during the year": [
+         null,
+         ""
+      ],
+      "Provides <strong>minimal</strong> information to the public in its budget documents during the year": [
+         null,
+         ""
+      ],
+      "Provides <strong>some</strong> information to the public in its budget documents during the year": [
+         null,
+         ""
+      ],
+      "Provides <strong>significant</strong> information to the public in its budget documents during the year": [
+         null,
+         ""
+      ],
+      "Provides <strong>extensive</strong> information to the public in its budget documents during the year": [
+         null,
+         ""
+      ],
+      "N/A -- This country was not included in the Open Budget Survey": [
+         null,
+         ""
+      ],
+      "View the Budget Library": [
+         null,
+         ""
+      ],
+      "View historical information": [
+         null,
+         ""
+      ],
+      "Current Status": [
+         null,
+         ""
+      ],
+      "Document": [
+         null,
+         ""
+      ],
+      "Fiscal Year": [
+         null,
+         ""
+      ],
+      "Comments": [
+         null,
+         ""
+      ],
+      "Date of Publication": [
+         null,
+         ""
+      ],
+      "Next Publishing Period": [
+         null,
+         ""
+      ],
+      "Unavailable": [
+         null,
+         ""
+      ],
+      "Before %s": [
+         null,
+         ""
+      ],
+      "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
+         null,
+         ""
+      ],
       "Press - Open Budget Survey - Tracker": [
          null,
          ""
@@ -243,11 +315,11 @@
          null,
          ""
       ],
-      " - Open Budget Survey - Tracker": [
+      "View current status": [
          null,
          ""
       ],
-      "Documents": [
+      "Historical Information": [
          null,
          ""
       ],
@@ -496,46 +568,6 @@
          ""
       ],
       "Vietnam": [
-         null,
-         ""
-      ],
-      "Close": [
-         null,
-         ""
-      ],
-      "Document": [
-         null,
-         ""
-      ],
-      "Fiscal Year": [
-         null,
-         ""
-      ],
-      "Current Status": [
-         null,
-         ""
-      ],
-      "Date of Publication": [
-         null,
-         ""
-      ],
-      "Next Publishing Period": [
-         null,
-         ""
-      ],
-      "Unavailable": [
-         null,
-         ""
-      ],
-      "Before %s": [
-         null,
-         ""
-      ],
-      "View the Budget Library": [
-         null,
-         ""
-      ],
-      "View historical information": [
          null,
          ""
       ],
