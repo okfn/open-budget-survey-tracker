@@ -12,9 +12,25 @@
     <div>
       <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
       {% if country.obi_scores %}
+      {% set lastscore = country.obi_scores|last %}
       <p>
-	{{ country.obi_scores|last.score }}/100
-	({{ country.obi_scores|last.year }})
+	<span class="lead">
+	{{ lastscore.score }}/100
+	</span>
+	<small class="text-muted">
+	{% if lastscore.score <= 20 %}
+	{{ gettext('Provides <strong>scant</strong> information to the public in its budget documents during the year') }}
+	{% elif lastscore.score <= 40 %}
+	{{ gettext('Provides <strong>minimal</strong> information to the public in its budget documents during the year') }}
+	{% elif lastscore.score <= 60 %}
+        {{ gettext('Provides <strong>some</strong> information to the public in its budget documents during the year') }}
+	{% elif lastscore.score <= 80 %}
+        {{ gettext('Provides <strong>significant</strong> information to the public in its budget documents during the year') }}
+        {% else %}
+        {{ gettext('Provides <strong>extensive</strong> information to the public in its budget documents during the year') }}
+        {% endif %}
+        ({{ date_format({'year':lastscore.year}, 'YYYY') }})
+        </small>
       </p>
       {% else %}
       <p class="text-muted">{{ gettext('N/A -- This country was not included in the Open Budget Survey') }}</p>
