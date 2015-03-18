@@ -99,7 +99,7 @@
       </td>
       <td class="text-center">
 	{% if cell.state == 'comments' %}
-	<span data-toggle="popover" data-title="{{ gettext('Comment on:') }} {{ doc.title }} {{ gettext('(untranslated)') }}" data-placement="top" data-content="{{ cell.comments }}" class="text-info glyphicon glyphicon-comment"></span>
+	<span data-toggle="popover" data-placement="top" data-content="{{ cell.comments }}" class="text-info glyphicon glyphicon-comment"></span>
 	{% endif %}
       </td>
       <td>
