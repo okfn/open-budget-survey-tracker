@@ -44,62 +44,94 @@
   </div>
 
   <h2>{{ gettext("Historical Information") }}</h2>
-  <div class="table-responsive">
+  <div class="panel panel-default">
+    <div id="heading" class="panel-heading">
+      <div class="text-right"{% if lang == 'ru'%} style="font-size:70%;"{% endif %}>
+        <strong>{{ gettext("Key") }}:</strong>
+        <span class="item">
+          <span class="badge state state-available"><span>{{ gettext("Publicly available") }}</span></span>
+          {{ gettext("Publicly available") }}
+        </span>
+        <span class="item">
+          <span class="badge state state-internal"><span>{{ gettext("Internally available") }}</span></span>
+          {{ gettext("Internal use only") }}
+        </span>
+        <span class="item">
+          <span class="badge state state-not-produced"><span>{{ gettext("Not produced") }}</span></span>
+          {{ gettext("Not produced") }} / {{ gettext("Published late") }}
+        </span>
+      </div>
+    </div>
+    <div class="table-responsive">
     <table class="table table-hover">
+      <colgroup>
+        <col width="16%">
+        <col width="10.5%">
+        <col width="10.5%">
+        <col width="10.5%">
+        <col width="10.5%">
+        <col width="10.5%">
+        <col width="10.5%">
+        <col width="10.5%">
+        <col width="10.5%">
+      </colgroup>
       <thead>
         <th></th>
 	{% set obi_latest = country.obi.availability|sort|last %}
-	{% for snapshot in country.snapshots|sort %}
-          <th>{{ date_format(Date.parse(snapshot.date), 'MMM YYYY')|capitalize }}</th>
+        {% for doc in docs %}
+        <th class="text-center" scope="row" data-toggle="popover" data-placement="top" data-content="{{ gettext(doc.description) }}"{% if lang == 'es' %} style="font-size:90%;"{% endif %}{% if lang == 'ru' %} style="font-size:70%;"{% endif %}>{{ gettext(doc.title) }}</th>
         {% endfor %}
-	<th>OBS{% if obi_latest %} {{ date_format(Date.parse(obi_latest), 'YYYY') }}{% endif %}</th>
       </thead>
       <tbody>
-        {% for doc in docs %}
-          <tr>
-            <th scope="row" data-toggle="popover" data-placement="top" data-content="{{ gettext(doc.description) }}"{% if lang == 'es' %} style="font-size:90%;"{% endif %}{% if lang == 'ru' %} style="font-size:70%;"{% endif %}>{{ gettext(doc.title) }}</th>
-	    {% for item in country.snapshots %}
-	      {% set snapshot = item.snapshot %}
-              {% set cell = undefined %}
-	      {% for year in snapshot|reverse %}
-                {% if not cell %}
-                  {% if doc.title in snapshot[year] %}
-                    {% set cell = snapshot[year][doc.title]|first %}
-                  {% endif %}
+	{% for snapshot_obj in country.snapshots|sort %}
+        {% set snapshot = snapshot_obj.snapshot %}
+	<tr>
+          <th>{{ date_format(Date.parse(snapshot_obj.date), 'MMM YYYY')|capitalize }}</th>
+	  {% for doc in docs %}
+            {% set cell = undefined %}
+            {% for year in snapshot|reverse %}
+              {% if not cell %}
+                {% if doc.title in snapshot[year] %}
+                  {% set cell = snapshot[year][doc.title]|first %}
                 {% endif %}
-              {% endfor %}
-              {% if cell %}
-                 <td data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
-                   <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
-                   <span>{{ h.state(cell.state) }}</span>
-                 </span>
-		     {{ h.state(cell.state) }}
-                 </td>
-              {% else %}
-                 <td data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
-                 <span class="badge state state-not-produced">
-                    <span>{{ h.state("not produced") }}</span>
-                 </span>
-                 {{ h.state("not-produced") }}
-                 </td>
-               {% endif %}
-             {% endfor %}
-	    <td>
-	      {% if obi_latest %}
-	      {% set state = country.obi.availability[obi_latest][doc.title] %}
+              {% endif %}
+            {% endfor %}
+            {% if cell %}
+            <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
+              <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
+                <span>{{ h.state(cell.state) }}</span>
+              </span>
+            </td>
+            {% else %}
+            <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
+              <span class="badge state state-not-produced">
+		<span>{{ h.state("not produced") }}</span>
+              </span>
+            </td>
+            {% endif %}
+          {% endfor %}
+          </tr>
+        {% endfor %}
+	  <tr class="info">
+	    <th>OBS{% if obi_latest %} {{ date_format(Date.parse(obi_latest), 'YYYY') }}{% endif %}</th>
+	    {% for doc in docs %}
+	    {% if obi_latest %}
+	    {% set state = country.obi.availability[obi_latest][doc.title] %}
+	    <td class="text-center" data-toggle="popover" data-content="{{ h.state(state) }}">
               <span class="badge state state-{{ state|replace(' ', '-') }}">
                 <span>{{ h.state(state) }}</span>
               </span>
-              {{ h.state(state) }}
-	      {% else %}
-              <span class="badge state state-untracked }}">
+	    </td>
+	    {% else %}
+	    <td class="text-center" data-toggle="popover" data-content="{{ gettext('Not tracked') }}">
+              <span class="badge state state-untracked">
                 <span>{{ gettext("Not tracked") }}</span>
               </span>
-              {{ gettext("Not tracked") }}
-	      {% endif %}
 	    </td>
+	    {% endif %}
+	    {% endfor %}
           </tr>
-        {% endfor %}
+
       </tbody>
     </table>
   </div>
