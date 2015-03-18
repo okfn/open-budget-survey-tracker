@@ -9,8 +9,8 @@
     <div class="col-md-9">
       <h1>{{ gettext(country.country) }}</h1>
 
-      {% if country.obi_scores %}
       <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
+      {% if country.obi_scores %}
       <div class="table-responsive">
 	<table class="table">
 	  <thead>
@@ -29,6 +29,8 @@
 	  </tbody>
 	</table>
       </div>
+      {% else %}
+      <p class="text-muted">{{ gettext('N/A -- This country was not included in the Open Budget Survey') }}</p>
       {% endif %}
     </div>
     <div class="col-md-3">

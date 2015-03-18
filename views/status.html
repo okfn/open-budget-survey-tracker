@@ -9,15 +9,17 @@
   <div class="col-md-9">
     <h1>{{ gettext(country.country) }}</h1>
 
-    {% if country.obi_scores %}
     <div>
       <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
+      {% if country.obi_scores %}
       <p>
 	{{ country.obi_scores|last.score }}/100
 	({{ country.obi_scores|last.year }})
       </p>
+      {% else %}
+      <p class="text-muted">{{ gettext('N/A -- This country was not included in the Open Budget Survey') }}</p>
+      {% endif %}
     </div>
-    {% endif %}
   </div>
   <div class="col-md-3">
     <div class="row top20">
