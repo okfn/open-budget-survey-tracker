@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-01-13 19:50-0600\nLast-Translator: Alex <alex.artyukov@gmail.com>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-04-17 11:52+0000\nLast-Translator: Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -177,7 +177,7 @@
       ],
       "N/A -- This country was not included in the Open Budget Survey": [
          null,
-         ""
+         "Нет -- Эта страна не включена в Опрос для оценки открытости бюджета"
       ],
       "View the Budget Library": [
          null,
@@ -201,7 +201,7 @@
       ],
       "Comments": [
          null,
-         ""
+         "Комментарии"
       ],
       "Date of Publication": [
          null,
@@ -221,7 +221,7 @@
       ],
       "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
          null,
-         ""
+         "Примечание. Комментарии отображаются только при их наличии и только на английском языке или на языке оригинала/исследователя"
       ],
       "Press - Open Budget Survey - Tracker": [
          null,
@@ -317,11 +317,11 @@
       ],
       "View current status": [
          null,
-         ""
+         "Просмотр текущего статуса"
       ],
       "Historical Information": [
          null,
-         ""
+         "Информация о прошлых периодах"
       ],
       "Not tracked": [
          null,

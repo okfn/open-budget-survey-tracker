@@ -1,10 +1,12 @@
 # Alex <alex.artyukov@gmail.com>, 2015.
+# Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2015-03-18 11:30+0000\n"
-"PO-Revision-Date: 2015-01-13 19:50-0600\n"
-"Last-Translator: Alex <alex.artyukov@gmail.com>\n"
+"PO-Revision-Date: 2015-04-17 11:52+0000\n"
+"Last-Translator: Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -295,9 +297,8 @@ msgstr "ОБШИРНАЯ ИНФОРМАЦИЯ"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:36
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:33
-#, fuzzy
 msgid "N/A -- This country was not included in the Open Budget Survey"
-msgstr ""
+msgstr "Нет -- Эта страна не включена в Опрос для оценки открытости бюджета"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:42
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:38
@@ -322,9 +323,8 @@ msgid "Fiscal Year"
 msgstr "Финансовый год"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:65
-#, fuzzy
 msgid "Comments"
-msgstr ""
+msgstr "Комментарии"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:66
 msgid "Date of Publication"
@@ -349,6 +349,8 @@ msgid ""
 "Note: Comments are only shown if present and only available in English or "
 "language of origin/researcher"
 msgstr ""
+"Примечание. Комментарии отображаются только при их наличии и только на "
+"английском языке или на языке оригинала/исследователя"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:3
 msgid "Press - Open Budget Survey - Tracker"
@@ -528,14 +530,12 @@ msgid "Research partners"
 msgstr "Научно-исследовательские партнеры"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:41
-#, fuzzy
 msgid "View current status"
-msgstr ""
+msgstr "Просмотр текущего статуса"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:46
-#, fuzzy
 msgid "Historical Information"
-msgstr ""
+msgstr "Информация о прошлых периодах"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:96
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:98

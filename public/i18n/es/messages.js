@@ -1,7 +1,7 @@
 ;var json_locale_data = {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-01-08 16:42-0300\nLast-Translator: Alito <horen.andrea@gmail.com>\nLanguage-Team: PC old\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-04-17 11:34+0000\nLast-Translator: Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>\nLanguage-Team: PC old\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -177,7 +177,7 @@
       ],
       "N/A -- This country was not included in the Open Budget Survey": [
          null,
-         ""
+         "N/C -- Este país no se incluyó en la Encuesta de Presupuesto Abierto"
       ],
       "View the Budget Library": [
          null,
@@ -201,7 +201,7 @@
       ],
       "Comments": [
          null,
-         ""
+         "Comentarios"
       ],
       "Date of Publication": [
          null,
@@ -221,7 +221,7 @@
       ],
       "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
          null,
-         ""
+         "Nota: Los comentarios solo si muestran si están presentes y solo están disponibles en inglés o en el idioma de origen/del investigador"
       ],
       "Press - Open Budget Survey - Tracker": [
          null,
@@ -317,11 +317,11 @@
       ],
       "View current status": [
          null,
-         ""
+         "Ver estado actual"
       ],
       "Historical Information": [
          null,
-         ""
+         "Información histórica"
       ],
       "Not tracked": [
          null,

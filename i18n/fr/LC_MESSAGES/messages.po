@@ -1,32 +1,12 @@
 # amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
-# amandine, 2015.
+# Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2015-03-18 11:30+0000\n"
-"PO-Revision-Date: 2015-01-09 16:09-0600\n"
-"Last-Translator: amandine <>\n"
+"PO-Revision-Date: 2015-04-17 11:37+0000\n"
+"Last-Translator: Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -290,37 +270,43 @@ msgstr " - Enquête sur le budget ouvert - Outil de suivi budgétaire"
 msgid ""
 "Provides <strong>scant</strong> information to the public in its budget "
 "documents during the year"
-msgstr "<strong>Très peu</strong> d’informations budgétaires disponibles au publique"
+msgstr ""
+"<strong>Très peu</strong> d’informations budgétaires disponibles au publique"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:24
 msgid ""
 "Provides <strong>minimal</strong> information to the public in its budget "
 "documents during the year"
-msgstr "Informations budgétaires <strong>minimales</strong> disponibles au publique"
+msgstr ""
+"Informations budgétaires <strong>minimales</strong> disponibles au publique"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:26
 msgid ""
 "Provides <strong>some</strong> information to the public in its budget "
 "documents during the year"
-msgstr "<strong>Quelques</strong> informations budgétaires disponibles au publique"
+msgstr ""
+"<strong>Quelques</strong> informations budgétaires disponibles au publique"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:28
 msgid ""
 "Provides <strong>significant</strong> information to the public in its "
 "budget documents during the year"
-msgstr "Informations budgétaires <strong>significatives</strong> disponibles au publique"
+msgstr ""
+"Informations budgétaires <strong>significatives</strong> disponibles au "
+"publique"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:30
 msgid ""
 "Provides <strong>extensive</strong> information to the public in its budget "
 "documents during the year"
-msgstr "Informations budgétaires <strong>approfondies</strong> disponibles au publique"
+msgstr ""
+"Informations budgétaires <strong>approfondies</strong> disponibles au "
+"publique"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:36
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:33
-#, fuzzy
 msgid "N/A -- This country was not included in the Open Budget Survey"
-msgstr ""
+msgstr "N/D -- Ce pays n'a pas été inclus dans l'Enquête sur le Budget ouvert"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:42
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:38
@@ -345,9 +331,8 @@ msgid "Fiscal Year"
 msgstr "Exercice budgétaire"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:65
-#, fuzzy
 msgid "Comments"
-msgstr ""
+msgstr "Observations"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/status.html:66
 msgid "Date of Publication"
@@ -372,6 +357,9 @@ msgid ""
 "Note: Comments are only shown if present and only available in English or "
 "language of origin/researcher"
 msgstr ""
+"Remarque : Les observations ne sont indiquées que lorsqu'elles ont été "
+"fournies et qu'elles sont disponibles en anglais ou dans la langue "
+"d'origine / du chercheur"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/press.html:3
 msgid "Press - Open Budget Survey - Tracker"
@@ -550,14 +538,12 @@ msgid "Research partners"
 msgstr "Partenaires de recherche"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:41
-#, fuzzy
 msgid "View current status"
-msgstr ""
+msgstr "Afficher le statut actuel'"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:46
-#, fuzzy
 msgid "Historical Information"
-msgstr ""
+msgstr "Données historiques"
 
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:96
 #: /home/tryggvib/work/open-budget-survey-tracker/views/country.html:98

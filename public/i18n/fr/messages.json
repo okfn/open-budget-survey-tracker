@@ -1,7 +1,7 @@
 {
    "messages": {
       "": {
-         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-01-09 16:09-0600\nLast-Translator: amandine <>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Generator: Virtaal 0.7.1\n"
+         "Project-Id-Version": " PACKAGE VERSION\nPOT-Creation-Date: 2015-03-18 11:30+0000\nPO-Revision-Date: 2015-04-17 11:37+0000\nLast-Translator: Tryggvi Björgvinsson <tryggvi.bjorgvinsson@okfn.org>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\nX-Generator: Virtaal 0.7.1\n"
       },
       "Publicly available": [
          null,
@@ -177,7 +177,7 @@
       ],
       "N/A -- This country was not included in the Open Budget Survey": [
          null,
-         ""
+         "N/D -- Ce pays n'a pas été inclus dans l'Enquête sur le Budget ouvert"
       ],
       "View the Budget Library": [
          null,
@@ -201,7 +201,7 @@
       ],
       "Comments": [
          null,
-         ""
+         "Observations"
       ],
       "Date of Publication": [
          null,
@@ -221,7 +221,7 @@
       ],
       "Note: Comments are only shown if present and only available in English or language of origin/researcher": [
          null,
-         ""
+         "Remarque : Les observations ne sont indiquées que lorsqu'elles ont été fournies et qu'elles sont disponibles en anglais ou dans la langue d'origine / du chercheur"
       ],
       "Press - Open Budget Survey - Tracker": [
          null,
@@ -317,11 +317,11 @@
       ],
       "View current status": [
          null,
-         ""
+         "Afficher le statut actuel'"
       ],
       "Historical Information": [
          null,
-         ""
+         "Données historiques"
       ],
       "Not tracked": [
          null,
