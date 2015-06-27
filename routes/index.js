@@ -3,6 +3,7 @@ var path = require('path');
 var express = require('express');
 var moment = require('moment');
 var api = require('./../api.js');
+var _ = require('underscore');
 var router = express.Router();
 
 var docs = [
@@ -49,6 +50,9 @@ router.get('/country/:country', function (req, res) {
         break;
       }
     }
+    country.snapshots = _.sortBy(country.snapshots, function(obj) {
+	return -obj.date;
+    });
     res.render('country', {
       'docs': docs,
       'country': country

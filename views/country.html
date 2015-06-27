@@ -83,7 +83,7 @@
         {% endfor %}
       </thead>
       <tbody>
-	{% for snapshot_obj in country.snapshots|sort %}
+	{% for snapshot_obj in country.snapshots %}
         {% set snapshot = snapshot_obj.snapshot %}
 	<tr>
           <th>{{ date_format(Date.parse(snapshot_obj.date), 'MMM YYYY')|capitalize }}</th>
