@@ -5,19 +5,23 @@
     {{ gettext("Internal use only") }}
   {%- elif check == 'late' - %}
     {{ gettext("Published late") }}
+  {%- elif check == "discontinued" -%}
+    {{ gettext("Discontinued") }}
   {%- else -%}
     {{ gettext("Not produced") }}
   {%- endif -%}
 {%- endmacro -%}
 
 {%- macro tooltip(country, doc) -%}
-  {{ gettext(country.country) }}: {% if doc.type %}{{ gettext(doc.type) }}{% else %}{{ gettext(doc.title) }}{% endif %} 
+  {{ gettext(country.country) }}: {% if doc.type %}{{ gettext(doc.type) }}{% elif doc.title %}{{ gettext(doc.title) }}{% else %}{% endif %} 
   {%- if doc.state == 'available' %}
     {{ gettext("is publicly available") }}
   {%- elif doc.state == "internal" %}
     {{ gettext("is produced and available for internal use only") }}
   {%- elif doc.state == 'late' %}
     {{ gettext("was published late") }}
+  {%- elif doc.state == 'discontinued' %}
+    {{ doc.popup }}
   {%- else %}
     {{ gettext("is not produced") }}
   {%- endif -%}

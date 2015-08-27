@@ -41,6 +41,17 @@ var docs = [
   }
 ];
 
+var country_override = {
+    "Philippines": {
+        "date": new Date(2015, 3, 30),
+	"message": "The availability status of the Philippines’ budget documents stopped being tracked on April 30, 2015. Historical information and published budget documents are available through this website, till that point.",
+	"value": [{
+          "state": "discontinued",
+          "popup": "The Philippines’ budget documents stopped being tracked on April 30, 2015"
+	}]
+    }
+};
+
 router.get('/country/:country', function (req, res) {
   api.call('countries', function (countries) {
     var country = {};
@@ -53,6 +64,25 @@ router.get('/country/:country', function (req, res) {
     country.snapshots = _.sortBy(country.snapshots, function(obj) {
 	return -obj.date;
     });
+
+    // Override country if needed (e.g. discontinued countries)
+    if (country.country in country_override) {
+	var documents = _.indexBy(_.pluck(docs, 'title'));
+        documents = _.mapObject(documents, function(value){
+          return country_override[country.country].value;
+        });
+	var this_year = ''+(new Date).getFullYear();
+        var overwritten = {};
+        overwritten[this_year] = documents;
+	country.snapshots = _.map(country.snapshots, function(obj) {
+            if (new Date(obj.date) > country_override[country.country].date) {
+		obj.snapshot = overwritten;
+	    }
+	    return obj;
+	});
+        country.message = country_override[country.country].message;
+    }
+
     res.render('country', {
       'docs': docs,
       'country': country
@@ -69,6 +99,19 @@ router.get('/status/:country', function (req, res) {
         break;
       }
     }
+
+    // Override country if needed (e.g. discontinued countries)
+    if (country.country in country_override) {
+      var documents = _.indexBy(_.pluck(docs, 'title'));
+      documents = _.mapObject(documents, function(value){
+        return country_override[country.country].value;
+      });
+      var this_year = ''+(new Date).getFullYear();
+      country.documents = {};
+      country.documents[this_year] = documents;
+      country.message = country_override[country.country].message;
+    }
+
     res.render('status', {
       'docs': docs,
       'country': country
@@ -111,6 +154,21 @@ router.get('/data.csv', function (req, res) {
 		data.push(country.code);
 		var snapshot = snapshots[s];
 		var date = moment(snapshot.date);
+
+                //Override countries (e.g. discontinued countries)
+                if (country.country in country_override) {
+		  var documents = _.indexBy(_.pluck(docs, 'title'));
+                  documents = _.mapObject(documents, function(value){
+                    return country_override[country.country].value;
+                  });
+                  var this_year = ''+(new Date).getFullYear();
+                  var overwritten = {};
+                  overwritten[this_year] = documents;
+		  if (date > moment(country_override[country.country].date)) {
+		    snapshot.snapshot = overwritten;
+                  }
+                }
+
 		data.push(date.month()+1);  // Months in js start from 0
 		data.push(date.year());
 		for (var d in docs) {
@@ -176,6 +234,19 @@ router.get('/', function (req, res) {
       last_update = new Date(last_update.getFullYear(),
                              last_update.getMonth(), 0);
     }
+
+    //Override countries (e.g. discontinued countries)
+    countries = _.map(countries, function(obj) {
+      if (obj.country in country_override) {
+        var documents = _.indexBy(_.pluck(docs, 'title'));
+        documents = _.mapObject(documents, function(value){
+          return country_override[obj.country].value;
+        });
+        obj.documents = {}
+        obj.documents[''+last_update.getFullYear()] = documents;
+      }
+      return obj;
+    });
 
     res.render('index', {
       'docs': docs,

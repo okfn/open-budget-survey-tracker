@@ -8,7 +8,9 @@
 <div class="row">
   <div class="col-md-9">
     <h1>{{ gettext(country.country) }}</h1>
-
+    {%- if country.message %}
+    <div class="alert alert-danger">{{ gettext(country.message) }}</div>
+    {% endif %}
     <div>
       <h2>{{ gettext("Open Budget Index") }} <small><a href="/about"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></small></h2>
       {% if country.obi_scores %}
