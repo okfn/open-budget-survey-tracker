@@ -118,8 +118,11 @@ gulp.task('dev_styles', function () {
 });
 
 gulp.task('watch', function () {
+  gulp.start(['dev_vendor_styles']);
+  gulp.start(['dev_vendor_scripts']);
+  gulp.start(['dev_styles']);
   gulp.watch(paths.vendor_styles, ['dev_vendor_styles']);
-  gulp.watch(paths.vendor_scripts, ['dev_vendor_styles']);
+  gulp.watch(paths.vendor_scripts, ['dev_vendor_scripts']);
   gulp.watch(paths.styles, ['dev_styles']);
 });
 

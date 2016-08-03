@@ -11,20 +11,27 @@ Open Budget Survey
 
 ## Installation
 
-    git clone https://github.com/okfn/open-budget-survey-realtime.git
-    cd open-budget-survey-realtime
+    git clone https://github.com/okfn/open-budget-survey-tracker.git
+    cd open-budget-survey-tracker
     bower update
     npm install
     gulp build && gulp deploy
-    ENV=development npm start
+    npm start
 
 Open: <http://localhost:3000/>
 
 ## Development
 
-Whilst developing you should run `gulp watch` as it'll re-compile your assets
-for you.
+    git clone https://github.com/okfn/open-budget-survey-tracker.git
+    cd open-budget-survey-tracker
+    bower update
+    npm install
+    npm watch
+    ENV=development npm start (in a separate terminal, or run `npm watch` in background)
 
+Open: <http://localhost:3000/>
+
+The watcher will re-compile your assets as you make changes.
 
 ## Translations
 
