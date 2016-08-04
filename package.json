@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "node_modules/mocha/bin/mocha test --recursive",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- test/*.js --recursive --report lcovonly && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "watch": "gulp watch",
     "postinstall": "bower install && gulp build && gulp deploy"
   },
@@ -38,7 +39,9 @@
     "underscore": "~1.8.3"
   },
   "devDependencies": {
-    "sinon": "~1.7.3",
-    "mocha": "~1.21.0"
+    "coveralls": "^2.11.12",
+    "istanbul": "^0.4.4",
+    "mocha": "~1.21.0",
+    "sinon": "~1.7.3"
   }
 }

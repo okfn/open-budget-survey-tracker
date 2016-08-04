@@ -6,3 +6,4 @@ npm-debug.log
 public/styles/app.css
 public/styles/vendor.css
 public/scripts/vendor.js
+coverage/
