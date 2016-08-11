@@ -2,6 +2,8 @@ Open Budget Survey
 ==================
 
 ![](https://secure.travis-ci.org/okfn/open-budget-survey-tracker.png?branch=master)
+[![Build Status](https://travis-ci.org/okfn/open-budget-survey-tracker.svg?branch=master)](https://travis-ci.org/okfn/open-budget-survey-tracker)
+[![Issues](https://img.shields.io/badge/issue-tracker-orange.svg)](https://github.com/okfn/open-budget-survey/issues)
 [![Coverage Status](https://coveralls.io/repos/github/okfn/open-budget-survey-tracker/badge.svg?branch=master)](https://coveralls.io/github/okfn/open-budget-survey-tracker?branch=master)
 
 # Manual install
