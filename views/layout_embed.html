@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ lang_dir }}">
+<head>
+
+  <title>{% block page_title %}{% endblock %}</title>
+
+  {% block meta %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% endblock %}
+
+  {% block head %}
+    <link rel="stylesheet" href="{{ asset('/styles/vendor.css') }}">
+    <link rel="stylesheet" href="{{ asset('/styles/app.css') }}">
+    <link rel="shortcut icon" href="/favicon.ico">
+  {% endblock %}
+
+  {% block extrahead %}{% endblock%}
+
+  {% block tracking %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-11687423-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  {% endblock %}
+</head>
+<body onload="parent.postMessage($('body').height(), '{{ EXPLORER_URL }}')">
+
+  <div class="container" style="width: 100%">
+    <div class="row">
+      <div class="col-md-6">{% block shortinfo %}{% endblock%}</div>
+      <div class="col-md-6">
+	<nav class="navbar">
+	  <ul class="languages nav navbar-nav navbar-right">
+	    <li><img src="{{ asset( '/images/language-icon.png') }}"></li>
+	    <li><a href="/locale/ar/embed">العربية</a></li>
+	    <li><a href="/locale/en/embed">English</a></li>
+	    <li><a href="/locale/es/embed">Español</a></li>
+	    <li><a href="/locale/fr/embed">Français</a></li>
+	    <li><a href="/locale/ru/embed">Русский</a></li>
+	  </ul>
+	</nav>
+      </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+  {% block scripts %}
+    <script src="{{ asset('/scripts/vendor.js') }}"></script>
+    <script src="{{ asset('/scripts/app.js') }}"></script>
+  {% endblock %}
+
+</body>
+</html>

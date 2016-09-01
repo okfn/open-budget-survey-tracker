@@ -1,9 +1,6 @@
-var request = require('request');
 var fs = require('fs');
-
-var uri = 'http://obstracker.internationalbudget.org/';
-// Sets the cache age to an hour
-var cache_age = 3600000;
+var Indaba = require('open-budget-indaba-client').default.Indaba;
+var moment = require('moment');
 
 function api_call (endpoint, callback) {
   var cache_file = './cache/'+endpoint+'.json';
@@ -14,8 +11,8 @@ function api_call (endpoint, callback) {
     should_update_cache = false;
     should_get_from_cache = true;
     var stat = fs.statSync(cache_file);
-    var difference = new Date().getTime() - stat.mtime.getTime();
-    if (difference > cache_age) {
+    var months = moment().diff(new Date(stat.mtime), 'months');
+    if (months >= 6) {
       should_update_cache = true;
       should_get_from_cache = false;
     }
@@ -24,16 +21,12 @@ function api_call (endpoint, callback) {
     var data = fs.readFileSync(cache_file);
     callback(JSON.parse(data));
   } else {
-    var url = uri+endpoint+'.json';
-    request(url, function (error, response, data) {
-      if (!error && response.statusCode == 200) {
-        if (should_update_cache) {
-          fs.writeFileSync(cache_file, data);
-        }
-        callback(JSON.parse(data));
-      } else {
-        console.log(error);
+
+    Indaba.getTrackerJSON().then( function (res) {
+      if (should_update_cache) {
+        fs.writeFileSync(cache_file, JSON.stringify(res));
       }
+      callback(res);
     });
   }
 }
