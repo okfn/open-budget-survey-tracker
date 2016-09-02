@@ -19,14 +19,15 @@ function api_call (endpoint, callback) {
   }
   if (should_get_from_cache) {
     var data = fs.readFileSync(cache_file);
-    callback(JSON.parse(data));
+    var date = new Date(stat.mtime);
+    callback(JSON.parse(data), date);
   } else {
 
     Indaba.getTrackerJSON().then( function (res) {
       if (should_update_cache) {
         fs.writeFileSync(cache_file, JSON.stringify(res));
       }
-      callback(res);
+      callback(res, new Date());
     });
   }
 }
