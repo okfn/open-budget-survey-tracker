@@ -139,6 +139,85 @@ router.get('/status/:country', function (req, res) {
         break;
       }
     }
+    country.snapshots = _.sortBy(country.snapshots, function(obj) {
+	return -obj.date;
+    });
+
+    // Override country if needed (e.g. discontinued countries)
+    if (country.country in country_override) {
+	var documents = _.indexBy(_.pluck(docs, 'title'));
+        documents = _.mapObject(documents, function(value){
+          return country_override[country.country].value;
+        });
+	var this_year = ''+(new Date).getFullYear();
+        var overwritten = {};
+        overwritten[this_year] = documents;
+	country.snapshots = _.map(country.snapshots, function(obj) {
+            if (new Date(obj.date) > country_override[country.country].date) {
+		obj.snapshot = overwritten;
+	    }
+	    return obj;
+	});
+        country.message = country_override[country.country].message;
+    }
+
+    res.render('status', {
+      'docs': docs,
+      'country': country,
+      'EXPLORER_URL': process.env.EXPLORER_URL
+    });
+  });
+});
+
+router.get('/country/:country/embed', function (req, res) {
+  api.call('countries', function (countries) {
+    var country = {};
+    for (var i in countries) {
+      if (countries[i].country == req.params.country) {
+        country = countries[i];
+        break;
+      }
+    }
+    country.snapshots = _.sortBy(country.snapshots, function(obj) {
+	return -obj.date;
+    });
+
+    // Override country if needed (e.g. discontinued countries)
+    if (country.country in country_override) {
+	var documents = _.indexBy(_.pluck(docs, 'title'));
+        documents = _.mapObject(documents, function(value){
+          return country_override[country.country].value;
+        });
+	var this_year = ''+(new Date).getFullYear();
+        var overwritten = {};
+        overwritten[this_year] = documents;
+	country.snapshots = _.map(country.snapshots, function(obj) {
+            if (new Date(obj.date) > country_override[country.country].date) {
+		obj.snapshot = overwritten;
+	    }
+	    return obj;
+	});
+        country.message = country_override[country.country].message;
+    }
+
+    res.render('country_embed', {
+      'docs': docs,
+      'country': country,
+      'EXPLORER_URL': process.env.EXPLORER_URL
+    });
+  });
+});
+
+
+router.get('/status/:country', function (req, res) {
+  api.call('countries', function (countries) {
+    var country = {};
+    for (var i in countries) {
+      if (countries[i].country == req.params.country) {
+        country = countries[i];
+        break;
+      }
+    }
 
     // Override country if needed (e.g. discontinued countries)
     if (country.country in country_override) {
@@ -295,6 +374,7 @@ router.get('/locale/:locale/embed', function (req, res) {
     res.redirect('/embed');
 });
 
+
 router.get('/', function (req, res) {
   api.call('countries', function (countries, last_update) {
     //Override countries (e.g. discontinued countries)
@@ -320,6 +400,43 @@ router.get('/', function (req, res) {
 
 router.get('/embed', function (req, res) {
   api.call('countries', function (countries, last_update) {
+    //Override countries (e.g. discontinued countries)
+    countries = _.map(countries, function(obj) {
+      if (obj.country in country_override) {
+        var documents = _.indexBy(_.pluck(docs, 'title'));
+        documents = _.mapObject(documents, function(value){
+          return country_override[obj.country].value;
+        });
+        obj.documents = {}
+        obj.documents[''+last_update.getFullYear()] = documents;
+      }
+      return obj;
+    });
+
+    res.render('index_embed', {
+      'docs': docs,
+      'countries': countries,
+      'last_update': last_update,
+      'EXPLORER_URL': process.env.EXPLORER_URL
+    });
+  });
+});
+
+router.get('/embed', function (req, res) {
+  api.call('countries', function (countries) {
+    // If today is less than the 22nd of the month the data is from
+    // the last date of two months ago else it's from last date of one
+    // month ago
+    var last_update = new Date();
+    if (last_update.getDate() < 22) {
+      last_update = new Date(last_update.getFullYear(),
+                             last_update.getMonth()-1, 0);
+    }
+    else {
+      last_update = new Date(last_update.getFullYear(),
+                             last_update.getMonth(), 0);
+    }
+
     //Override countries (e.g. discontinued countries)
     countries = _.map(countries, function(obj) {
       if (obj.country in country_override) {
