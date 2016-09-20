@@ -88,10 +88,24 @@
       <td class="text-center">{{ date_format({'year':fiscal_year}, 'YYYY') }}</td>
       <td>
 	{% if cell %}
+        {% set parentId = "" %}
+          {% if cell.uploads %}
+            {% for upload in cell.uploads %}
+              {% if upload.parentId %}
+                {% set parentId = upload.parentId %}
+              {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if parentId %}
+          <a target="_blank" href="https://drive.google.com/drive/folders/{{ parentId }}">
+        {% endif %}
         <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
           <span>{{ h.state(cell.state) }}</span>
         </span>
         {{ h.state(cell.state) }}
+        {% if parentId %}
+          </a>
+        {% endif %}
 	{% else %}
         <span class="badge state state-not-produced">
           <span>{{ h.state("not produced") }}</span>

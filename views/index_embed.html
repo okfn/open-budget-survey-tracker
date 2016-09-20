@@ -75,10 +75,24 @@
                       {% endif %}
                     {% endfor %}
                     {% if cell %}
+                      {% set parentId = "" %}
+                      {% if cell.uploads %}
+                        {% for upload in cell.uploads %}
+                          {% if upload.parentId %}
+                            {% set parentId = upload.parentId %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
                       <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, cell) }}">
+                        {% if parentId %}
+                          <a target="_blank" href="https://drive.google.com/drive/folders/{{ parentId }}">
+                        {% endif %}
                         <span class="badge state state-{{ cell.state|replace(' ', '-') }}">
                           <span>{{ h.state(cell.state) }}</span>
                         </span>
+                        {% if parentId %}
+                          </a>
+                        {% endif %}
                       </td>
                     {% else %}
                       <td class="text-center" data-toggle="popover" data-content="{{ h.tooltip(country, doc) }}">
